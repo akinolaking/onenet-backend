@@ -1,0 +1,174 @@
+:root {
+
+  --black: #1B1616;
+
+  --white: #fff;
+
+  --grey: #6e6e6e;
+
+  --primary-color: #FFA054;
+
+  --secondary-color:#2D3250;
+
+  
+
+  --light-secondary-color:#434C7E;
+
+  --bg-light-grey:#f3f3f3;
+
+  --bg-dark-grey:#EBEAE9;
+
+  --bg-white:#fff;
+
+  --bg-primary-color:#FFA054;
+
+  --bg-light-primary-color:#F0E6E1;
+
+  --bg-secondary-color:#2D3250;
+
+  --bg-secondary--dark:#282E4D;
+
+  
+
+  --btn-primary-bgcolor: #FFA054;
+
+  --btn-primary-color: #fff;
+
+  --btn-primary-border: #FFA054;
+
+  --btn-primary-bgcolor-hover:#fff;
+
+  --btn-primary-color-hover: #FFA054;
+
+ 
+
+  --btn-secondary-bgcolor: #2D3250;
+
+  --btn-secondary-color: #fff;
+
+  --btn-secondary-border: #2D3250;
+
+  --btn-secondary-bgcolor-hover:#fff;
+
+  --btn-secondary-color-hover:#000;
+
+
+
+}
+
+.cuppon-box h5 {
+
+    background: url(../images/layoutsix/coupon-bg.svg) no-repeat;
+
+}
+
+.hostx-pages-sections :is(.big_col){
+
+    background: url(../images/layoutsix/big-int-banner.png);
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+}
+
+.header.wgs-new-header-top-latest {
+
+    background: var(--bg-secondary-color);
+
+}
+
+
+
+header.header.wgs-new-header-top-latest .right .right_navi li a, .hostx-navigation-selected-mega-menu-latest .right .right_navi li a i {
+
+    color: var(--white);
+
+}
+
+span.label.label-success.wgs-custom-label-cart-hostx{
+
+    color: var(--white);
+
+    border: solid 1px #B85C31;
+
+    background: var(--bg-primary-color);
+
+}
+
+.hx-business-block .hx-business-list li:not(:last-child) {
+
+    border-right: 1px solid #2f325212;
+
+}
+
+.operating-system .operating-table table td img {
+
+    filter: invert(1) brightness(0);
+
+}
+
+.ssl-effect-site, .custom-block-2 {
+
+    background-color:  var(--bg-light-primary-color);
+
+}
+
+#filters-row .irs-line-right,
+
+#filters-row .irs-line-mid,
+
+#filters-row .irs-line-left {
+
+    height: 6px;
+
+    background-position: 100% -30px;
+
+    background: #C7C9D9 !important;
+
+}
+
+.custom_checkbox input:checked+span:after{
+
+    background-image:url(../images/layoutsix/checked-six.svg);
+
+}
+
+.main-sate .col1, .pricing_section ul#changeBillingCycle li a.active, .pricing_section ul#changeBillingCycle li a:hover, .main-sate .upper-sec-satelite .satelitetop-detail .active, .main-sate .upper-sec-satelite .satelitetop-detail p:hover, .main-sate .upper-sec-satelite .satelitetop-detail p:after{
+
+    background: var(--bg-primary-color);
+
+}
+
+#order-standard_cart .domain-selection-options .domain-input-group select {
+
+    background-color: var(--bg-secondary-color);
+
+}
+
+.promo-code-form button.btn.button-style.hx-primary-btn, .remove-promo-btn .btn.btn-default.btn-xs{
+
+    background: var(--bg-secondary--dark);
+
+}
+
+#order-standard_cart label, #order-standard_cart .field, #order-standard_cart .form-control, #order-standard_cart .field, #order-standard_cart .form-control::placeholder{
+
+    color: var(--text-color);
+
+}
+
+.shoping-cart-background.cart-product-configure, .shoping-cart-background.cart-view-cart, .shoping-cart-background.cart-complete-cart {
+
+    background: url(../images/layoutsix/cart-product-bg.jpg);
+
+}
+
+.register-domain-banner2 {
+
+    background: url(../images/layoutsix/contact-bg.svg);
+
+    background-size: cover;
+
+}
+

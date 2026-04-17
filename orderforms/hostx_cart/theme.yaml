@@ -1,0 +1,9 @@
+dependencies:
+  bootstrap: 3||4
+  jquery: 1.12
+  fontawesome: 5
+name: "Hostx Cart"
+description: "Hostx Cart Orderform"
+author: "Whmcs Global Services"
+config:
+  parent: standard_cart

@@ -1,0 +1,1088 @@
+@media (max-width: 1399px) {
+   .landing-page.ssl .features .feature h5 {
+        line-height: 22px;
+        min-height: 45px;
+    }
+    .landing-page.ssl .row-pricing-table .header {
+        height: 70px;
+    }
+    .landing-page.ssl .row-pricing-table .header h4 {
+        font-size: 16px;
+        width: 100%;
+        word-break: break-all;
+        line-height: 26px;
+        min-height: 68px;
+        padding: 11px 10px 10px;
+    }
+    .landing-page.sitebuilder .pricing-table-row.col-heading div {
+        padding: 16px 10px;
+        font-size: 16px;
+        line-height: normal;
+        height: 70px;
+    }
+    .col-md-5.ssl-certs-right-sec {
+        padding-left: 140px;
+    }
+    .list-style-inner {
+        min-height: 83px;
+    }
+}
+@media (max-width: 1280px) {
+    .social-bee .content-block {
+        flex-direction: column;
+        align-items: center;
+
+        & img {
+            max-width: 100%;
+        }
+
+        & .content-block__text {
+            max-width: 100%;
+        }
+    }
+
+    .social-bee .content-block.faq {
+        align-items: start;
+        gap: 0;
+    }
+
+    .social-bee .pricing-table {
+        width: auto;
+        min-width: 1024px;
+    }
+}
+@media (min-width: 1200px) {
+    .get-started .col-md-4.text-right.sign-up-inner-right {
+        padding-left: 120px;
+        text-align: left !important;
+    }
+}
+@media (max-width: 1199px) {
+    .landing-page .navbar.navbar-expand-lg .navbar-nav > li > a {
+        font-size: 14px;
+        padding: 24px 22px;
+    }
+    .col-md-5.ssl-certs-right-sec {
+        padding-left: 55px;
+    }
+    .col-md-5.ssl-certs-right-sec:after {
+        left: 0;
+    }
+    .landing-page .currency-selector {
+        margin-left: auto;
+        display: block;
+    }
+    .faq-content-sec {
+        padding-left: 20px;
+    }
+    .sign-up-inner .col-md-8:after {
+        right: -30px;
+    }
+    .landing-page .incoming-email-right img {
+        max-width: 100%;
+    }
+    .list-style-inner {
+        font-size: 12px;
+        text-align: left;
+    }
+    .sp-offer {
+        margin-bottom: 30px;
+    }
+    .landing-page.mail-services .product-options .price{
+        min-height: 70px;
+    }
+    .landing-page .product-options .item {
+        padding: 20px;
+    }
+    .landing-page.sitebuilder .pricing-table-row.price-bottom .col-plans-5 {
+        font-weight: 700;
+        font-size: 16px;
+    }
+    .landing-page.sitebuilder .features .title {
+        font-size: 18px;
+    }
+    .landing-page .currency-selector {
+        width: auto;
+    }
+    .weebly-plans h5 {
+        font-size: 15px;
+    }
+    .landing-page .certificate-options .row-pricing-table ul li, .landing-page.threesixtymonitoring .feature-count-4 li, .landing-page.threesixtymonitoring .feature-count-3 li {
+        padding: 0px 10px;
+    }
+    .landing-page.ox .stand-out .col-md-12:last-child div {
+        min-height: inherit;
+    }
+    .landing-page.ox .stand-out .col-md-12 {
+        margin-top: 20px;
+    }
+    .choose_section .tab li a {
+        font-size: 16px;
+    }
+    .more-reason-col  h6 {
+        line-height: 24px;
+    }
+	.landing-page.sitelock .feature-wrapper-emergency h4 {
+		font-size: 17px;
+	}
+	.feature-wrapper-emergency {
+        padding: 15px;
+        min-height: 300px;
+    }
+	.landing-page.sitelock .feature-wrapper-emergency p {
+		font-size: 14px;
+	}
+	.website-monitoring .section-pricing .col-12.div-plan-name {
+		font-size: 20px !important;
+	}
+	.whmcs-templatefile-store-codeguard-index .content-block.image-standout .col-md-6 {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.whmcs-templatefile-store-codeguard-index .content-block.image-standout .col-md-6 img {
+		margin-bottom: 20px;
+	}
+	.landing-page.nordvpn .feature.world .world-desc {
+		position: unset;
+	}
+    .hx-business-list li:first-child {
+        padding-left: 22px;
+    }
+    .landing-page.sitebuilder .faq-block {
+        min-height: 225px;
+    }
+}
+@media (max-width: 1024px) {
+    .social-bee .pricing-table__cell {
+        padding: 24px 0px !important;
+    }
+
+    .social-bee .hero {
+        padding: 0 24px;
+    }
+
+    .social-bee .pricing__header {
+        padding: 0 24px;
+    }
+
+    .social-bee .pricing-table {
+        margin: 0 24px;
+    }
+
+    .social-bee .planner {
+        min-height: auto;
+
+        & img {
+            display: block;
+            max-width: 100%;
+            height: fit-content;
+        }
+    }
+
+    .social-bee .action-buttons {
+        gap: 16px;
+    }
+}
+@media (max-width: 991px) {
+    h1 {
+        font-size: 35px !important;
+        line-height: 45px !important;
+        text-align: left;
+    }
+    .help-me-choose-left-sec {
+        max-width: 100%;
+        padding-right: 0;
+    }
+    .help-me-choose-right-sec {
+        max-width: 100%;
+        text-align: left;
+    }
+    .ssl-main .row.help-me-choose .col-md-12:nth-child(2) .help-me-choose-right-sec {
+        text-align: left;
+    }
+    .row.help-me-choose .col-md-12:nth-child(2) .help-me-choose-right-sec {
+        text-align: center;
+    }
+    .col-md-5.ssl-certs-right-sec {
+        padding-left: 15px;
+    }
+    .button-style {
+        padding: 12.5px 18px !important;
+        font-size: 14px;
+    }
+    .col-md-5.ssl-certs-right-sec:after {
+        left: 0;
+    }
+    .col-md-6.col-lg-4.dd, .col-lg-4.cc {
+        margin-bottom: 20px;
+    }
+    .weebly-lite-plan:after{display: none;}
+    .row.weebly-price .col-md-9, .row.weebly-price .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    #pricing .weebly-price .btn-group {
+        display: inline-block;
+        width: 100%;
+    }
+    #pricing .weebly-price button.btn.btn-default.cycle-change {
+        padding: 8px 15px;
+    }
+    .landing-page.ssl .validation-levels .item {
+        min-height: 433px;
+    }
+    .more-reason-col {
+        min-height: 200px;
+        padding: 35px 30px;
+    }
+    .row.help-me-choose .col-md-12:nth-child(2) .help-me-choose-left-sec {
+        order: unset;
+    }
+    .landing-page .certificate-options .row-pricing-table ul li, .landing-page.threesixtymonitoring .feature-count-4 li{
+        font-size: 12px;
+        padding: 0px 12px;
+        height: auto;
+        padding-left: 15px !important;
+    }
+    .ssl .standout-heading h6 {
+        font-size: 14px;
+    }
+    .standout-heading {
+        padding: 25px 10px;
+    }
+    .navbar-collapse.collapse.show ul.nav.navbar-nav {
+        display: block !important;
+    }
+    .landing-page .navbar.navbar-expand-lg .navbar-nav > li > a {
+        padding: 15px 22px;
+    }
+    .landing-page .pricing-item ul li{
+        font-size: 14px;
+    }
+    .weebly #pricing .header {
+        min-height: 110px;
+    }
+    .weebly .pricing-item-inner {
+        padding: 15px;
+    }
+    .weebly .pricing-item .price {
+        font-size: 18px;
+    }   
+    .website-security-sitelock .row {
+        align-items: unset;
+    }
+    .feature-wrapper-emergency {
+        padding: 20px;
+        min-height: 330px;
+    }
+    .row.bottom-row .col-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+        margin-bottom: 15px;
+        margin-left: 0;
+    }
+    .landing-page.threesixtymonitoring .div-feature-values.feature-count-4 {
+        width: 17.5%;
+    }
+    .landing-page.threesixtymonitoring .div-feature-labels.feature-count-4 {
+        width: 30%;
+    }
+    .landing-page.threesixtymonitoring .div-pricing-container > .div-feature-labels.feature-count-4:nth-child(5) {
+        display: none;
+    }
+    #websiteSectionPricing .header .div-plan-name {
+        font-size: 18px;
+    }
+    .col-12.div-plan-tagline {
+        font-size: 13px;
+    }
+    .landing-page.sitebuilder .nav-tabs > li > a, .landing-page.threesixtymonitoring .nav-secondary .nav-link, .incoming-mail .nav-pills .nav-link{
+        padding: 20px 20px;
+        font-size: 17px;
+    }
+    .landing-page.mail-services .tabs .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+    .list-style-inner {
+        min-height: 60px;
+    }
+    .incominag-main-img-sec {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    .option .form-check-inline {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .additional-options-main {
+        padding-left: 30px;
+    }
+    .sign-up-inner {
+        padding: 20px;
+    }
+    .btn-group.choose-product button.btn{
+        min-height: 145px;
+        font-size: 17px;
+    }
+    .landing-page .get-started .price {
+        font-size: 20px;
+    }
+    .landing-page.ox.col-xl-4.col-md-12 {
+        margin-top: 20px;
+    }
+    .landing-page.ox .feature-block img{
+        max-width: 15%;
+    }
+    .landing-page.ox .feature-block h6.title, .landing-page.ox .feature-block p {
+        margin-left: 50px;
+    }
+    .landing-page.ox .feature-block h6.title{
+        font-size: 15px;
+    }
+    div#oxPricing .col-xl-12 {
+        overflow: auto;
+    }
+    .landing-page.ox .hero-right-img img {
+        width: 100%;
+        max-width: 100%;
+    }
+    .landing-page.ox .stand-out .col-xl-4.col-md-12 {
+        margin-top: 30px;
+    }  
+    .content-block.feature-tabs.bg-white {
+        padding-bottom: 150px;
+    }  
+    body .landing-page.codeguard .overview-features span {
+        padding: 0px 10px 20px;
+        font-size: 14px;
+    }
+    .content-block.image-standout .row {
+        align-items: unset;
+    }
+    .feature-blocks.market-go-feature .col-md-2 {
+        flex: 0 0 33%;
+        max-width: 33%;
+    }
+    .landing-page.marketgoo .plan .header {
+        height: 97px;
+    }
+    .landing-page.marketgoo .plan .header h4 {
+        font-size: 30px;
+    }
+    .landing-page.nordvpn .feature.world .world-data p:nth-of-type(2) {
+        font-size: 40px;
+    }
+    .landing-page.nordvpn p {
+        font-size: 14px;
+    }
+    .world-data-inner {
+        padding: 14px;
+    }
+    .landing-page.nordvpn .feature.world .world-desc {
+        position: unset;
+    }
+    .feature.security .col-10.offset-1.col-lg-6.offset-lg-0.my-auto {
+        padding-right: 0;
+    }
+    .security-right-sec {
+        display: block;
+    }       
+    .security-right-sec-inner {
+        padding: 30px 0px 0px 0px;
+    }  
+    .feature.use .title-heading {
+        padding-right: 30px;
+    }
+    .landing-page.nordvpn .feature.use h3 {
+        font-size: 17px;
+    }
+    .website-monitoring .section-pricing .col-12.div-plan-name {
+        font-size: 20px !important;
+    }
+    .landing-page.threesixtymonitoring .feature-count-3 li{
+        padding: 0px 15px; 
+        padding-left: 15px !important;
+    }
+    .landing-page.ox .pricing td, .landing-page.xovinow .pricing .plan-feature, .landing-page.marketgoo .plan ul li {
+        padding: 21px 25px !important;
+    }
+    .landing-page.ox .pricing tr td:not(:first-child){
+        border-left: transparent;
+    }
+    .audience-inner {
+        min-height: 370px;
+    }
+    .landing-page.nordvpn .vpn-right-sec-inner p {
+        font-size: 18px;
+    }
+    .vpn-right-sec-inner {
+        padding: 20px 20px;
+    }
+	.ideal-for-col h4 {
+		font-size: 13px;
+	}
+	.landing-page.ssl .row-pricing-table .header {
+        height: 49px;
+    }
+	.landing-page.ssl .row-pricing-table .header h4 {
+		font-size: 15px;
+		line-height: 26px;
+		min-height: 48px;
+	}
+	.landing-page.threesixtymonitoring .section-discover .col-md-6 {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.site-mointoring-left {
+		margin-bottom: 15px;
+	}
+	.feature.security .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+	.install .left img {
+		width: 100%;
+	}
+	.xovinow .content-block.feature-tabs .row {
+        align-items: center;
+    }
+    .social-bee .action-button-wrapper button {
+        padding: 20px 26px !important;
+        font-size: 14px !important;
+    }
+
+
+}
+
+@media (max-width: 767px) {
+    .hero-right-img {
+        margin-top: 25px;
+    }
+    .hero-right-img, .ssl-desc-img-sec   {
+        margin-top: 40px;
+    }
+    .landing-page.ssl .validation-levels h2 {
+        margin-bottom: 30px;
+    }
+    .landing-page.ssl p.help-me-choose {
+        line-height: normal;
+    }
+    .landing-page.ssl p.help-me-choose a {
+        font-size: 14px;
+    }
+    .landing-page .navbar.navbar-expand-lg .navbar-nav > li {
+        max-width: 100%;
+    }
+    .col-md-7.what-is-ssl-left {
+        padding-right: 15px;
+    }
+    .content-block.ssl-benefits.standout img {
+        padding-right: inherit;
+        margin-bottom: 30px;
+    }
+    .padded-cell.btn-sec .button-style.hx-primary-btn{font-size: 13px !important;}
+    .p-vertical {
+        padding: 40px 0 !important;
+    }
+    .landing-page.ssl .browser-notice .wrapper-container {
+        padding: 0 15px;
+    }
+    .landing-page.ssl .browser-notice .wrapper {
+        padding:30px 20px;
+        font-size: 14px;
+    }
+    .upgrade-sec {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .content-helpme-inner .card-body {
+        padding: 30px;
+    }
+    
+    .upgrade-sec-left {
+        max-width: 100%;
+    }
+
+    .button-style {
+        padding: 12.5px 20px !important;
+        font-size: 13px;
+    }
+    .landing-page .navbar.navbar-expand-lg .navbar-nav > li > a {
+     padding: 20px 30px;
+    }
+    .landing-page .navbar-toggler {
+        margin: 9px 25px;
+    }
+    .landing-page.ssl .detailed-info .card-header {
+        padding: 20px;
+    }
+    .landing-page.ssl .detailed-info .card-header h4 {
+        font-size: 16px;
+    }
+    .landing-page.ssl .detailed-info .arrow {
+        margin-right: 0;
+    }
+    .landing-page.ssl .detailed-info {
+        padding: 50px 0;
+    }
+    div#sslAccordion {
+        padding: 0 15px;
+    }
+    .col-md-5.ssl-certs-right-sec {
+        padding-left: 15px;
+    }
+    .col-md-5.ssl-certs-right-sec:after{display: none;}
+    .whmcs-templatefile-store-ssl-index p {
+        font-size: 14px;
+    }
+    .landing-page.ssl .detailed-info .card-body {
+        padding: 25px;
+    }
+    .logos .row {
+        flex-wrap: nowrap;
+    }
+    .landing-page.ssl .logos {
+        max-width: 100%;
+    }
+    .ideal-for-col {
+        margin-bottom: 10px;
+    }
+    .col-md-4.standard-dv-right {
+        text-align: center;
+        margin: 30px 0 0px;
+    }
+    .standout-heading {
+        margin-bottom: 15px;
+    }
+    .landing-page.ssl .features .feature {
+        margin: 0 0 15px 0;
+    }
+    .standout-heading {
+        margin-bottom: 15px;
+    }
+    .content-block.standout.standard-dv .text-center.d-block.d-sm-none {
+        display: none!important;
+    }
+    .landing-page.ssl .row-pricing-table .header h4 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .landing-page.ssl .row-pricing-table .header{
+        margin-top:0px;
+    }
+    .certificate-options .rapid-list-sec {
+        background: var(--bg-light-grey);
+        border-radius: 0px 0px 5px 5px;
+    }
+    .certificate-options .row-pricing-table {
+        background: transparent;
+    }
+    .landing-page.ssl .row-pricing-table .header {
+        height: auto;
+        padding: 0;
+        margin-top: 20px;
+    }
+    .landing-page.sitebuilder .nav-tabs > li > a {
+        font-size: 15px;
+        padding: 20px 25px;
+        margin-bottom: 5px;
+        box-shadow: 0px 0px 5px #0000001a;
+    }
+    .landing-page.sitebuilder .nav-tabs > li > a {
+        font-size: 12px;
+        padding: 20px 7px;
+        box-shadow: 0px 2px 10px #00000012;
+        margin-bottom: 5px;
+    }
+    .landing-page.sitebuilder .feature-block {
+        margin-bottom: 45px;
+    }
+    .landing-page.sitebuilder .templates .nav.nav-tabs.justify-content-center{
+        box-shadow: none;
+    }
+    .landing-page.sitebuilder .templates .previews .show-more div {
+        font-size: 2em;
+        line-height: 196px;
+        height: auto;
+        border: none;
+    }
+    .landing-page.sitebuilder .pricing-table-row.col-heading div {
+        padding: 16px 10px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: normal;
+        height: 68px;
+    }
+    .landing-page.sitebuilder .pricing-table-row .col-primary {
+        padding: 11px 28px;
+        font-size: 14px;
+    }
+    .landing-page.sitebuilder .pricing-table-row.price-bottom .col-plans-5 {
+        font-size: 15px;
+        padding: 21px 10px;
+    }
+    .faq-img img {
+        max-width: 35px;
+    }
+    .landing-page.sitebuilder .pricing-table {
+        margin: 30px 0 0;
+    }
+    .landing-page .image-standout img {
+        margin-bottom: 30px;
+    }
+    #pricing .btn-group {
+        display: inline-block;
+        width: 100%;
+    }
+    #pricing button.btn.btn-default.cycle-change {
+        width: 100%;
+    }
+    .weebly-plans h5 {
+        line-height: 24px;
+    }
+    .landing-page .pricing-item .price {
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 25px !important;
+        line-height: 35px !important;
+        margin-bottom: 15px !important;
+    }
+    h1 {
+        font-size: 30px !important;
+        line-height: 45px;
+    }
+    .weebly-lite-inner {
+        display: inherit;
+    }
+    .weebly-price-left, .weebly-lite-inner .pricing {
+        max-width: 100%;text-align: left;
+    }
+    .landing-page.ssl .validation-levels .item, .more-reason-col {
+        min-height: auto;
+    }
+    .content-block.ssl-benefits.standout .col-md-5 {
+        order: 2;
+        margin-top: 30px;
+    }
+    .landing-page.ssl .ssl-benefits .row {
+        margin-top: 0;
+    }
+    .more-reason-col {
+        margin-bottom: 15px;
+    }
+    .ssl .content-block.standout-2.standout.logo-sec-bottom.p-vertical {
+        padding-top: 40px !important;
+    }
+    .landing-page.bg-white.ssl .text-left h3 {
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .landing-page.ssl .dashed-border {
+        padding-bottom: 40px;
+    }
+    .weebly .content-block.image-standout .container {
+        padding: 30px;
+    }
+    .landing-page .pricing-item {
+        margin: 0px 0 15px 0;
+    }
+    .commom-faq a.card-link, .landing-page.threesixtymonitoring .section-faq .btn-link, .landing-page.xovinow .faq .card-header .btn, .landing-page.nordvpn .feature.faq .card-header .btn, .sitelock #faq .card-header h4 {
+        font-size: 13px;
+        padding-right: 35px;
+    }
+    .commom-faq .arrow-new {
+        position: absolute;
+        right: 10px;
+    }
+    .feature-wrapper-emergency {
+        min-height: auto;
+    }
+    .landing-page.sitelock .plans .plan ul {
+        min-height: auto;
+    }
+    .landing-page .bottom-site-lock img {
+        max-width: 250px;
+    }
+    .landing-page.sitelock .hero img {
+        margin-top: 30px;
+    }
+    .landing-page.sitelock .plans .float-right {
+        float: unset !important;
+    }
+    .threesixtymonitoring .tab-website .col-2 {
+        flex: 0 0 30.666667%;
+        max-width: 29.666667%;
+    }
+    .threesixtymonitoring .tab-website .col-10 {
+        flex: 0 0 70.333333%;
+        max-width: 70.333333%;
+    }
+    .landing-page.threesixtymonitoring .nav-primary .nav-link{
+        padding: 24px 15px;
+    }
+    .landing-page.threesixtymonitoring .nav-secondary .nav-link{
+        padding: 20px 11px;
+        font-size: 15px;
+    }
+    .landing-page.threesixtymonitoring .nav-secondary {
+        padding-top: 40px;
+    }
+    .landing-page.threesixtymonitoring .section-features .row-features .row {
+        margin-bottom: 30px;
+    }
+    .tab-content.website-monitoring .row-features {
+        padding-bottom: 0 !important;
+    }   
+    .col-3.fav-icon .row, .row.bottom-row .col-3 .row {
+        margin: 0px 0px;
+    }
+    .col-3.fav-icon, .row.bottom-row .col-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 20px;
+    }
+    .landing-page.threesixtymonitoring .row-notifications > div {
+        margin: 0;
+    }
+    .landing-page.threesixtymonitoring .div-pricing-container > .div-feature-labels.feature-count-2:not(:first-child), .landing-page.threesixtymonitoring .div-pricing-container > .div-feature-labels.feature-count-3:not(:first-child), .landing-page.threesixtymonitoring .div-pricing-container > .div-feature-labels.feature-count-4:not(:first-child) {
+        display: none;
+    }
+    .landing-page.threesixtymonitoring .div-pricing-container {
+        width: 700px;
+    }
+    .website-monitoring .section-pricing .container{
+        overflow: auto;
+    }
+    .landing-page.threesixtymonitoring .div-pricing-container {
+        width: 700px;
+    }
+    section#websiteSectionPricing .container {
+        overflow: auto;
+    }
+    #websiteSectionPricing .header .row {
+    margin: 0;
+    }
+   
+    .row-features-right p {
+        margin-left: 12px !important;
+        max-width: 100%;
+    }
+    ul.site-features {
+        min-height: unset;
+    }
+    .sign-up-sec {
+        display: block;
+    }
+    .additional-options-main {
+        padding-left: 10px;
+    }
+    .mail-services .sign-up-inner .col-md-8:after {
+        display: none;
+    }
+    .mail-services .col-md-4.text-right.sign-up-inner-right {
+        text-align: left !important;
+        margin-top: 20px;
+    }   
+    .responsive-tabs-sm-connector .bottom-border {
+        display: none;
+    }
+    .mail-services  .tab-content {
+        padding: 0px;
+    }
+    .incoming-email-filtering {
+        padding: 20px;
+    }
+    .landing-page.ox .feature-block h6.title, .landing-page.ox .feature-block p {
+        margin-left: 65px;
+    }
+    .landing-page.ox .stand-out .col-md-6.text-md-left {
+        margin-bottom: 20px;
+    }
+    .audience-inner {
+        margin-bottom: 15px;
+    }
+    .landing-page.xovinow .pricing .plan-feature i {
+        display: none;
+    }
+    .pricing.price-backup {
+        padding: 40px 0px !important;
+    }
+    .pricing.price-backup .float-right {
+        float: unset !important;
+    }
+    .pricing.price-backup:after {
+        height: 330px;
+    }
+    .landing-page.codeguard .overview-features img {
+        padding: 5px 10px 0px 30px;
+    }
+    body .landing-page.codeguard .overview-features li {
+        margin-bottom: 20px;
+    }
+    .landing-page.codeguard .irs-grid-text {
+        font-size: 11px;
+    }
+    .plan-container-main {
+        float: left;
+        width: 100%;
+        overflow: auto;
+    }
+    .pricing-marketgo .plan-container {
+        width: 610px;
+    }
+    .plan.marketgoo_lite .header-inner{
+        min-height: 123px;
+    }
+    .landing-page.marketgoo .plan .header {
+        height: 123px;
+    }
+    .landing-page.marketgoo .plan {
+        width: 30%;
+    }
+    .landing-page.marketgoo .plan.labels {
+        display: none;
+        width: 40%;
+    }
+    .feature-blocks.market-go-feature .col-md-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .pricing-marketgo .form-control {
+        width: auto;
+        margin-left: auto;
+    }
+    .landing-page.marketgoo .plan .header h4 {
+        font-size: 26px;
+    }
+    .landing-page.marketgoo .testimonials .testimonial{
+        font-size: 16px;
+    }
+    .nordvpn .feature.world.p-vertical{
+        margin-top: 0;
+    }
+    .world-data-inner {
+        margin-bottom: 20px;
+    }
+    .row.world-data {
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+    .feature.security.p-vertical .row:last-child .col-md-6:first-child {
+        order: 2;
+    }
+    .feature.use .title-heading {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    .nordPricing-inner {
+        padding: 30px;
+        margin-bottom: 20px;
+    }
+    #nordPricing h2 {
+        margin-bottom: 20px !important;
+    }
+    #nordPricing {
+        padding-bottom: 40px;
+    }
+    .feature-nordvpn {
+        display: block;
+    }
+    .nordvpn .feature.device .container {
+        padding: 30px;
+        border-radius: 0;
+    }
+    .landing-page.nordvpn .feature.security .row.h-100 {
+        margin: 0rem 0 0rem;
+    }
+    .landing-page.threesixtymonitoring .div-feature-labels {
+        width: 34%;
+    }
+    .landing-page.threesixtymonitoring .div-feature-values {
+        width: 22%;
+    }
+    .landing-page.threesixtymonitoring div#pills-server .row-notifications .row .col-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 20px;
+    }
+    .landing-page.threesixtymonitoring div#pills-server .row-notifications .row {
+        margin: 0;
+    }
+    .landing-page.threesixtymonitoring div#pills-server .row-notifications .col-3.offset-3.offset-lg-0 {
+        margin: 0;
+    }
+    .threesixtymonitoring .row-revenue .col-12 {
+        font-size: 20px !important;
+    }
+    .landing-page.threesixtymonitoring .section-discover, .landing-page.threesixtymonitoring .section-features {
+        padding: 40px 0;
+    }
+    .landing-page.threesixtymonitoring .tab-server .section-monitoring {
+        margin-bottom: 2rem;
+    }
+    .row-features-left {
+        width: 40px;
+    }
+    .row-features-right {
+        width: calc(100% - 50px);
+    }
+    .landing-page.threesixtymonitoring .row-features p {
+        word-break: break-all;
+    }
+    .landing-page.xovinow .feature-tabs .tab-content img {
+        padding-right: 0;
+        margin-bottom: 15px;
+    }
+    #cpsPricing .money-back span {
+        line-height: 32px;
+    }
+    .landing-page.sitebuilder .features.new-feature .nav-tabs {
+        padding: 0;
+    }
+    nav.nav-primary.site-monitoring-sec{
+        padding: 0;
+    }
+    div#xovinow-screenshots a.left.carousel-control {
+        left: 0;
+        right: unset !important;
+        margin: 10px 5px 0px !important;
+        top: 10px !important;
+    }
+    .landing-page.nordvpn .col-md-5.d-lg-block {
+        margin-top: 40px !important;
+    }
+    .landing-page.nordvpn .feature-vpn-left-sec img{
+        max-width: 330px;
+        width: 100%;
+    }
+    .nordvpn .feature.device .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .landing-page.xovinow .pricing .plan-feature i.fas.fa-check.d-md-none {
+        display: inline-block;
+    }
+    .sign-up-inner .additional-options-main {
+        padding-left: 0;
+    }
+    .certificate-options.ov select {
+        margin-bottom: 0;
+    }
+    .ssl .content-block.dashed-border.standout .col-lg-6.col-md-6:first-child {
+        order: 2;
+    }
+    .ssl .standard-ov .text-center.d-block.d-sm-none {
+        display: none !important;
+    }
+    .landing-page .currency-selector {
+        margin-right: auto;
+    }
+    .codeguard .price-backup h2 {
+        text-align: center;
+    }
+    .codeguard .pricing-main-sec {
+        justify-content: center;
+    }
+    .landing-page.codeguard .irs-with-grid {
+        margin: 30px 0px;
+    }
+    .landing-page.threesixtymonitoring .modal-results .div-modal-border {
+        margin: 1rem 0;
+    }
+    #modalTestResults .modal-body .col-3 span {
+        font-size: 12px;
+    }
+    #modalTestResults .modal-body .col-3 {
+        padding: 0 3px;
+    }
+    .landing-page.sitelock .feature-wrapper-emergency p{min-height: inherit;}
+    .landing-page.sitebuilder .faq-block {
+        min-height: auto;
+    }
+    /* socialbee whmcs 8.13 */
+    .social-bee .social-faqs label span {
+        font-size: 13px !important;
+    }
+    .social-bee .action-buttons {
+        gap: 0;
+        flex-wrap: wrap;
+    }
+
+    .social-bee .tab {
+        max-height: fit-content;
+    }
+
+    .social-bee .tab input:checked~.tab__content {
+        padding: 16px 32px 16px 0px;
+    }
+
+    .social-bee .features .features__item p {
+        margin-top: 24px;
+    }
+    .social-bee .action-button-wrapper button {
+        padding: 16px 18px !important;
+    }
+
+    .social-bee .pricing-table__cell {
+        padding: 15px 0px !important;
+    }
+
+    .social-bee .pricing-table__header-cell {
+        padding: 15px 24px;
+    }
+}
+
+@media (max-width: 575px) {
+    .landing-page.ssl .features .feature h5 {
+        min-height:inherit;
+    }
+    .ideal-for-col h4 br {
+        display: none;
+    }
+    .landing-page #pricing {
+        padding: 40px 0;
+    }
+    .landing-page .pricing-item .price {
+        font-size: 22px;
+    }
+    .landing-page.sitebuilder .nav-tabs > li {
+        display: inline-block;
+        width: 100%;
+    }
+    .landing-page.mail-services .tabs .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+    .list-style-inner i {
+        margin-top: 0px;
+    }
+    .list-style-inner {
+        min-height: inherit;
+    }
+    .landing-page.ssl .currency-selector {
+        width: 100%;
+    }
+    .store-promoted-product ul.features li {
+        float: left;
+        width: 100%;
+    }
+    form#frmAddToCart .col-sm-7.text-right {
+        text-align: left !important;
+    }
+    /* socialbee */
+    .social-bee .action-button-wrapper {
+            display: grid;
+            width: 100%;
+    }
+
+    .social-bee .action-button-wrapper button {
+        padding: 12px 7px !important;
+        font-size: 14px !important;
+    }
+
+}

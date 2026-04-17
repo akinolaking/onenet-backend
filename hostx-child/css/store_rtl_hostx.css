@@ -1,0 +1,225 @@
+.content-block.standout-2.standout.logo-sec-bottom h6{
+    text-align: center;
+}
+.landing-page div#collapseMultiYear img {
+    max-width: 100%;
+    margin: 0 !important;
+}
+.landing-page .navbar .navbar-nav {
+    padding: 0;
+}
+.landing-page.sitelock .feature-wrapper .content {
+    margin-left: 0;
+}
+.landing-page.threesixtymonitoring .row-features p, .landing-page.threesixtymonitoring .row-features span {
+    text-align: right;
+}
+.landing-page.threesixtymonitoring .div-feature-labels.feature-count-4 li {
+    text-align: right;
+}
+.sign-up-inner .col-md-8:after {
+    left: 30px;
+    right: unset;
+}
+
+.additional-options-main h4, .additional-options-main .form-control.ssl-currency-selector {
+    margin-right: 35px;
+    width: auto;
+}
+.landing-page.ox .pricing table tr td:first-child {
+    text-align: right;
+}
+.landing-page.xovinow .feature-tabs .tab-content img {
+    padding-left: 50px;
+    padding-right: 0;
+}
+.content-block.feature-tabs ul li i {
+    margin-right: 0;
+    margin-left: 10px;
+}
+.landing-page.xovinow .pricing .col-md-4.col-sm-6:last-child .plan{
+    border-bottom-right-radius: 0;
+}
+.plan-feature-bottom {
+    border-bottom-left-radius: 0px;
+}
+.codegurd-feature .feature-text-sec {
+    padding-right: 30px;
+    text-align: right;
+    padding-left: 0;
+}
+.landing-page.codeguard .pricing-container {
+    margin-right: 0;
+    margin-left: 40px;
+}
+.nordvpn-banner :is(.col-md-5, h1) {
+    text-align: left;
+}
+.col-md-7.ssl-benefits-content {
+    text-align: right;
+}
+.landing-page .currency-selector {
+    direction: rtl;
+}
+.list-style-inner i {
+    margin-left: 10px;
+    margin-right: 0;
+}
+.vpn-right-sec-inner, .feature.use .col-md-6, .feature.use .title-heading, .nordPricing-inner {
+    text-align: right;
+}
+p.billing-save span {
+    left: 40px;
+    right: inherit;
+}
+.landing-page.ssl .detailed-info .arrow{
+    margin-right: 0;
+    margin-left: 10px;
+}
+.landing-page h1, .landing-page h2, .landing-page h3, .landing-page h4, .landing-page h5, .landing-page h6 {
+    letter-spacing: -0.5px;
+}
+
+.landing-page.ox .feature-block {
+    text-align: right;
+}
+.landing-page.ox .feature-block img {
+    float: right;
+}
+.landing-page.ox .feature-block h6.title, .landing-page.ox .feature-block p {
+    margin-right: 68px;margin-left: inherit;
+}
+.landing-page.sitebuilder .pricing-table-row.col-heading div{float: right;}
+.landing-page.ox .feature-block h6.title {
+    font-size: 15px;
+    line-height: 22px;
+}
+.hero h1 {
+    text-align: right;
+}
+.more-reason-col  h6 {
+    font-size: 16px;
+    line-height: 24px;
+    min-height: 46px;
+}
+.certificate-options.dv div form {
+    width: 100%;
+    display: inline-block;
+}
+.landing-page .certificate-options.dv .currency-selector {
+    float: left;
+}
+.landing-page .currency-selector {
+    float: left;
+}
+.nordvpn-banner .my-auto, .nordvpn-banner :is(.col-md-5, h1) {
+    text-align: right;
+}
+.landing-page.ssl .detailed-info .arrow {
+    float: left;
+}
+@media (max-width: 1399px) {
+   .col-md-5.ssl-certs-right-sec {
+        padding-right: 55px;
+    }
+    .col-md-5.ssl-certs-right-sec:after {
+        right: 0;
+        left: inherit;
+    }
+    .landing-page h6 {
+        font-size: 20px;
+    }
+    .more-reason-col  h6 {
+        font-size: 16px;
+        min-height: 48px;
+    }
+    .landing-page.ox .stand-out ul li {
+        margin-bottom: 0;font-size: 14px;
+    }
+}
+@media (max-width: 1199px) {
+    .faq-content-sec {
+        padding-right: 20px;
+        padding-left:0;
+    }
+    .landing-page .product-options h4 {
+        margin: 0;
+        font-size: 20px;
+    }
+    .landing-page.mail-services .product-options .price strong {
+        font-size: 20px;
+    }
+    .list-style-inner {
+        min-height: 50px;
+        padding: 6px;
+        text-align: right;
+    }
+    .list-style-inner i {
+        margin-right: 0;
+        margin-left: 10px;
+    }
+     .landing-page.ox .stand-out .wrapper {
+        min-height: 325px;
+    }
+    .landing-page.ox .stand-out ul li {
+        margin-bottom: 0;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .landing-page.ox .feature-block h6.title, .landing-page.ox .feature-block p {
+        margin-right: 45px;
+    }
+    .landing-page.ssl ul.ssl-certs-all .col-md-7, .landing-page.ssl ul.ssl-certs-all .col-md-5 {
+        max-width: 100%;
+        flex: 100%;padding-right: 15px;
+    }
+    .col-md-5.ssl-certs-right-sec:after{display: none;}
+    .landing-page h6 {
+        font-size: 18px;
+    }
+   .landing-page.ox .stand-out ul li {
+        letter-spacing: -0.7px;
+    }
+}
+@media (max-width: 767px) {
+    .landing-page.threesixtymonitoring .section-features ul#how-tab {
+        justify-content: center;
+        padding-right: 0;
+    }
+    .commom-faq a.card-link, .landing-page.threesixtymonitoring .section-faq .btn-link, .landing-page.xovinow .faq .card-header .btn, .landing-page.nordvpn .feature.faq .card-header .btn, .sitelock #faq .card-header h4 {
+        padding-right: 0;
+        padding-left: 35px;
+        text-align: right;
+    }
+    .sign-up-inner .col-md-8:after {
+        left: 15px;
+    }
+    .mail-services .col-md-4.text-right.sign-up-inner-right {
+        text-align: right !important;
+        margin-top: 20px;
+        padding-right: 50px;
+    }
+    div#xovinow-screenshots a.left.carousel-control {
+        left: -40px;
+        right: unset !important;
+        margin: 10px 5px 0px !important;
+        top: 10px !important;
+    }
+    .landing-page.xovinow .feature-carousel .carousel-control.right {
+        left: unset;
+        right: 0 !important;
+    }
+    .pricing-marketgo .plan-container {
+        float: unset;
+    }
+    div#xovinow-screenshots {
+        direction: ltr;
+    }
+    .landing-page.ox .stand-out .wrapper {
+        min-height: auto;
+    }
+    .product-options .item p{min-height: inherit;}
+    .feature.icon-new-vpn .col-12 {
+        margin-bottom: 0;
+    }
+}   

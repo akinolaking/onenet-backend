@@ -1,0 +1,186 @@
+/*hostx-child-purple-mode*/
+
+:root{
+
+  --black: #1B1616;
+
+  --white: #fff;
+
+  --grey: #6e6e6e;
+
+  --primary-color: #FC5185;
+
+  --secondary-color:#673DE6;
+
+  --light-secondary-color:#BEA9FF;
+
+  --bg-light-grey:#f3f3f3;
+
+  --bg-dark-grey:#EBEAE9;
+
+  --bg-white:#fff;
+
+  --bg-primary-color:#FC5185;
+
+  --bg-light-primary-color:#F3E7EB;
+
+  --light-primary-color:#F0E6E1;
+
+  --bg-secondary-color:#673DE6;
+
+  --bg-secondary--dark:#2F1C6A;
+
+
+
+  --btn-primary-bgcolor: #FC5185;
+
+  --btn-primary-color: #fff;
+
+  --btn-primary-border:#FC5185;
+
+  --btn-primary-bgcolor-hover:#fff;
+
+  --btn-primary-color-hover: #FC5185;
+
+ 
+
+  --btn-secondary-bgcolor: #673DE6;
+
+  --btn-secondary-color: #fff;
+
+  --btn-secondary-border: #673DE6;
+
+  --btn-secondary-bgcolor-hover:#fff;
+
+  --btn-secondary-color-hover:#673DE6;
+
+}
+
+.hostx-child-purple-mode h2{
+
+    color: var(--text-color);
+
+}
+
+.hostx-child-purple-mode .big-share-banner .big_col, .banner-page-web-hosting .big_col {
+
+    background: url(../images/layoutfive/big-int-banner.png);
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+}
+
+.hostx-child-purple-mode .header.wgs-new-header-top-latest {
+
+    background: var(--bg-secondary-color);
+
+}
+
+
+
+.hostx-child-purple-mode header.header.wgs-new-header-top-latest .right .right_navi li a, .hostx-navigation-selected-mega-menu-latest .right .right_navi li a i {
+
+    color: var(--white);
+
+}
+
+.hostx-child-purple-mode span.label.label-success.wgs-custom-label-cart-hostx{
+
+    color: var(--white);
+
+    border: solid 1px #B85C31;
+
+    background: var(--bg-primary-color);
+
+}
+
+.hostx-child-purple-mode .hx-business-block .hx-business-list li:not(:last-child) {
+
+    border-right: 1px solid #2f325212;
+
+}
+
+.hostx-child-purple-mode .operating-system .operating-table table td img {
+
+    filter: invert(1) brightness(0);
+
+}
+
+.hostx-child-purple-mode .price_list .tag {
+
+    color: var(--black);
+
+}
+
+.hostx-child-purple-mode .ssl-effect-site, .hostx-child-purple-mode .custom-block-2 {
+
+    background-color:  var(--bg-light-primary-color);
+
+}
+
+.hostx-child-purple-mode #filters-row .irs-line-right, .hostx-child-purple-mode #filters-row .irs-line-mid, .hostx-child-purple-mode #filters-row .irs-line-left {
+
+    height: 6px;
+
+    background-position: 100% -30px;
+
+    background: #C7C9D9 !important;
+
+}
+
+.hostx-child-purple-mode .custom_checkbox input:checked+span:after{
+
+    background-image:url(../images/layoutfive/checked-six.svg);
+
+}
+
+.hostx-child-purple-mode .dedicated_servers .right .results_box .col1:first-child, .hostx-child-purple-mode .main-sate .col1, .hostx-child-purple-mode .pricing_section ul#changeBillingCycle li a.active, .hostx-child-purple-mode .pricing_section ul#changeBillingCycle li a:hover, .hostx-child-purple-mode .main-sate .upper-sec-satelite .satelitetop-detail .active, .hostx-child-purple-mode .main-sate .upper-sec-satelite .satelitetop-detail p:hover, .hostx-child-purple-mode .main-sate .upper-sec-satelite .satelitetop-detail p:after{
+
+    background: var(--bg-light-primary-color);
+
+}
+
+.hostx-child-purple-mode #order-standard_cart .domain-selection-options .domain-input-group select {
+
+    background-color: var(--bg-secondary-color);
+
+}
+
+.hostx-child-purple-mode .promo-code-form button.btn.button-style.hx-primary-btn, .hostx-child-purple-mode .remove-promo-btn .btn.btn-default.btn-xs{
+
+    background: var(--bg-secondary--dark);
+
+}
+
+.hostx-child-purple-mode #order-standard_cart label, #order-standard_cart .field, .hostx-child-purple-mode #order-standard_cart .form-control, .hostx-child-purple-mode #order-standard_cart .field, #order-standard_cart .form-control::placeholder{
+
+    color: var(--text-color);
+
+}
+
+/*.hostx-child-purple-mode .hx-list {
+
+    background: #ff6296;
+
+}*/
+
+.hostx-child-purple-mode .cuppon-box h5{background: url(../images/layoutfive/coupon-bg.svg) no-repeat;}
+
+.hostx-child-purple-mode .shoping-cart-background.cart-product-configure, .hostx-child-purple-mode .shoping-cart-background.cart-view-cart, .hostx-child-purple-mode .shoping-cart-background.cart-complete-cart {
+
+    background: url(../images/layoutfive/cart-product-bg.jpg);
+
+}
+
+.register-domain-banner2 {
+
+    background: url(../images/layoutfive/contact-bg.svg);
+
+    background-size: cover;
+
+}
+
+/*hostx-child-purple-mode end*/
+

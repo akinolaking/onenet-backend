@@ -1,0 +1,2090 @@
+/*cookie block responsive start*/
+html {
+  scroll-behavior: smooth;
+}
+@media print {
+    .cc-revoke,
+    .cc-window {
+        display: none
+    }
+}
+@media screen and (max-width: 900px) {
+    .cc-btn {
+        white-space: normal
+    }
+}
+
+@media screen and (max-width: 414px) and (orientation:portrait),
+screen and (max-width:736px) and (orientation:landscape) {
+    .cc-window.cc-top {
+        top: 0
+    }
+    .cc-window.cc-bottom {
+        bottom: 0
+    }
+    .cc-window.cc-banner,
+    .cc-window.cc-floating,
+    .cc-window.cc-left,
+    .cc-window.cc-right {
+        left: 0;
+        right: 0
+    }
+    .cc-window.cc-banner {
+        -ms-flex-direction: column;
+        flex-direction: column
+    }
+    .cc-window.cc-banner .cc-compliance {
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto
+    }
+    .cc-window.cc-floating {
+        max-width: none
+    }
+    .cc-window .cc-message {
+        margin-bottom: 1em
+    }
+    .cc-window.cc-banner {
+        -ms-flex-align: unset;
+        align-items: unset
+    }
+    .cc-window.cc-banner .cc-message {
+        margin-right: 0
+    }
+}
+@media (max-width: 1440px) {
+    .header-is-sticky section#main-body {
+        margin-top: 123px;
+    }
+}
+
+/*cookie block responsive end*/
+
+@media (min-width: 1400px) {
+    .clientarea.wgs-in-cart .container,
+    .container {
+        max-width: 1280px;
+    }
+
+}
+@media (min-width: 1400px) {
+}
+@media (min-width: 1200px) {
+    .testimonials-1 .container{
+            max-width: 1000px;
+    }
+}
+@media (max-width: 1399px) {
+    .cuppon-box h5 strong {
+        font-size: 18px;
+    }
+    .hx_supprt-sec ul {
+        padding: 10px 10px;
+        width: 100%;
+        max-width: 100%;
+    }
+    .hx_supprt-sec {
+        display: block;
+    }
+    .col-sm-5.bandwidth-left img {
+        max-width: 100%;
+    }
+     #modalCancelInvite .modal-dialog, #modalAjax .modal-dialog{
+        transform: inherit !important;
+        margin: 60px auto;
+        top:inherit;
+    }
+    .cuppon-box h5 {
+        background-size: 100% 100% !important;
+    }
+    .b-left-box {
+        min-height: 170px;
+    }
+    .best-vps-server .cols {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 1366px) {
+    .maintenance-inner-text-row .maintenance-inner-img img{
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 1199px) {
+    nav.top-mega-menu-latest-cls .country-dropdown {
+        top: 46px;margin-left: 5px;
+    }
+    h2, .certificate .right h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .left-section-offer .list-inline .list-inline-item {
+        margin: 0 15px 0 0;
+    }
+    .home-page-pricing-section-two .price_group #productList .price_sect {
+        padding: 15px 15px 15px 17px;
+    }
+    .home-page-pricing-section-two .price_group #productList .price_sect {
+        margin: 0px 6px;
+    }
+    .dedicated-server .item {
+        padding: 0 19px;
+    }
+    .dedicated-server .dedicated_box .dedicated_box_col .gol {
+        width: 40px;
+        height: 40px;
+    }
+    .dedicated-server .dedicated_box h5 {
+        font-size: 14px;
+        line-height: 25px;
+    }
+    .dedicated-server .dedicated_box .dedicated_box_col h6 {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .dedicated-server .button-style {
+        padding: 7px 5px;
+        font-size: 12px;
+    }
+    .pricing_section.home-page-pricing-section-two .price_sect h2 {
+        font-size: 20px;
+    }
+    .custom-block-1.p-vertical .block-box {
+        padding: 25px;
+    }
+    .dedicated-server img {
+        width: 100%;
+        max-width: 110px;
+    }
+    .bandwidth_in img,
+    .recent-changes-effact .ssl-effect-site-row .http-image-box img,
+    .ssl-effect-site .ssl-effect-site-row img {
+        width: 100%;
+    }
+    .ssl-certification div[class*=col-] .why-choose-inner-abt {
+        max-height: 320px;
+    }
+    .vps-hosting .vps-hosting-list .left::after {
+        right: 10px;
+    }
+    .customers .owl-prev {
+        left: -40px;
+    }
+    .customers .owl-next {
+        right: -20px;
+    }
+
+    .hx_description ul li, .price_list .price_grid .price_grid_list li {
+        font-size: 14px;
+    }
+    .customers .container {
+        padding: 0 130px;
+    }
+    .tlds .left table tr td:first-child {
+        padding-left: 35px;
+    }
+    .logo-sec img {
+        max-width: 125px;
+    }
+    .top-mega-menu-latest-cls .country-list-menu-btn {
+        margin-left: 10px;
+    }
+    .counrty-inner a {
+        padding: 30px 10px;
+    }
+    .top-mega-menu-latest-cls .drop-down-menu {
+        top: 119px;
+    }
+    .new-hx-tabs div#v-pills-tab {
+        padding: 25px 0 0 0px;
+    }
+    .new-hx-tabs .nav-pills .nav-link-new {
+        padding: 20px 10px 20px 10px;
+        font-size: 14px;
+    }
+    .hx_supprt-sec ul li {
+        margin-bottom: 10px;
+    }
+    .hx-list {
+        max-width: 90%;
+    }
+    .hx-business-list li {
+        padding: 0 20px;
+    }
+    .hx-business-list li:first-child {
+        padding-right: 20px;
+    }
+    .features-col {
+        padding: 10px;
+    }
+    .main-sate .detail-inner-sec {
+        width: 1400px;
+        max-width: 1400px;
+        padding: 20px 15px;
+    }
+    .main-sate .sate-bottom-sec {
+        overflow: auto;
+    }
+    .bandwidth-left {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .bandwidth-left h2 {
+        border-right: none;
+        text-align: left;
+        max-width: 100%;
+    }
+    .bandwidth-left p {
+        text-align: left;
+        padding: 0;
+        width: 100%;
+    }
+    .cuppon-box h5 {
+        padding: 20px;
+    }
+    .cuppon-box h5 strong {
+        font-size: 14px;
+    }
+    .cp-bx p {
+        font-size: 13px;
+        line-height: normal;
+    }
+    body .price_list .price_grid h4 {
+        font-size: 16px;
+    }
+    .footcaptionhfirstbox h6 {
+        font-size: 15px;
+    }
+    .cloud_hosting .left .hosting_list ul li {
+        font-size: 11px;
+    }
+    .hx-banner-list p {
+        font-size: 13px;
+    }
+    .pricing_section .price_group .owl-item .price_sect ul.list li, .home-page-pricing-section-two .descSecondBox li {
+        text-align: left;
+        font-size: 14px;
+    }
+    .home-page-pricing-section-two .home_two_price-discount {
+        padding: 4px 4px;
+    }
+    .simple-steps .row:after{
+        top: 15%;
+        width: 60%;
+    }
+    .simple-steps .simple-col img {
+        max-width: 140px;
+    }
+    .cuppon-box {
+        margin: 20px 0px 0 auto;
+        width: 100%;
+    }
+    .sp-offer-deals {
+        display: block;
+    }
+    .custom-block-5 .col-md-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+     .hx_web-hosting-sec .slick-dots {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        padding: 0 !important;
+    }
+    .hx_web-hosting-sec .slick-dots button {
+        font-size: 0;
+        border: transparent;
+        margin: 0px 1px;
+        background: var(--green);
+    }
+    .features-option2.features-option4 .features-col {
+        padding: 20px;
+    }
+    .features-option2.features-option4 .features-col h6 {
+        font-size: 18px;
+    }
+    .price_list .price_grid{
+        margin-bottom: 20px;
+    }
+    .why-hostx .row {
+        align-items: unset;
+    }
+    .why-hostx-left img {
+        width: 100%;
+    }
+    .offers-banner .list-inline-item b{
+        width: 83px;
+    }
+    .ofr-sub-head{
+        font-size: 15px;
+    }
+    .offer-image-section img {
+        max-width: 490px;
+    }
+    .count-discount-box{
+        max-width: 145px;
+        min-width: 145px;
+        padding: 20px;
+        top: 48px;
+        left: -1px
+    }
+    .dedicated-server .dedicated_box{
+        padding: 35px 20px;
+    }
+    .why-choose-inner-abt p {
+        font-size: 14px;
+    }
+    .ssl-certification div[class*=col-] .why-choose-inner-abt{
+        padding: 25px 20px;
+    }
+    .testimonials-1 .container{
+        max-width: 900px;
+    }
+    .best-vps-server .cols {
+        padding: 20px;
+        min-height: 260px;
+    }
+    .b-9-box{
+        padding: 25px 20px;
+    }
+    .b-9-box p {
+        margin: 8px 0px;
+        font-size: 14px;
+    }
+    .dedicated-server h3 {
+        font-size: 30px;
+    }
+    .register-form-latest-v{
+        padding: 30px 30px;
+    }
+    .hosting_feature .hosting_sections .hosting_box span {
+        min-width: 40px;
+        height: 40px;
+        width: 40px;
+    }
+    .hosting_feature .hosting_sections .hosting_box img {
+        width: 28px;
+    }
+    .hosting_feature .hosting_sections .hosting_box h6 {
+        font-size: 18px;
+        line-height: 26px;
+        margin: 8px 0px;
+    }
+    .see-our-story-about .about-metus-row img {
+        width: 100%;
+    }
+    .see-our-story-about .scnd-frst-row h5:after {
+        right: 32px;
+    }
+    .abt-frst-row h4{
+        margin: 0px auto 30px;
+    }
+    .register-domain-banner2{
+            background-position: center !important;
+    }
+    .hx_web-hosting-sec .slick-arrow {
+        display: none !important;
+    }
+    .great-service .great-service-row .maintenance-inner-img{
+        padding: 20px;
+    }
+}
+@media (min-width: 991px) and (max-width: 1600px) {
+	.banner {
+		background-position: center;
+	}
+}
+@media (min-width: 991px) and (max-width: 1440px) {
+    .header-is-sticky .hostx-pages-sections, .header-is-sticky section#main-body {
+        margin-top: 64px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+ .hx_webhost-pdng {padding: 30px 20px;}
+ .hx_webhost-list li span i {padding-right: 6px;}
+ .hx_webhost-list li {font-size: 14px;}
+ .hx_wb-hostplans h3 {font-size: 18px;}
+ .hx_wb-hostprice .txt.value {font-size: 22px;}
+ .hx_plans {padding: 26px 10px;}
+}
+@media (max-width: 991px) and (min-width: 768px) {
+    .banner {background-position: center!important;    }
+    .price_list .col-sm-3,
+    .features-option2.features-option4 .col-sm-4,
+    .features-option2 .col-sm-3,
+    .hosting_sections .col-sm-4,
+    .why-choose .col-sm-3,
+    .custom-block-4 .col-md-3, .best-vps-server.p-vertical .col-md-4{flex: 0 0 50%;max-width: 50%;}
+    .price_list .price_grid{margin-bottom: 30px;}
+    .pricing_section .price_group #productList .price_sect{width: 100%;max-width: 48%;}
+    .hx_webhost-pdng{padding: 15px;}
+    .how-it-works-offers-inner h6{font-size: 17px;}
+    .hx_webhost-list li span i{padding-right: 6px;font-size: 10px;}
+    .hx_webhost-list li {font-size: 13px;padding-left: 7px;padding-right: 7px;}
+    .hx_web-host-heading h3 {font-size: 17px;}
+    .hx-bnr-list p {padding-left: 10px;}
+    .choose_section .tab li a {font-size: 16px;padding: 20px 20px;}
+    .choose_section .tab{margin-top: 10px;}
+    .p-vertical{padding: 45px 0;}
+    .cloud_hosting .cloud_hosting_in{padding: 30px 0px;}
+    .cloud_hosting_in .right .col-sm-6{max-width: 100%;flex: 100%;padding: 0px 15px !important;}
+    .cloud_hosting .right .hosting_box{margin: 10px auto;}
+    .cloud_hosting .left .hosting_list ul li {height: 52px;}
+    .cloud_hosting .left h2{font-size: 26px;}
+    .price_list.heading-sec .title-heading p {max-width: 70%; margin: 0 auto;}
+    .features-option2.features-option4 .features-col, .block-box.blck-4, .b-left-box {padding: 20px;}
+    .dedicated-server .dedicated_box {padding: 25px 10px;}
+    .dedicated-server h3 {font-size: 25px;}
+    .block-box-cont h5{font-size: 20px;}
+    .img-blc {max-width: 50px;}
+    .figure-icon {margin: 0 10px 0 0;}
+    .figure-icon img {max-width: 30px;}
+    .block-box.block-5{padding: 20px 15px;}
+    .block-box.block-5 .block-box-cont {padding-left: 0px;}
+    .why-hostx-right {
+        padding-left: 15px;
+        padding-top: 30px;
+    }
+    .choose-us-row-two .col-sm-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .b-support-img img {
+        width: 100%;
+    }
+    .tabs-sec .nav-item {
+        max-width: 180px;
+    }
+    .block-5-btm {
+        flex-wrap: wrap;
+    }
+    .custom-block-5 .col-md-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .business-row .left span {
+        font-size: 20px;
+    }
+    .b-left-box {
+        min-height: 210px;
+    }
+    .custom-block-2 .col-md-4, .custom-block-2 .col-md-8 {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .tabs-sec th span {
+        font-size: 20px;
+    }
+    .cloud_hosting .right .hosting_box {
+        min-height: 180px;
+        padding: 12px 25px;
+    }
+     .dedicated_servers .right .results_box .col1:first-child h2 {font-size: 18px;}
+    .dedicated_servers .right .results_box .col2 {padding-left: 15px;}
+    .dedicated_servers li {font-size: 12px;margin-bottom: 5px;}
+        .dedicated_servers .col_in h5 { font-size: 16px; line-height: normal;}
+}
+@media (max-width: 991px) {
+    h1 {
+        font-size: 45px;
+        line-height: 65px;
+    }
+    .pricing_section .price_group .owl-item .price_sect ul.price_grid_list {
+        padding: 10px 0px 8px 18px;
+    }
+    .header .right .right_navi li:first-child {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 49px;
+    }
+    .header .right .right_navi li:first-child span {
+        display: none;
+    }
+    .header .right .right_navi li a i {
+        color: var(--primary-color) !important;
+    }
+    .best-vps-server .cols h3 {
+        margin: 15px 0 0 0;
+        font-size: 15px;
+    }
+    
+    .get_started_inner:after{
+        width: 200px;
+        right: 0;
+        opacity: .05;
+    }
+    .get_started_inner:before{
+        width: 300px;
+        left: 0;
+        opacity: .05;
+    }
+    .hx_supprt-sec {width: 100%;display: inline-block;}
+    .hx_supprt-sec ul {max-width: 100%;padding: 20px 0 0;}
+    .hx_supprt-sec ul li {width: 46%;font-size: 13px;}
+    .home-page-pricing-section-two .price_group #productList .price_sect {
+        margin: 0px 6px 15px;
+    }
+    .whmcs-client-area-pages-section .table tr td #confirmModal4 .btn {
+        margin: 2px 5px;
+    }
+    .build-sites-row img {
+        width: 100%;
+        max-width: 270px;
+    }
+    .why-choose .choose-col {
+        margin-bottom: 25px;
+        min-height: 310px;
+    }
+    .ssl-certification div[class*=col-] .why-choose-inner-abt {
+        padding: 34px 20px;
+    }
+     .maintenance-inner-img img {
+        max-width: 310px;
+        margin: 15px auto 30px;
+        display: block;
+    }
+    .vps-hosting .vps-hosting-list .left img {
+        width: 100%;
+        max-width: 100px;
+    }
+    .hx-list {
+        max-width: 100%;
+    }
+    .best-vps-server br {
+        display: none;
+    }
+    .how-it-works-offers-inner span {
+        font-size: 25px;
+        width: 40px;
+        height: 40px;
+    }
+    .how-it-works-offers-inner {
+        padding: 15px;
+    }
+    .new-hx-tabs .nav-pills .nav-link-new {
+        /* padding: 15px 5px 15px 0; */
+        font-size: 13px;
+    }
+    .new-hx-tabs .nav-pills .nav-link-new span {
+        padding-right: 5px;
+    }
+    .cloud_hosting {
+        padding: 50px 0px;
+    }
+    .dedicated_servers .col-sm-9,
+    .dedicated_servers .col-sm-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .dedicated_servers .col1{
+        flex: 0 0 50%;
+    }
+    .col1.last-column-area .col_in {
+        text-align: left;
+        margin-top: 10px;
+    }
+    .dedicated_servers .col1.text-center {
+        flex: 0 0 100%;
+    }
+    .results_box {
+        border: 1px solid #d7d7d7;
+    }
+    .banner .right img {
+        width: 100%;
+    }
+    ul.nav.navbar-nav,
+    ul#hostx-drop-down-menus {
+        display: none;
+    }
+    ul.nav.drop-default-mega-menu-mobile {
+        display: block;
+        padding: 0px;
+        float: left;
+        width: 100%;
+    }
+    ul.nav.drop-default-mega-menu-mobile li.nav__item {
+        padding: 22px 30px;
+        border-bottom: 1px solid #f5f5f5;
+        background-color: #fff;
+    }
+    ul.nav.drop-default-mega-menu-mobile a.nav__link.sub__close {
+        font-size: 16px;
+        line-height: 29px;
+        display: flex !important;
+        align-items: center;
+    }
+    ul.nav.drop-default-mega-menu-mobile a.nav__link.sub__close img {
+        margin-right: 6px;
+        height: 14px;
+    }
+    ul.nav.drop-default-mega-menu-mobile .nav__sub.is-active {
+        padding: 0px;
+    }
+    .all-language-list-mobile,
+    .all-currency-list-mobile {
+        display: none;
+        position: absolute;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        font-size: 14px;
+    }
+    .language-currency-section-area {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 22px 10px;
+        background: var(--bg-secondary-color);
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 99999;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .body-open-drop-mega-menu .language-currency-section-area {
+        opacity: 1;
+        visibility: visible;
+    }
+    span.selected-currency,
+    .selected-language {
+        font-size: 14px;
+        color: #fff;
+    }
+    .selected-language {
+        padding: 7px;
+        background: var(--bg-secondary--dark);
+        margin-right: 20px;
+    }
+    .selected-language img {
+        margin-right: 6px;
+    }
+    .mobile-menu-language-list-open .language-section-part .all-language-list-mobile {
+        display: block;
+    }
+    a.dropdown-item.flag-list-mob {
+        float: left !important;
+        width: 33%;
+        clear: unset;
+        padding: 14px 20px;
+    }
+    .all-language-list-mobile {
+        height: 100vh;
+    }
+    .hostx-navigation-selected-mega-menu-old .navbar-toggleable-md.wgs-new-mega-menu,
+    .hostx-nav-drop-down-style .inner-area-drop-down-menu,
+    .main-sec,
+    .menu-style-4 .container {
+        justify-content: center;
+    }
+    ul.top-header-list li,
+    .menu-style-4 ul.navbar-nav-four.ms-auto-2.mb-lg-0 {
+        display: none;
+    }
+    nav.navbar.navbar-style-four {
+        padding: 15.5px 0px;
+        border-bottom: 1px solid #f1f1f1;
+    }
+    .main-sec {
+        padding: 19.5px 0px;
+    }
+    .country-sec {
+        display: none;
+    }
+    .right-sec {
+        display: none;
+    }
+    .left-sec {
+        max-width: 28%;
+        justify-content: center;
+    }
+    .button-area-mobile-menu a {
+        display: block;
+        text-align: center;
+        padding: 12px;
+        margin-top: 10px;
+        background: var(--btn-secondary-bgcolor);
+        color: var(--btn-secondary-color);
+        font-size: 16px;
+    }
+    .button-area-mobile-menu {
+        float: left;
+        width: 100%;
+        padding: 0px 30px;
+    }
+    .button-area-mobile-menu .register-button-mobile {
+        background: var(--btn-primary-bgcolor);
+    }
+    span.close-language-mobile {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        background: #f5f5f5;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0px auto 50px;
+        border-radius: 50px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .mobile-menu-global-hostx {
+        float: left;
+        width: 100%;
+        position: fixed;
+        top: 73px;
+        z-index: 9999;
+        background: #ffff;
+        height: 100vh;
+        left: -100%;
+        transition: all 0.5s;
+    }
+    .header .right .right_navi li {
+        display: none;
+    }
+    .bar1,
+    .bar2,
+    .bar3 {
+        background: #606367;
+        height: 2px;
+        width: 20px;
+        margin-bottom: 3px;
+    }
+    .mobile-menu-toggle-drop {
+        position: absolute;
+        left: 32px;
+        top: 30px;
+        z-index: 999;
+    }
+    .body-open-drop-mega-menu .mobile-menu-global-hostx {
+        left: 0;
+    }
+    .mobile-menu-global-hostx .mobile-menu-below-section-area {
+        display: block;
+    }
+    .body-open-drop-mega-menu {
+        overflow: hidden;
+    }
+    .mobile-menu-scrollable-area {
+        height: calc(100% - 150px);
+        overflow-y: auto;
+    }
+    .mobile-menu-currency-list-open .all-currency-list-mobile {
+        display: block;
+        width: 100%;
+        margin-left: auto;
+        bottom: 70px;
+        margin: 0 auto;
+        border-radius: 0;
+        padding: 18px 0;
+        background: #ffffff;
+        box-shadow: 0px 0px 10px #00000024;
+    }
+    .all-currency-list-mobile .dropdown-item {
+        padding: 0.4rem 1.5rem;
+    }
+    .register-form-latest-v .register-left-view,
+    .register-form-latest-v .register-right-view {
+        max-width: 100%;
+        border-right: none;
+        padding: 0;
+    }
+    .button-area-mobile-menu {
+        display: block;
+    }
+    .header .right .right_navi li.cart-view-list,
+    li.latest-cart.cart-view-list.top-header-list-item {
+        display: block;
+        position: absolute;
+        top: 16px;
+        z-index: 999;
+        right: 20px;
+    }
+    .hostx-nav-drop-down-style .header .logo {
+        padding-top: 0;
+        display: block;
+        width: auto;
+    }
+    .hostx-nav-drop-down-style .right.float-right {
+        width: auto;
+    }
+    .hostx-nav-drop-down-style .inner-area-drop-down-menu {
+        padding: 16px 0px;
+    }
+    .custom-block-1.p-vertical .block-box {
+        min-height: 100%;
+    }
+    .dedicated-server .button-style {
+        padding: 7px 3px;
+        font-size: 10px;
+    }
+    .dedicated-server .dedicated_box .dedicated_box_col:last-child h6 {
+        font-size: 20px;
+    }
+    .dedicated-server .dedicated_box .dedicated_box_col h5 {
+        font-size: 15px;
+    }
+    .row.hx-tab-inner{
+        margin-top: -60px;
+    }
+    .hx_supprt-sec ul {
+        padding: 30px 0 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .hx-banner-business-img img {
+        max-width: 500px;
+        margin: 20px auto 0px;
+        display: block;
+    }
+    .offers-banner-inner .col-md-6,
+    .why-hostx .col-sm-6,
+    .maintenance-inner-text-row .col-sm-6,
+    .tlds.all-tld-below .col-sm-4, .col-md-3.tab-leftwidth, .col-md-9.tab-rightwidth {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .why-hostx-left img {
+        width: auto;
+        max-width: 500px;
+    }
+    .dedicated-server img {
+        width: 100%;
+        max-width: 100px;
+    }
+    .hx-list>.col-md-3:nth-child(2) {
+        border-right-width: 0px;
+    }
+    .cuppon-box h5{
+        height: 168px;
+        background-position: top;
+        background-size: 100%;
+    }
+    .c-code{
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+    body .price_list .price_grid h4 {
+        font-size: 20px;
+    }
+    .toll-free .toll-free-col h5, .toll-free .toll-free-col h6 {
+        font-size: 14px;
+    }
+    .toll-free-col {
+        padding: 15px;
+    }
+    .toll-free-col-content {
+        padding-left: 20px;
+    }
+    .custom-block-1 .block-box-cont h6 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .custom-block-1.p-vertical .block-box {
+        padding: 15px 15px 15px;
+    }
+    .about-why-choose-us.ssl-certification .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .why-choose-inner-abt {
+        margin-top: 25px;
+    }
+    .banner-bottombar .cols {
+        font-size: 16px;
+    }
+    .b-9-box h6 {
+        margin-top: 0;
+        font-size: 20px;
+    }
+    .b-9-box {
+        padding: 20px 20px;
+        min-height: 225px;
+    }
+    .customers .container {
+        padding: 0 70px;
+    }
+    .ssl-effect-site .ssl-effect-site-row img {
+        max-width: 400px;
+        display: block;
+        margin: 20px auto 0px;
+    }
+    .testimonials-1 .container {
+        max-width: 640px;
+    }
+    .hosting_feature .hosting_sections .hosting_box h6 {
+        font-size: 16px;
+    }
+    .vps-hosting .vps-hosting-list .left::after {
+        right: 0px;
+    }
+    .hosting_feature .hosting_sections .hosting_box {
+        padding: 15px;
+    }
+    .footer .footer_col ul.footer_links li {
+        margin-bottom: 10px;
+    }
+    .footer .footer_col ul.footer_links li a {
+        font-size: 13px;
+    }
+    .footer_col h4 {
+        font-size: 16px;
+    }
+    footer.footer {
+        margin: 0;
+        padding: 50px 0 50px;
+    }
+    .price_list .col-sm-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .count-discount-box {
+        left: 7px;
+        top: 110px;
+    }
+    div#filters-row {
+        position: unset;
+    }
+    .cpanel_banner.about-us-banner img {
+        width: 100%;
+    }
+    .see-our-story-about .scnd-frst-row h5:after{
+        display: none;
+    }
+    .great-service .great-service-row .maintenance-inner-img {
+        height: auto;
+        background-color: var(--white);
+        padding: 10px;
+    }
+     .secure_col .secure-box .secure-box1 img {
+        width: 26px;
+    }
+    .secure_col .secure-box h6 {
+        font-size: 22px;
+    }
+    .cloud_hosting .cloud_hosting_in .row {
+        align-items: center;
+    }
+	.row.about-metus-row .col-sm-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+	.see-our-story-about .about-metus-row img {
+        margin-bottom: 15px;
+    }
+	.why-choose-inner-abt{
+		min-height: 300px;
+		padding: 30px 15px;
+	}
+	.about-why-choose-us .choose-us-row-two .why-choose-inner-abt h5{
+		font-size: 18px;
+		line-height: 25px;
+	}
+    .install .left img {
+        width: 100%;
+    }
+    .domain-search-section-mobile {
+        display: block;
+        padding: 22px 30px;
+    }
+    .domain-search-section-mobile h2{
+        font-size: 20px;
+    }
+    .home-page-pricing-style-1 .slick-prev.slick-arrow:after {
+        content: "\f053";
+        font-family: fontawesome;
+        font-family: "Font Awesome 6 Pro";
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        color: var(--secondary-color)
+    }
+    .home-page-pricing-style-1 .slick-arrow {
+        font-size: 0;
+        background: var(--bg-light-primary-color);
+        border: transparent;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        z-index: 9999;
+    }
+    .home-page-pricing-style-1 .slick-prev.slick-arrow {
+        left: -2px;
+    }
+    .home-page-pricing-style-1 .slick-next.slick-arrow:after {
+                content: "\f054";
+        font-family: "Font Awesome 6 Pro";
+        font-weight: 500;
+        color: var(--secondary-color);
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .home-page-pricing-style-1 .slick-next.slick-arrow {
+        right: -6px;
+    }
+    .home-page-pricing-style-1 ul.slick-dots {
+        display: none !important;
+    }
+    .header-is-sticky.whmcs-user-loggedout #main-body:has(.register_page.default-hostx-login-register) {
+        display: block;
+        height: auto;
+    }
+    .register_page .left, .right.right-section-default-login-register {
+        float: unset;
+        width: 100%;
+    }
+    .right.right-section-default-login-register {
+        margin-bottom: 40px;
+    }
+    .whmcs-templatefile-clientregister .register_page.default-hostx-login-register {
+        display: block;
+    }
+    .header-is-sticky section#main-body {
+        margin-top: 72px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+    .features-option2.features-option3 .col-sm-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .features-option2.tabs-sec-feature .col-sm-5, .features-option2.tabs-sec-feature .col-sm-7, .ssl-effect-site .ssl-effect-site-row .col-sm-6{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .certificate .left img {
+        max-width: 70%;
+        margin: auto;
+        display: block;
+    }
+    .operating-table {
+        overflow: auto;
+    }
+    .operating-system .operating-table table {
+        width: 800px;
+    }
+    .offer-image-section img{
+        margin: auto;
+    }
+    .new_hx-banner .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 5px 0px;
+    }
+    .dedicated_servers .col-md-3, .dedicated_servers .col-md-9 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .dedicated_servers .col_in h5 {
+        font-size: 18px;
+    }
+    .great-service .col-sm-3 {
+        flex: 0 0 33%;
+        max-width: 33%;
+    }
+    .great-service .maintenance-inner-img img {
+        max-width: 120px;
+        margin: 0px auto 0px;
+    }
+    .great-service .list-inline {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 767px) {
+     h1 {font-size: 26px;line-height: 36px;}
+     h2 {font-size: 24px;line-height: 34px !important;}
+     h5, .media-body h5, h6 {font-size: 18px;}
+     .right-header-client-area a.telephone-client-area {display: none;}
+     .left-logo-image {padding-top: 20px;padding-bottom: 20px;}
+     div#containerNewUserSignup .col-sm-6:nth-child(odd) {padding-right: 15px;}
+     .register-page-submit-button .btn-primary{max-width: 100%;min-width: 100%;}
+     .join-mail-list-register-form h3.card-title {max-width: 72%;}
+     .iti-mobile .intl-tel-input.iti-container {left: 0;right: 0%;margin: 0 auto;max-width: 94%;}
+    .big-share-banner h3 {font-size: 22px;}
+    .banner .big_col h1 span{font-size: 26px;}
+    .new-hx-tabs .nav-pills .nav-link-new{margin-bottom: 0;}
+    .hx_webhost-pdng {padding: 20px 10px;}
+    .hx_web-host-heading h3, .dedicated-server h3 {font-size: 20px;}
+    .hx_webhost-list li {font-size: 14px;margin-bottom: 7px;max-width: 100%;padding: 0;}
+    .hx-tablesearchbar .input-group-append{width: 100%;}
+    .hx-tablesearchbar .form-control {width: 50%;}
+    .hx-tablesearchbar .input-group { height: auto;padding: 10px;}
+    .new-hx-tabs div#v-pills-tab {padding:0px;}
+    .new-hx-tabs .nav-pills .nav-link-new {padding: 16px 10px 16px 10px;}
+    .mouse-leave-div .col-sm-4 {margin-bottom: 15px;}
+    #tbl-new-block-tld td.hx-table-extensions, #tbl-new-block-tld td.hx-table-price, 
+    #tbl-new-block-tld td.hx-table-noprice {font-size: 12px;vertical-align: middle;}
+    .hx-tbl-data.pt-4 p {font-size: 12px;}
+    #tbl-new-block-tld .add-to-cart-btn {font-size: 12px;padding: 8px 8px;}
+    .media img.mr-4 { width: 50px;height: 50px;padding: 10px;}
+    .media:not(:last-child):after {left: 25px;}
+    .dedicated-server .item {padding: 0 30px;}
+    .dedicated-server .dedicated_box .dedicated_box_col h6 {line-height: 20px;padding: 4px 0;}
+    .block-box {padding: 20px;}
+    .img-blc img {height: 36px;}
+    .build-sites .build-sites-right h3 {font-size: 22px;margin-top: 25px;}
+    .cuppon-box h5 {display: inline-block;max-width: 279px;width: 100%;    height: 220px;}
+    .figure-icon {margin: 0 15px 0 0;}
+    .features-option3 .features-col {padding: 20px;}
+    .features-option2.features-option4 .features-col .img-box {width: 56px;height: 56px;margin: 0 auto;}
+    .hx-business-list li:first-child {padding-left: 10px;}
+    .hx-banner-list p{font-size: 14px;}
+    .block-box.block-5 .block-box-cont, .best-vps-server .cols, .choose-col.color-white{min-height: auto;}
+    .tabs-sec .compare-table-section .nav-link {font-size: 14px;padding: 22px 15px;}
+    .compare-table-section .nav-tabs{flex-wrap: nowrap;}
+    .bandwidth-left h2 {max-width: 100%;text-align: center;}
+    .bandwidth-left p {padding-left: 0; text-align: center;}
+    .customers .data_box {max-width: 80%;margin: 20px auto 0;font-size: 16px;line-height: 26px;}
+    .simple-steps .row:after{display: none;}
+    .testimonials-1 .container{border: none;}
+    .vps-hosting .vps-hosting-list .col-sm-8{padding:0;}
+    .vps-hosting .vps-hosting-list .left {align-items: center;display: flex;}
+    .http-image-box { margin-top: 25px;}
+    .technical-specifications .row .col-sm-6 {max-width: 100%;flex: 100%;}
+    .home-page-pricing-section-two .dicount_home_two_price {max-width: 225px;}
+    .hx-list .col-md-3 {max-width: 50%;margin-bottom: 12px;}
+    .new_hx-business-banner .hx-business-list li:nth-of-type(2) {margin-right: 10px;}
+    .choose_section .tab li a {font-size: 14px;padding: 20px 20px;}
+    .how-it-works-offers-inner {margin: 5px 0;}
+    .banner-bottombar .cols img {margin: 0 12px 0 0;}
+    .hosting_feature p br{display: none;}
+    .cloud_hosting .right .hosting_box {max-width: 100%;}
+    .business-row{background-image: none;background-color: #0f0f0f;}
+    #tbl-new-block-tld td, #tbl-new-block-tld th{padding: 10px;}
+    .why-choose .col-sm-3,
+    .hosting_sections .col-sm-4, .row.how-it-works-offers-row-two .col-sm-4{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .offers-banner .list-inline-item b {
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+    }
+    .count-discount-box {
+        max-width: 115px;
+        min-width: 115px;
+        top: 58%;
+        left: 29px;
+    }
+    .offers-banner-inner .col-md-6,
+    .why-hostx .col-sm-6,
+    .maintenance-inner-text-row .col-sm-6,
+    .tlds.all-tld-below .col-sm-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .pricing_section .price_group #productList .price_sect,
+    .pricing_section .price_group #productList_SSL .price_sect {
+        max-width: 100%;
+    }
+   /* .wgsTestimonial .carousel-item {
+        width: 340px !important;
+    }*/
+    .testimonials-1 .slick-track {
+        display: block;
+    }
+    .wgsTestimonial.carousel-inner {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .sp-offer {
+        display: block;
+        width: 100%;
+        padding: 20px 30px;
+    }
+    .cuppon-box {
+        width: 100%;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    .cp-bx {
+        max-width: 100%;
+    }
+    .cp-bx p {
+        width: 100%;
+        max-width: 250px;
+    }
+    .sp-offer:before {
+        left: 0;
+        margin: auto;
+        top: -10px;
+    }
+    .sp-offer-deals {
+        position: relative;
+        flex-wrap: wrap;
+    }
+    .sp-offer {
+        position: unset;
+    }
+    .sp-offer:after {
+        bottom: -10px;
+        left: 0;
+        margin: auto;
+    }
+    .free-trial-col {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .free-trial-col-left {
+        margin-bottom: 30px;
+    }
+    .free-trial-col-right {
+        padding-left: 0;
+        text-align: center;
+    }
+    #featureTabBlock table {
+        width: 600px;
+    }
+    #featureTabBlock {
+        overflow: auto;
+    }
+    .ssl-effect-site img {
+        margin-bottom: 25px;
+    }
+    .vps-hosting .vps-hosting-list .left::after {
+        display: none;
+    }
+    .hosting_box_right_Sec h6 {
+        margin-top: 0;
+    }
+    .bandwidth_in img,
+    .recent-changes-effact .ssl-effect-site-row .http-image-box img,
+    .ssl-effect-site .ssl-effect-site-row img {
+        width: 100%;
+        max-width: 300px;
+        margin: 0px auto 20px;
+        display: block;
+    }
+    .banner-bottombar .cols {
+        margin-bottom: 15px;
+        font-size: 12px;
+    }
+    .bandwidth_in .bandwidth-left {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .best-vps-server h2.text-center {
+        margin-bottom: 10px !important;
+        width: 100%;
+        max-width: 450px;
+        margin: auto;
+        line-height: 25px;
+    }
+    .toll-free-col {
+        margin-bottom: 30px;
+    }
+    .business-row:before {
+        content: "";
+        background: #00000057;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+    .business-row p {
+        color: var(--white);
+    }
+    .business-row h2 {
+        color: var(--white);
+    }
+    .count-discount-box h3 {
+        font-size: 50px;
+    }
+    .count-discount-box h3 .precent {
+        top: 0px;
+        right: -5px;
+    }
+    .price_list .price_grid {
+        margin-bottom: 20px;
+    }
+    .operating-table {
+        overflow: auto;
+    }
+    .operating-system .operating-table table {
+        width: 700px;
+    }
+    .offer-image-section {
+        margin-top: 15px;
+    }
+    .price_list.heading-sec .title-heading {
+        padding: 0px 15px;
+    }
+    .price_list .price_grid .price_box:after {
+        display: none;
+    }
+    .cloud_hosting .cloud_hosting_in .col-sm-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .cloud_hosting .right .hosting_box {
+        margin-top: 15px;
+    }
+    .cloud_hosting .cloud_hosting_in .col-sm-6.pl-0 {
+        padding-left: 15px !important;
+    }
+    a.sata_button {
+        display: block;
+        font-size: 14px;
+    }
+    #billingcycle-tabs-block,
+    ul#changeBillingCycle {
+        display: block;
+        width: 100%;
+    }
+    .main-sate .detail-inner-sec {
+        width: 900px;
+        max-width: 900px;
+    }
+    .banner .big_col {
+        min-width: 100%;
+        display: block;
+    }
+    .banner .big_col .big_col_in {
+        float: unset;
+    }
+    .banner .big_col h1 {
+        font-size: 22px;
+        line-height: 27px;
+        width: 100%;
+        float: unset;
+        padding: 5px 15px 16px;
+    }
+    .banner .banner_bottom ul li,
+    .banner .banner_bottom ul {
+        width: 100%;
+    }
+    .banner .banner_bottom ul li {min-height: 44px;margin: 7px 0px 0;}
+    ul.nav.drop-default-mega-menu-mobile .nav__link {
+        color: #242424;
+    }
+    .customers .container {
+        padding: 0px;
+    }
+    .ssl-effect-site .ssl-effect-site-row .col-sm-7 {
+        padding-right: 15px;
+        max-width: 100%;
+    }
+    .footer .footer_col ul.socil_icon {
+        padding-left: 0;
+    }
+    .customers .owl-buttons {
+        display: none;
+    }
+    .customers h2 {
+        padding: 0px 15px;
+    }
+    .mobile-menu-global-hostx {
+        top: 68px;
+    }
+    .why-hostx-left img {
+        width: 100%;
+    }
+    .p-vertical {
+        padding: 60px 0;
+    }
+    .tab-leftwidth,
+    .tab-rightwidth {
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+    .row.hx-tab-inner {
+        margin-top: -50px;
+    }
+    .custom-block-1.p-vertical .row {
+        row-gap: 20px;
+    }
+    .tabs-sec th span {
+        font-size: 20px;
+    }
+    .hx-business-list li {
+        padding: 0 10px;
+    }
+    .hx-business-banner .hx-bnr-list p {
+        font-size: 12px;
+    }
+    .hx-business-banner .hx-business-list {
+        padding: 13px 0px!important;
+    }
+    .row.ssl-effect-site-row {
+        flex-direction: column;
+    }
+    .row.ssl-effect-site-row .col-sm-6 {
+        max-width: 100%;
+    }
+    .testimonials-1 .container {
+        max-width: 700px;
+    }
+    .certificate .right {
+        padding-left: 0;
+    }
+    .ofr-sub-head{
+        padding: 4px 10px;
+        font-size: 12px;
+    }
+    .left-section-offer .list-inline .list-inline-item:not(:last-child)::after{
+        top: 1%;
+        right: -13px;
+        font-size: 35px;
+    }
+    .count-discount-box {
+        top: 28%;
+        left: 5px;
+    }
+    .custom-block-5 .col-md-4, .about-why-choose-us.ssl-certification .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .hx-tablesearchbar .input-group-append button {
+        margin-right: 0;
+    }
+    .business-block .hx-box img {
+        width: 35px;
+    }
+    .price_list .col-sm-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .b-left-box, .block-box.block-5, .b-9-box, .technical-specifications .row .col-sm-6, .best-vps-server .cols, .why-choose .choose-col {
+        margin: 0 0 15px;
+    }
+    .hosting_sections .col-sm-4.mt-3, .vps-hosting .vps-hosting-list {
+        margin-top: 15px !important;
+    }
+    .features-col {
+        margin: 10px 0;
+    }
+    .banner .col-sm-6, .col-sm-5.bandwidth-left, .col-sm-7.bandwidth-left {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .banner .right img {
+        max-width: 400px;
+        width: 100%;
+        margin: 20px auto 0px;
+        display: block;
+    }
+    .card-body.ryt-contact-sec {
+        padding: 20px 0px 0px;
+        overflow: unset;
+    }
+    .size-product-des h3 {
+        font-size: 20px;
+    }
+    div#filters-row {
+        position: unset;
+    }
+    .dedicated_servers .right .results_box .col1:first-child, .dedicated_servers .col1, .dedicated_servers .right .results_box .col2, .col1.last-column-area{
+        width: 100%;
+        max-width: 100%;
+        flex:0 0 100%;
+    }
+    .dedicated_servers .col1.last-column-area {
+        border-bottom: transparent;
+    }
+    .dedicated_servers .col1.col2 {
+        padding-left: 0 !important;
+        margin: 15px 0px;
+    }
+    .col1.last-column-area .col_in {
+        text-align: left;
+    }
+    .shoping-cart-background {
+        background-image: none!important;
+        background-color: var(--bg-secondary-color) !important;
+    }
+    .frequbntly_asked .question_answers .question {
+        width: 90%;
+    }
+    .offers-banner-inner{text-align: center !important;}
+    #offerStyleOne .pop-inner-box h4{
+            font-size: 13px;
+    }
+    #offerStyleOne .pop-inner-box h6{
+        font-size: 18px;
+        padding: 2px 7px;
+    }
+    .inner {
+        padding: 10px;
+    }
+    #offerStyleOne .modal-body {
+        text-align: center;
+        padding: 30px;
+    }
+    #offerStyleOne .pop-inner-box h2 {
+        font-size: 28px;
+    }
+    #offerStyleOne .close {
+        top: 2px;
+        right: 6px;
+    }
+    .tabs-sec #featureTabBlock {
+        padding: 15px;
+    }
+    .button-style {
+        padding: 12.5px 13px;
+        font-size: 13px;
+    }
+    a.live-btn {
+        margin-right: 5px;
+    }
+    .custom-block-2 .c-support-btn {
+        display: flex;
+    }
+    .cpanel_banner.about-us-banner .right {
+        margin-top: 50px;
+    }
+    .website-rating .choose-us-row .rating-box .ratinginner{
+        top: 150px;
+        height: auto;
+        position: unset;
+        left: 50%;
+        margin-left: 0;
+        margin-top: 110px;
+    }
+    .great-service {
+        padding: 260px 0 80px;
+    }
+    .maintenance-inner-text-row .col-sm-6:first-child {
+        order: unset;
+    }
+    .website-rating .choose-us-row .rating-box .line-1sh, .website-rating .choose-us-row .rating-box .line-2sh {
+        display: none;
+    }
+    .great-service .great-service-row .maintenance-inner-img {
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+    .great-service img {
+        max-width: 130px;
+        margin: auto;
+        display: block;
+    }
+    .md-editor>.btn-toolbar .btn-group {
+        margin-bottom: 4px;
+    }
+    #productList .owl-controls .owl-prev{
+        width: 10px;
+    }
+    .cloud_hosting .right .hosting_box {
+        min-height: auto;
+    }
+    .features-option2.features-option4 .features-col, .home-page-pricing-section-two .descSecondBox, .hx_testimonial-wrapper h6, .ssl-certification div[class*=col-] .why-choose-inner-abt, .technical-specifications .cols, .b-9-box{
+        height: auto;
+        min-height: auto;
+    }
+    .new_hx-banner{
+        background-image: none;
+    }
+    .ssl-certification div[class*=col-] .why-choose-inner-abt {
+        max-height: unset;
+    }
+    .features-option2.include_all_feature_sec .features-col {
+        border-bottom: 1px solid var(--border-color);
+    }
+    .card.hostx-bulk-domain-page .button-style {
+        padding: 12.5px 7px;
+        font-size: 12px;
+    }
+    .inner-term-domain-page .inner_term_container {
+        padding: 45px 15px;
+    }
+    .secure_col .secure-box .secure-box1 img {
+        width: 20px;
+    }
+    .secure_col .secure-box h6 {
+        font-size: 18px;
+    }
+   
+    .modal {
+        width: 98%;
+        padding: 0px !important;
+        right: 0;
+        margin: 0 auto;
+    }
+    .domain-search-frm{padding: 10px;}
+    ul.footer_links {
+        display: none;
+    }
+    ul.footer_links.active {
+        display: block;
+        animation: slide-down 1.3s ease-out;
+    }
+    .footer_col h4:after {
+        content: "\f078";
+        font-family: 'Font Awesome 6 Pro';
+        font-weight: 500;
+        float: right;
+        transition: all 0.3s;
+    }
+    .footer_col h4.active:after {
+        transform: rotate(177deg);
+    }
+    @keyframes slide-down{
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+    .banner.p-vertical.banner-page-web-hosting {
+        background-position: center !important;
+    }
+    #mainfooterhostx .footer_col h4::after {
+        display: none;
+    }
+    .copyright {
+        font-size: 12px;
+    }
+    .right-section-default-login-register .form-input-area-login {
+        display: block;
+    }
+    .register_page .min_box {
+        padding: 30px;
+    }
+    .right-section-default-login-register .rember-me-login {
+        margin-top: 9px;
+    }
+    .register_page .right>h1 {
+        padding: 30px 0 0 0px;
+        font-size: 25px;
+    }
+    .right-section-default-login-register .form-group {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+    .right.right-section-default-login-register.register-page-hostx-right {
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+    .whmcs-templatefile-clientregister .register_page .right .min_box {
+        padding: 0;
+        box-shadow: none;
+    }
+}
+@media (min-width:576px) and (max-width:767px) {
+    .features-option2.include_all_feature_sec .col-sm-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+@media (max-width: 575px) {
+    .mobile-menu-toggle-drop {left: 15px;}
+    .header .right .right_navi li.cart-view-list, li.latest-cart.cart-view-list.top-header-list-item {right: 15px;}
+    h4 {font-size: 20px;}
+    
+    .ssl-effect-site .ssl-effect-site-row ul li {width: 100%;}
+    .banner .left h6 {font-size: 15px;}
+    .choose_section .tab li {width: 100%; text-align: center;}
+    .choose_section .tab li a {font-size: 16px;}
+    .domain-block-search {display: inherit;width: 100%;}
+    .domain-block-search .btn {width: 100%;}
+    .domain-block-home .col-md-7 {max-width: 100%;}
+    .hosting_feature .hosting_sections .hosting_box span {width: 42px;height: 42px;}
+    .hosting_feature .hosting_sections .hosting_box img {width: 28px;}
+    .hosting_feature .hosting_sections .hosting_box h6 {margin-top: 8px;}
+    .toll-free-col img {width: 46px;}
+    .vps-hosting .vps-hosting-list .col-sm-8 {padding: 20px 0 0;}
+    #tbl-new-block-tld td.hx-table-extensions, #tbl-new-block-tld td.hx-table-price {padding-left: 10px;}
+    #tbl-new-block-tld td.hx-table-noprice {padding-right: 10px;}
+    .technical-specifications .cols h3 {
+        font-size: 18px;
+    }
+    .tabs-sec td {
+        font-size: 14px;
+    }
+    .why-choose-inner-abt {
+        margin-top: 15px;
+    }
+    .cuppon-box {
+        flex-wrap: wrap;
+    }
+    .dedicated-server .owl-next {
+        right: 21px;
+    }
+    .dedicated-server p br {
+        display: none;
+    }
+    .build-sites-row img {
+        margin-bottom: 15px;
+    }
+    .how-it-works-offers-inner {
+        margin-bottom: 15px;
+    }
+    .why-hostx-right {
+        padding-left: 15px;
+        margin-top: 20px;
+    }
+    .home-page-pricing-section-two .price_group #productList .price_sect {
+        margin: 0px 0px 15px;
+    }
+    .count-discount-box {
+        padding: 14px 10px 14px 0;
+        max-width: 75px;
+        min-width: 75px;
+        top: 65%;
+        left: 13px;
+    }
+    .offer-image-section img {
+        max-width: 80%;
+    }
+    .count-discount-box h3 .precent {
+        width: 24px;
+        height: 24px;
+        font-size: 14px;
+    }
+    .count-discount-box h3 {
+        font-size: 30px;
+    }
+    .count-discount-box h3 stroke-text {
+        font-size: 20px;
+        line-height: 22px;
+    }
+    .left-section-offer .list-inline .list-inline-item {
+        margin: 0 0px 0 8px;
+    }
+    .offers-banner .list-inline-item b {
+        width: 54px;
+        height: 54px;
+        line-height: 54px;
+        font-size: 20px;
+    }
+    .offers-banner .list-inline-item span {
+        font-size: 13px;
+    }
+    #pricing {
+        padding: 0;
+    }
+    .free-trial-col {
+        padding: 20px;
+    }
+    .get_started_inner {
+        padding: 30px 10px;
+    }
+    .p-vertical {
+        padding: 35px 0;
+    }
+    .new-hx-tabs .col-12 {
+        padding: 0;
+    }
+    .new-hx-tabs .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    /*.hx-table-content button.btn.btn-secondary {
+        font-size: 0;
+        width: auto;
+    }*/
+    .hx_supprt-sec ul {width: 100%;max-width: 100%;}
+    .hx_supprt-sec ul li {width: 100%; text-align: left; padding: 8px 0; display: flex;margin: 0;}
+    .hx_supprt-sec {
+        border-top-left-radius: 0;
+        flex-direction: column;
+        align-items: baseline;
+        gap: 10px;
+    }
+    .hx-table-content {
+        padding: 15px 5px 0px;
+    }
+    .hx-table-content button.btn.btn-secondary i {
+        font-size: 14px;
+    }
+    .hx_supprt-sec .hx_hide-btn {
+        left: 10px;
+    }
+    .hx-tablesearchbar .input-group-text {
+        font-size: 13px;
+        padding-left: 10px !important;
+    }
+    .hx-tablesearchbar .form-control {
+        font-size: 13px;
+    }
+    .business-content p {
+        font-size: 13px;
+        line-height: 21px;
+    }
+    .hx-bnr-list,
+    .new_hx-banner .hx-banner-list {
+        display: block;
+        text-align: center;
+    }
+    .business-block .hx-box img,
+    .hx-banner-list .hx-box img {
+        margin: 0px auto 5px;
+    }
+    .hx-business-banner .hx-bnr-list p,
+    .hx-banner-list p {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    .business-content h5, .hx-banner-content h5, .hx-banner-business-content span {
+        margin-top: 5px;
+        font-size: 14px;
+        line-height: 24px;
+        padding: 5px 15px;
+    }
+    .hx-banner-content h5 {padding: 2px 16px;}
+    .hx-business-banner .business-content h5::before {
+        top: 5px;
+    }
+    .hx-business-banner.p-vertical {
+        padding-bottom: 190px;
+    }
+    .hx-banner-content h5::before {
+        border-top: 14px solid #480a0c;
+        top: 5px;
+    }
+    .domain .search_box .search_input {
+        width: calc(100% - 34px);float: right;
+    }
+    .domain .search_box .submit {
+        min-width: 100%;
+        font-size: 14px;
+        float: none;
+    }
+    .domain .search_box {
+        padding: 10px;
+    }
+    .domain .search_box img {
+        left: 12px;
+        top: 26px;
+    }
+    .frequbntly_asked .question_answers>span {
+        font-size: 15px;
+    }
+    .frequbntly_asked .question_answers {
+        padding: 15px 15px 15px 0px;
+    }
+    .frequbntly_asked .question_answers .question {
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .question_answers .collapse.show {
+        line-height: 20px;
+        font-size: 13px;
+    }
+    .frequbntly_asked .question_answers .question span img,
+    .frequbntly_asked .question_answers .question span svg {
+        top: 19px;
+    }
+    .hx-list>.col-md-3:nth-child(2) {
+        border: transparent;
+    }
+    .hx-bnr-list p {
+        padding-left: 0;
+        text-align: center;
+        line-height: 18px;
+        font-size: 12px;
+    }
+    .hx-business-block .hx-business-list li {
+        margin-right: 0;
+        width: 100%;
+        max-width: 33%;
+        padding: 0 10px
+    }
+    .hx-business-list {
+        padding-top: 30px;
+        width: 100%;
+    }
+    .hx-business-list li:first-child {
+        padding-right: 10px;
+    }
+    .hx-business-list li {
+        padding: 0 10px;
+    }
+   
+    .dedicated-server .owl-wrapper-outer .dedicated_box .dedicated_box_col {
+        width: 100% !important;
+        text-align: center;
+    }
+    .dedicated-server .dedicated_box .dedicated_box_col h6 {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .dedicated-server .dedicated_box .dedicated_box_col .gol {
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .dedicated-server .dedicated_box {
+        padding: 26px 0 0px;
+    }
+    .dedicated-server .button-style {
+        margin-bottom: 0;
+        width: 100%;
+    }
+    .packages {
+        font-size: 14px;
+    }
+    .perfect-domain {
+        padding: 35px 15px;
+    }
+    .accordion-container-main.faq .card-header {
+        padding: 20px 15px;
+        padding-right: 35px;
+    }
+    .accordion-container-main.faq .card-header h5 {
+        font-size: 14px;line-height: 24px;
+    }
+    .certificate .right h2 {
+        font-size: 25px;
+    }
+    .cuppon-box .cp-bx {
+        max-width: 100%;
+    }
+    .row.hx-tab-inner {
+        margin-top: -160px;
+    }
+    .vps-hosting .vps-hosting-list .left,
+    .vps-hosting .vps-hosting-list .col-sm-8 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .cloud_hosting .left .hosting_list ul {
+        width: 100%;
+    }
+    .hx-business-list li:first-child{
+        padding-right: 15px;
+    }
+    .hx-business-block .hx-business-list li, .hx-business-list li{
+        max-width: 33%;
+        padding: 0 10px;
+        margin: 0 !important;
+    }
+    .hx-business-banner .hx-bnr-list p {
+        font-size: 11px;
+    }
+    .cloud_hosting .right .hosting_box{
+        max-width: 100%;
+    }
+    .cloud_hosting .cloud_hosting_in{
+        padding: 20px 0px 0px;
+    }
+    .col-md-6.left-section-offer {
+        padding: 0;
+    }
+    .count-discount-box{
+        top: 27%;
+        left: 42px;
+    }
+    .get_started_inner:before, .get_started_inner:after{
+        display: none;
+    }
+    .build-sites-row img {
+        width: auto;
+    }
+    .dedicated-server img {
+        max-width: fit-content;
+    }
+    .toll-free .toll-free-col h5, .toll-free .toll-free-col h6 {
+        font-size: 16px;
+    }
+    .toll-free-col-content {
+        padding-left: 20px;
+    }
+    .plan-detail table {
+        width: 600px;
+    }
+    .plan-detail {
+        overflow: auto;
+    }
+    .custom-block-2 h6{
+        font-size: 15px;
+    }
+    .choose_section .tab{
+        margin: 40px 15px 0px;
+    }
+    .inner-sec-category-product .group-content-section h5 {
+        font-size: 15px;
+    }
+    .product-category-list-hostx .slick-slide {
+        padding: 15px 0px !important;
+    }
+    .secure_col .secure-box .secure-box1{
+        padding: 10px 10px;
+    }
+    .secure_col .secure-box .secure-box1 {display: inline;text-align: center;}
+    .secure_col .secure-box h6 {
+        margin: 5px 0 !important;display: block;line-height: 24px;
+    }
+    .cloud_hosting .right .hosting_box p br{display: none;}
+    #measure .button-style {
+        padding: 12.5px 15px;
+        font-size: 12px;
+    }
+    #productList .owl-next, #productList_SSL .owl-next {
+        right: 8px;
+    }
+    #modalGeneratePassword .modal-dialog{
+        max-width: 350px;
+        width: 100%;
+    }
+    .hx-business-banner .list-inline-item.business-brdr-right {
+        padding: 0 20px;
+    }
+    .new-hx-tabs table#tbl-new-block-tld {
+        width: 550px;
+    }
+    .new-hx-tabs .hx-tbl-data.pt-4 {
+        overflow: auto;
+    }
+    .home-page-pricing-style-1 .slick-prev.slick-arrow {
+        left: 4px;
+    }
+    .home-page-pricing-style-1 .slick-next.slick-arrow {
+        right: 7px;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .business-block .hx-business-list .list-inline-item {
+        margin: 0;
+        width: calc(100%/3);
+    }
+    #tbl-new-block-tld .add-to-cart-btn {
+        font-size: 10px;
+        padding: 8px 5px;white-space: nowrap;
+    }
+    #tbl-new-block-tld td.hx-table-extensions, #tbl-new-block-tld td.hx-table-price {
+        padding-left: 6px;
+        padding-right: 4px;
+    }
+    .hx-business-block .hx-business-list li, .hx-business-list li {
+        padding: 0 6px;
+    }
+    .hx-banner-list p {
+        font-size: 13px;
+    }
+    .hx-list {
+        padding: 15px 8px 15px;
+    }
+    .button-style {
+        padding: 12.5px 15px;
+    }
+    .g-recaptcha{transform: scale(0.8);}
+
+}

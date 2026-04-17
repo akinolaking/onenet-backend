@@ -1,0 +1,60 @@
+<header class="header wgs-new-header-top-latest">
+	<div class="container">
+		<div class="left-logo-mobile-section">
+            {if !empty($hostx_theme_settings.header_logo)}
+                <a href="{if $hostx_theme_settings.header_logo_link neq ''}{$hostx_theme_settings.header_logo_link}{else}{$systemurl}{/if}" {if $hostx_theme_settings.enable_header_target eq 'on'}target="_blank"{/if}  class="logo">
+                    <img src="{$hostx_theme_settings.header_logo}" alt="{$companyname}" {if $hostx_theme_settings.header_logo_height neq ''}height="{$hostx_theme_settings.header_logo_height}"{/if} {if $hostx_theme_settings.header_logo_width neq ''}width="{$hostx_theme_settings.header_logo_width}" {/if}>
+                </a>
+            {else}
+                <a href="{if $hostx_theme_settings.header_logo_link neq ''}{$hostx_theme_settings.header_logo_link}{else}{$systemurl}{/if}" class="logo logo-text" {if $hostx_theme_settings.enable_header_target eq 'on'}target="_blank"{/if}>{$companyname}</a>
+            {/if}
+		</div>	
+		<div class="right float-right">
+			<ul class="nav right_navi"> 
+				{if $hostx_theme_settings.phone_display eq 'yes'}
+					{if empty($hostx_theme_settings.phone)}
+						<li><a href="tel:+{$LANG.headerphone}" class="telephoneanchor"><i class="fas fa-phone"></i><span>{$LANG.headerphone}</span></a></li>
+					{else}
+						<li><a href="tel:+{$hostx_theme_settings.country_calling_code_phone}{$hostx_theme_settings.phone}" class="telephoneanchor"><i class="fas fa-phone"></i> <span>(+{$hostx_theme_settings.country_calling_code_phone}) {$hostx_theme_settings.phone}</span></a></li>
+					{/if}
+				{/if}
+				{if $languagechangeenabled && count($locales) > 1}
+					<li class="languageDiv"><a href="#" data-toggle="dropdown"><span id="sLanguage"><img src="{$WEB_ROOT}/templates/{$template}/images/blank.gif" class="flag flag-{$hxselectedlanguage.flagcode}" alt="{$hxselectedlanguage.localisedName}" /> {$hxselectedlanguage.localisedName}</span> <i class="fas fa-sort-desc"></i></a>
+						<div class="dropdown-menu flag_drop" id="languageList"> 
+							{foreach $hxlanguagesflags as $locale}
+								<a class="dropdown-item" href="{$currentpagelinkback}language={$locale.language}"><img src="{$WEB_ROOT}/templates/{$template}/images/blank.gif" class="flag flag-{$locale.flagcode}" alt="{$locale.localisedName}" /> {$locale.localisedName}</a>
+							{/foreach}
+						</div>
+					</li> 
+				{/if}
+				{if !$loggedin && $currencies && ($hostx_theme_settings.disable_multi_crrency) == 'on' }
+					<li class="currencyDiv"><a href="#" data-toggle="dropdown"><span id="sCurrency">{$hxselectedcurrency.prefix} {$hxselectedcurrency.code}</span> <i class="fas fa-sort-desc"></i></a>
+						<div class="dropdown-menu" id="currencyList"> 
+							{foreach from=$currencies item=listcurr}
+								<a class="dropdown-item" href="{$currentpagelinkback}currency={$listcurr.id}">{$listcurr.prefix} {$listcurr.code}</a>
+							{/foreach}
+						</div>
+					</li>
+				{/if}
+				{if !$loggedin}
+					<li class="hover mblshow"><a href="{$WEB_ROOT}/clientarea.php"><i class="fas fa-user"></i></a></li>
+				{else}
+					<li class="hover mblshow"><a href="{$WEB_ROOT}/clientarea.php"><i class="fas fa-user"></i></a></li>
+					<li class="hover mblshow user-logout-list"><a href="{$WEB_ROOT}/logout.php"><i class="fas fa-sign-out"></i></a></li>
+				{/if}
+				<li class="hover cart-view-list"><a href="{$WEB_ROOT}/cart.php?a=view">
+					<i class="fas fa-shopping-cart"></i>
+					<span id="cartItemCount" class="label label-success wgs-custom-label-cart-hostx {if $cartitemcount > 0}itemincart{/if}">{$cartitemcount}</span>
+				</a></li>
+				{if $adminMasqueradingAsClient || $adminLoggedIn}
+					<li class="admin-logout-list">
+						<a href="{$WEB_ROOT}/logout.php?returntoadmin=1" class="hover mblshow" data-toggle="tooltip" data-placement="bottom" title="{if $adminMasqueradingAsClient}{$LANG.adminmasqueradingasclient} {$LANG.logoutandreturntoadminarea}{else}{$LANG.adminloggedin} {$LANG.returntoadminarea}{/if}">
+							<i class="fal fa-sign-out"></i>
+						</a>
+					</li>
+				{/if}					 
+			</ul>
+			<div class="mobile-menu-toggle-drop"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div>
+		</div> 
+	</div>
+</header>

@@ -1,0 +1,11 @@
+name: "Hostx-Child"
+description: "Hostx Child Theme"
+author: "Whmcs Global Services"
+config:
+  parent: twenty-one
+properties:
+  serverSidePagination: false # Defines client side will handle pagination
+provides:
+  bootstrap: 4.5.3
+  jquery: 1.12.4
+  fontawesome: 5.10.1

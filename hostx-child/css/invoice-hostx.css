@@ -1,0 +1,9 @@
+@media (max-width: 767px){
+        .invoice-container{
+                padding: 35px 35px 50px 35px;
+                width: 100%;
+                max-width: 100%;
+                border: transparent;
+                margin:0;
+        }   
+}

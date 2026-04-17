@@ -1,0 +1,225 @@
+
+
+/*.hostx-child-dark-green-mode*/
+
+:root{
+
+  --black: #1B1616;
+
+  --white: #fff;
+
+  --grey: #6e6e6e;
+
+  --primary-color: #00A63F;
+
+  --secondary-color:#2B2B2B;
+
+  --bg-light-grey:#f3f3f3;
+
+  --bg-dark-grey:#EBEAE9;
+
+  --bg-white:#fff;
+
+  --bg-primary-color:#00A63F;
+
+  --bg-light-primary-color:#DAF2E3;
+
+  --light-primary-color:#F0E6E1;
+
+  --bg-secondary-color:#2B2B2B;
+
+  --bg-secondary--dark:#1D1D1D;
+
+
+
+  --btn-primary-bgcolor: #00A63F;
+
+  --btn-primary-color: #fff;
+
+  --btn-primary-border: #00A63F;
+
+  --btn-primary-bgcolor-hover:#fff;
+
+  --btn-primary-color-hover: #00A63F;
+
+ 
+
+  --btn-secondary-bgcolor: #2B2B2B;
+
+  --btn-secondary-color: #fff;
+
+  --btn-secondary-border: #2B2B2B;
+
+  --btn-secondary-bgcolor-hover:#fff;
+
+  --btn-secondary-color-hover:#2B2B2B;
+
+}
+.hostx-child-dark-green-mode .domain .top h2 {
+    color: #fff;
+}
+.hostx-child-dark-green-mode h2{
+
+    color: var(--text-color);
+
+}
+
+.hostx-child-dark-green-mode .big-share-banner .big_col, .banner-page-web-hosting .big_col {
+
+    background: url(../images/layoutfour/big-int-banner.png);
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+}
+
+.hostx-child-dark-green-mode .header.wgs-new-header-top-latest {
+
+    background: var(--bg-secondary-color);
+
+}
+
+
+
+.hostx-child-dark-green-mode header.header.wgs-new-header-top-latest .right .right_navi li a, .hostx-navigation-selected-mega-menu-latest .right .right_navi li a i {
+
+    color: var(--white);
+
+}
+
+.hostx-child-dark-green-mode span.label.label-success.wgs-custom-label-cart-hostx{
+
+    color: var(--white);
+
+    border: solid 1px #B85C31;
+
+    background: var(--bg-primary-color);
+
+}
+
+.hostx-child-dark-green-mode .hx-business-block .hx-business-list li:not(:last-child) {
+
+    border-right: 1px solid #2f325212;
+
+}
+
+.hostx-child-dark-green-mode .operating-system .operating-table table td img {
+
+    filter: invert(1) brightness(0);
+
+}
+
+.hostx-child-dark-green-mode .price_list .tag {
+
+    color: var(--black);
+
+}
+
+.hostx-child-dark-green-mode .ssl-effect-site, .hostx-child-dark-green-mode .custom-block-2 {
+
+    background-color:  var(--bg-light-primary-color);
+
+}
+
+.hostx-child-dark-green-mode #filters-row .irs-line-right,
+
+.hostx-child-dark-green-mode #filters-row .irs-line-mid,
+
+.hostx-child-dark-green-mode #filters-row .irs-line-left {
+
+    height: 6px;
+
+    background-position: 100% -30px;
+
+    background: #C7C9D9 !important;
+
+}
+
+.hostx-child-dark-green-mode .custom_checkbox input:checked+span:after{
+
+    background-image:url(../images/layoutfour/checked-six.svg);
+
+}
+
+.hostx-child-dark-green-mode .dedicated_servers .right .results_box .col1:first-child, .hostx-child-dark-green-mode .main-sate .col1, .hostx-child-dark-green-mode .pricing_section ul#changeBillingCycle li a.active, .hostx-child-dark-green-mode .pricing_section ul#changeBillingCycle li a:hover, .hostx-child-dark-green-mode .main-sate .upper-sec-satelite .satelitetop-detail .active, .hostx-child-dark-green-mode .main-sate .upper-sec-satelite .satelitetop-detail p:hover, .hostx-child-dark-green-mode .main-sate .upper-sec-satelite .satelitetop-detail p:after{
+
+    background: var(--bg-light-primary-color);
+
+}
+
+.hostx-child-dark-green-mode #order-standard_cart .domain-selection-options .domain-input-group select {
+
+    background-color: var(--bg-secondary-color);
+
+}
+
+.hostx-child-dark-green-mode .promo-code-form button.btn.button-style.hx-primary-btn, .hostx-child-dark-green-mode .remove-promo-btn .btn.btn-default.btn-xs{
+
+    background: var(--bg-secondary--dark);
+
+}
+
+.hostx-child-dark-green-mode #order-standard_cart label, #order-standard_cart .field, .hostx-child-dark-green-mode #order-standard_cart .form-control, .hostx-child-dark-green-mode #order-standard_cart .field, #order-standard_cart .form-control::placeholder{
+
+    color: var(--text-color);
+
+}
+
+/*.hostx-child-dark-green-mode .hx-list {background: ##2f9c37;}*/
+
+.hostx-child-dark-green-mode .offers-banner .list-inline-item span, .hostx-child-dark-green-mode .left-section-offer .list-inline .list-inline-item:not(:last-child)::after{color: var(--white);}
+
+.hostx-child-dark-green-mode .offers-banner .list-inline-item b{border: 2px solid var(--bg-secondary--dark)}
+
+.hostx-child-dark-green-mode .cuppon-box h5{background: url(../images/layoutfour/coupon-bg.svg) no-repeat;}
+
+.hostx-child-dark-green-mode .completeSolution a, .hostx-child-dark-green-mode .completeSolution, .hostx-child-dark-green-mode .hx-banner-list p, .hostx-child-dark-green-mode .hx-banner-list strong{color:var(--white);}
+
+.hostx-child-dark-green-mode .shoping-cart-background.cart-product-configure, .hostx-child-dark-green-mode .shoping-cart-background.cart-view-cart, .hostx-child-dark-green-mode .shoping-cart-background.cart-complete-cart {
+
+    background: url(../images/layoutfour/cart-product-bg.jpg);
+
+}
+
+.register-domain-banner2 {
+
+    background: url(../images/layoutfour/contact-bg.svg);
+
+    background-size: cover;
+
+}
+
+.hostx-child-dark-green-mode .landing-page.codeguard .irs-line{
+
+    background: var(--bg-light-primary-color)
+
+}
+
+.hostx-child-dark-green-mode .world-data-inner {
+
+    background: var(--bg-primary-color);
+
+}
+
+.hostx-child-dark-green-mode .landing-page.nordvpn .feature.world .world-data p:first-of-type, .hostx-child-dark-green-mode .world-data-inner p{
+
+    color: var(--white) !important;
+
+}
+
+.hostx-child-dark-green-mode  .world-data-inner img {
+
+    margin-top: 15px;
+
+    filter: brightness(0) invert(1);
+
+}
+
+.whmcs-templatefile-account-contacts-manage .btn.button-style.hx-black-btn {
+
+    background: #db3838;
+
+    color: #ffffff;
+
+}
