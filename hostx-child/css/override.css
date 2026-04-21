@@ -56,45 +56,144 @@ body.header-is-sticky section#main-body {
   margin-top: 0 !important;
 }
 
-/* ── BREADCRUMB — replace hero image with main-site gradient ─────── */
+/* ── PAGE BANNERS + BREADCRUMB — main-site gradient across all pages ─ */
+/*
+   Gradient matches screenshot: rich purple-blue (#8080f0) → light (#c8c8fb)
+   → pale (#eeeeff) → white. Applied to every HostX banner/page-header
+   variant so products, domain, cart, and all inner pages are consistent.
+*/
+--on-banner-gradient: linear-gradient(
+  180deg,
+  #9090f5 0%,
+  #b8b8f8 28%,
+  #d8d8fd 52%,
+  #eeeeff 72%,
+  #ffffff 100%
+);
+
+/* Core page banner used on web hosting, domain, VPS, SSL, cart, etc. */
+.banner.p-vertical,
+.banner.p-vertical[class*="banner-page-"],
+/* Breadcrumb nav bar (inner pages) */
 .master-breadcrumb,
+nav.master-breadcrumb,
 .hostx-bread-crumb-data,
-.hostx-breadcrumb-area,
-.breadcrumb-area,
+nav.hostx-bread-crumb-data,
+/* Domain page banners */
+.register-domain-banner,
+.register-domain-banner2,
+.term-domain_banner,
+/* About / contact / TOS page banners */
+.cpanel_banner.about-us-banner,
+.about-us-banner,
+/* Store / market-connect page heroes */
+.hero.sitebuilder-banner,
+.hero.nordvpn-banner,
+.hero.ssl-banner,
+.heros.sitebuilder-banner,
+/* Business / other banner variants */
+.hx-business-banner,
+.new_hx-banner,
+.new_hx-business-banner,
+/* Offers / promo banners */
+.offers-banner,
+.video-banner,
+/* Generic fall-back for any remaining banner */
+div.banner,
 .page-title-area,
 .inner-banner,
-nav.hostx-bread-crumb-data {
-  background: linear-gradient(180deg, #eeeeff 0%, #f0f0fa 45%, #ffffff 100%) !important;
+.hostx-breadcrumb-area,
+.breadcrumb-area {
+  background: linear-gradient(
+    180deg,
+    #9090f5 0%,
+    #b8b8f8 28%,
+    #d8d8fd 52%,
+    #eeeeff 72%,
+    #ffffff 100%
+  ) !important;
   background-image: none !important;
-  background-attachment: unset !important;
-  border-bottom: 1px solid var(--on-border-l) !important;
-  padding: 28px 0 20px !important;
+  background-color: transparent !important;
+  background-attachment: scroll !important;
   box-shadow: none !important;
 }
-/* Ensure all text inside breadcrumb is dark (readable on light bg) */
+
+/* Breadcrumb-specific padding */
+.master-breadcrumb,
+.hostx-bread-crumb-data {
+  border-bottom: 1px solid rgba(104,104,243,0.1) !important;
+  padding: 28px 0 20px !important;
+}
+
+/* Kill pseudo-element overlays used by HostX over banners */
+.banner::before,
+.banner::after,
+.banner.p-vertical::before,
+.banner.p-vertical::after,
+.hostx-bread-crumb-data::before,
+.hostx-bread-crumb-data::after,
+.register-domain-banner::before,
+.register-domain-banner::after,
+.hero.sitebuilder-banner::before,
+.hero.sitebuilder-banner::after,
+.breadcrumb-area::before,
+.breadcrumb-area::after {
+  display: none !important;
+  background: none !important;
+}
+
+/* All text inside any banner → dark ink / theme-blue, no contrasting white */
+.banner.p-vertical *,
 .master-breadcrumb *,
-.hostx-bread-crumb-data * {
+.hostx-bread-crumb-data *,
+.register-domain-banner *,
+.hero.sitebuilder-banner *,
+.hx-business-banner *,
+.new_hx-banner *,
+.cpanel_banner * {
   color: var(--on-text) !important;
   text-shadow: none !important;
 }
+
+/* Links and accents inside banners → theme blue */
+.banner.p-vertical a,
 .master-breadcrumb a,
-.hostx-bread-crumb-data a {
+.hostx-bread-crumb-data a,
+.register-domain-banner a,
+.hero.sitebuilder-banner a {
   color: var(--on-primary) !important;
 }
+.banner.p-vertical a:hover,
 .master-breadcrumb a:hover,
 .hostx-bread-crumb-data a:hover {
   color: var(--on-primary-dark) !important;
 }
+
+/* Breadcrumb active item → muted */
 .master-breadcrumb .breadcrumb-item.active,
-.hostx-bread-crumb-data .breadcrumb-item.active {
+.hostx-bread-crumb-data .breadcrumb-item.active,
+.breadcrumb-item.active {
   color: var(--on-muted) !important;
 }
-/* Remove any pseudo-element overlay / background-image from child elements */
-.hostx-bread-crumb-data::before,
-.hostx-bread-crumb-data::after,
-.breadcrumb-area::before,
-.breadcrumb-area::after {
-  display: none !important;
+
+/* Headings inside banners → ink */
+.banner.p-vertical h1,
+.banner.p-vertical h2,
+.banner.p-vertical h3,
+.banner.p-vertical h4,
+.register-domain-banner h1,
+.register-domain-banner h2,
+.hero.sitebuilder-banner h1,
+.hero.sitebuilder-banner h2 {
+  color: var(--on-text) !important;
+}
+
+/* Keep CTA buttons inside banners styled properly — override text: inherit */
+.banner.p-vertical .btn-primary,
+.banner.p-vertical .hx-primary-btn,
+.register-domain-banner .btn-primary,
+.hero.sitebuilder-banner .btn-primary {
+  color: #ffffff !important;
 }
 
 /* ── GLOBAL BUTTONS — pill shape matching main site ─────────────── */
