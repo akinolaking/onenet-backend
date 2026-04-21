@@ -71,6 +71,13 @@ body.header-is-sticky section#main-body {
   #ffffff 100%
 );
 
+/* Cart / shopping pages — HostX uses .shoping-cart-background (sic) */
+.shoping-cart-background,
+.shoping-cart-background.cart-product-list,
+.shoping-cart-background.cart-product-configure,
+.shoping-cart-background.cart-view-cart,
+.shoping-cart-background.cart-checkout-cart,
+.shoping-cart-background.cart-complete-cart,
 /* Core page banner used on web hosting, domain, VPS, SSL, cart, etc. */
 .banner.p-vertical,
 .banner.p-vertical[class*="banner-page-"],
@@ -143,6 +150,7 @@ div.banner,
 }
 
 /* All text inside any banner → dark ink / theme-blue, no contrasting white */
+.shoping-cart-background *,
 .banner.p-vertical *,
 .master-breadcrumb *,
 .hostx-bread-crumb-data *,
