@@ -1,0 +1,7 @@
+.git_onenet/
+.git_standalone/
+.gitignore_standalone
+hostx-child/.git_onenet/
+hostx-child/.git_standalone/
+hostx-child/.gitignore_standalone
+*.zip
