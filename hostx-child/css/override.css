@@ -118,24 +118,37 @@ div.banner,
   padding: 20px 0 16px !important;
 }
 
-/* Cart background — control height so gradient isn't wasted on a big block */
+/* .shoping-cart-background is an EMPTY div — needs explicit height or it collapses */
 .shoping-cart-background {
-  height: auto !important;
-  min-height: 0 !important;
+  height: 140px !important;
+  min-height: 140px !important;
   padding: 0 !important;
 }
 
 /* ── MOBILE — compact breadcrumb / banner ───────────────────────── */
 @media (max-width: 767px) {
+  /* Reapply gradient on mobile (in case hostx-responsive overwrites it) */
   .shoping-cart-background,
   .shoping-cart-background.cart-product-list,
   .shoping-cart-background.cart-product-configure,
   .shoping-cart-background.cart-view-cart,
   .shoping-cart-background.cart-checkout-cart,
-  .shoping-cart-background.cart-complete-cart,
+  .shoping-cart-background.cart-complete-cart {
+    background: linear-gradient(
+      180deg,
+      #9090f5 0%,
+      #b8b8f8 28%,
+      #d8d8fd 52%,
+      #eeeeff 72%,
+      #ffffff 100%
+    ) !important;
+    background-image: none !important;
+    background-color: transparent !important;
+    height: 80px !important;
+    min-height: 80px !important;
+  }
+  /* Banner sections that have content inside — keep padding, just reduce it */
   .banner.p-vertical,
-  .master-breadcrumb,
-  .hostx-bread-crumb-data,
   .register-domain-banner,
   .register-domain-banner2,
   .hero.sitebuilder-banner,
@@ -152,9 +165,13 @@ div.banner,
     ) !important;
     background-image: none !important;
     background-color: transparent !important;
-    height: auto !important;
-    min-height: 0 !important;
-    padding: 16px 0 12px !important;
+    padding-top: 36px !important;
+    padding-bottom: 32px !important;
+  }
+  /* Mobile breadcrumb */
+  .master-breadcrumb,
+  .hostx-bread-crumb-data {
+    padding: 12px 0 10px !important;
   }
   /* Mobile text — dark, no white contrast */
   .shoping-cart-background *,
@@ -164,7 +181,7 @@ div.banner,
     color: var(--on-text) !important;
     text-shadow: none !important;
   }
-  /* Breadcrumb font size — compact on mobile */
+  /* Breadcrumb font size */
   .master-breadcrumb .breadcrumb,
   .hostx-bread-crumb-data .breadcrumb {
     font-size: 13px !important;
@@ -172,9 +189,7 @@ div.banner,
   }
   /* Banner headings — smaller on mobile */
   .banner.p-vertical h1,
-  .register-domain-banner h1,
-  .shoping-cart-background h1,
-  .shoping-cart-background h2 {
+  .register-domain-banner h1 {
     font-size: 22px !important;
     line-height: 1.25 !important;
     margin-bottom: 8px !important;
