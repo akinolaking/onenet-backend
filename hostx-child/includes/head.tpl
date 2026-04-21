@@ -1,3 +1,5 @@
+<link rel="icon" type="image/svg+xml" href="{$WEB_ROOT}/templates/{$template}/images/onenet-logo-icon.svg">
+<link rel="shortcut icon" href="{$WEB_ROOT}/templates/{$template}/images/onenet-logo-icon.svg">
 {\WHMCS\View\Asset::fontCssInclude('open-sans-family.css')}
 <link href="{assetPath file='all.min.css'}?v={$versionHash}" rel="stylesheet">
 <link href="{assetPath file='theme.min.css'}?v={$versionHash}" rel="stylesheet">

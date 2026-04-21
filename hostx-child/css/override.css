@@ -1,6 +1,6 @@
 /* ============================================================
-   OneNet Servers - override.css v9
-   Brand colors synced with main site (nextjs-self-iota-49.vercel.app)
+   OneNet Servers - override.css v10
+   Phase 2: dropdown fix, logo, language pill, pricing cards, footer
    Primary: #4343f0  Footer bg: #0f0f1a
    ============================================================ */
 :root {
@@ -60,9 +60,18 @@ header.wgs-new-header-top-late,
   gap: 32px !important;
 }
 
-/* LOGO */
-.onenet-logo { flex-shrink: 0 !important; display: flex !important; align-items: center !important; text-decoration: none !important; }
-.onenet-logo img { height: 36px !important; width: auto !important; display: block !important; }
+/* LOGO + BRAND NAME */
+.onenet-logo { flex-shrink: 0 !important; display: flex !important; align-items: center !important; gap: 8px !important; text-decoration: none !important; }
+.onenet-logo img { height: 32px !important; width: 32px !important; display: block !important; flex-shrink: 0 !important; }
+.onenet-brand-name {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: var(--on-text) !important;
+  letter-spacing: -0.01em !important;
+  white-space: nowrap !important;
+}
+.onenet-mobile-logo { display: flex !important; align-items: center !important; gap: 8px !important; text-decoration: none !important; }
+.onenet-mobile-logo img { width: 26px !important; height: 26px !important; flex-shrink: 0 !important; }
 
 /* NAV LIST */
 .onenet-nav-list {
@@ -459,3 +468,311 @@ footer.site-footer a:hover,
 .btn-outline-primary:hover, .hostx-btn-outline:hover { background-color: var(--on-primary) !important; color: var(--on-white) !important; }
 .price-color, .hostx-price, .text-primary, .color-primary { color: var(--on-primary) !important; }
 .plan-popular, .plan-badge, .hostx-popular-badge { background: var(--on-primary) !important; color: var(--on-white) !important; border-color: var(--on-primary) !important; }
+
+/* ============================================================
+   DROPDOWN BRIDGE — fills 8px gap so hover doesn't snap closed
+   ============================================================ */
+.onenet-dd-bridge {
+  position: absolute !important;
+  top: 100% !important;
+  left: -12px !important;
+  right: -12px !important;
+  height: 10px !important;
+  z-index: 1099 !important;
+  display: none !important;
+}
+.onenet-has-dropdown.onenet-open .onenet-dd-bridge { display: block !important; }
+
+/* ============================================================
+   LANGUAGE PILL — same style as currency pill
+   ============================================================ */
+.onenet-lang-wrap { position: relative !important; }
+.onenet-lang-pill {
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  padding: 7px 12px !important;
+  background: transparent !important;
+  border: 1.5px solid var(--on-border) !important;
+  border-radius: 9999px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: var(--on-text) !important;
+  cursor: pointer !important;
+  transition: background 0.15s, border-color 0.15s !important;
+  white-space: nowrap !important;
+  line-height: 1 !important;
+}
+.onenet-lang-pill:hover { background: var(--on-primary-light) !important; border-color: var(--on-primary) !important; color: var(--on-primary) !important; }
+.onenet-lang-dropdown {
+  display: none !important;
+  position: absolute !important;
+  top: calc(100% + 6px) !important;
+  right: 0 !important;
+  min-width: 160px !important;
+  background: var(--on-white) !important;
+  border: 1px solid var(--on-border) !important;
+  border-radius: var(--on-radius) !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
+  padding: 6px !important;
+  z-index: 1200 !important;
+}
+.onenet-lang-dropdown.onenet-open { display: block !important; }
+
+/* ============================================================
+   PHASE 2 — PRICING CARDS
+   Compact, clean — matching main site screenshot
+   ============================================================ */
+
+/* Card wrapper */
+.wgs-price-plan-wrap, .price-plan-wrapper, .hostx-price-card,
+.price-table-wrap, .plan-col, .pricing-plan {
+  border: 1px solid var(--on-border) !important;
+  border-radius: 16px !important;
+  background: var(--on-white) !important;
+  padding: 24px !important;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease !important;
+  box-shadow: none !important;
+}
+.wgs-price-plan-wrap:hover, .price-plan-wrapper:hover, .hostx-price-card:hover,
+.price-table-wrap:hover, .plan-col:hover, .pricing-plan:hover {
+  box-shadow: 0 4px 24px rgba(67,67,240,0.08) !important;
+  border-color: var(--on-primary-light) !important;
+}
+
+/* Popular/featured card */
+.wgs-price-plan-wrap.plan-popular-wrapper, .price-plan-wrapper.featured,
+.hostx-price-card.popular, .plan-col.most-popular {
+  border-color: var(--on-primary) !important;
+  background: var(--on-primary-xs) !important;
+}
+
+/* Plan name */
+.plan-name, .price-plan-name, .package-name, .wgs-plan-title {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: var(--on-text) !important;
+  margin: 0 0 2px !important;
+  line-height: 1.2 !important;
+}
+
+/* Plan tagline */
+.plan-tagline, .price-plan-tagline, .package-tagline, .plan-subtitle {
+  font-size: 13px !important;
+  color: var(--on-muted) !important;
+  margin: 0 0 16px !important;
+}
+
+/* Price */
+.plan-price, .price-amount, .wgs-plan-price, .package-price {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 4px !important;
+  margin: 0 0 4px !important;
+}
+.plan-price .price, .price-amount .amount, .wgs-plan-price .price,
+.hx-price-num { font-size: 28px !important; font-weight: 800 !important; color: var(--on-text) !important; line-height: 1 !important; }
+.plan-price .per, .price-amount .period, .price-period,
+.hx-price-cycle { font-size: 13px !important; font-weight: 400 !important; color: var(--on-muted) !important; }
+
+/* Renewal note */
+.plan-renew, .price-renews, .renew-note { font-size: 12px !important; color: var(--on-muted) !important; margin: 0 0 16px !important; }
+
+/* Feature list — compact, no excessive gap */
+.plan-features, .price-features, .wgs-features, .package-features,
+.feature-list, .features-list, .plan-feature-list {
+  list-style: none !important;
+  margin: 0 0 20px !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+.plan-features li, .price-features li, .wgs-features li, .package-features li,
+.feature-list li, .features-list li, .plan-feature-list li {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 13.5px !important;
+  color: var(--on-text-2) !important;
+  line-height: 1.3 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+/* checkmark icon */
+.plan-features li::before, .price-features li::before,
+.feature-list li::before, .features-list li::before {
+  content: '' !important;
+  flex-shrink: 0 !important;
+  width: 16px !important;
+  height: 16px !important;
+  background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 8l3.5 3.5L13 5' stroke='%234343f0' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain !important;
+  display: block !important;
+}
+/* override any existing icons set via FA or img */
+.plan-features li i.fa, .plan-features li i.fas, .plan-features li i.far,
+.price-features li i, .feature-list li i { display: none !important; }
+.plan-features li img, .price-features li img, .feature-list li img { display: none !important; }
+
+/* Plan badge (Most Popular) */
+.plan-badge-wrap, .most-popular-badge, .wgs-popular-label,
+.plan-popular-label, .popular-badge {
+  background: var(--on-primary) !important;
+  color: var(--on-white) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  padding: 4px 12px !important;
+  border-radius: 9999px !important;
+  display: inline-block !important;
+  margin-bottom: 12px !important;
+}
+
+/* CTA button */
+.plan-cta, .price-cta, .wgs-plan-btn, .package-btn {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  padding: 11px 20px !important;
+  border-radius: 9999px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  transition: background 0.15s, border-color 0.15s !important;
+  border: 1.5px solid var(--on-border) !important;
+  background: transparent !important;
+  color: var(--on-text) !important;
+}
+.plan-cta:hover, .price-cta:hover { border-color: var(--on-primary) !important; color: var(--on-primary) !important; }
+.plan-cta.primary, .price-cta.primary, .plan-cta-primary,
+.featured .plan-cta, .most-popular .plan-cta, .popular .plan-cta {
+  background: var(--on-primary) !important;
+  border-color: var(--on-primary) !important;
+  color: var(--on-white) !important;
+}
+.plan-cta.primary:hover, .featured .plan-cta:hover {
+  background: var(--on-primary-dark) !important;
+  border-color: var(--on-primary-dark) !important;
+}
+
+/* ============================================================
+   PHASE 2 — FOOTER (OneNet custom footer)
+   ============================================================ */
+.onenet-footer {
+  background: var(--on-footer-gradient) !important;
+  color: #e4e4f0 !important;
+  padding: 64px 0 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Footer grid: brand + 4 columns */
+.onenet-footer-grid {
+  display: grid !important;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr !important;
+  gap: 48px 32px !important;
+  padding-bottom: 48px !important;
+  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+}
+@media (max-width: 1024px) {
+  .onenet-footer-grid { grid-template-columns: 1fr 1fr !important; gap: 32px 24px !important; }
+}
+@media (max-width: 600px) {
+  .onenet-footer-grid { grid-template-columns: 1fr !important; }
+}
+
+/* Brand column */
+.onenet-footer-brand img { display: block !important; margin-bottom: 12px !important; }
+.onenet-footer-brand p { font-size: 13px !important; line-height: 1.6 !important; color: #a8a8c8 !important; margin: 0 0 20px !important; max-width: 280px !important; }
+.onenet-footer-logo { display: inline-flex !important; align-items: center !important; text-decoration: none !important; }
+
+/* Social pills */
+.onenet-footer-social { display: flex !important; gap: 8px !important; flex-wrap: wrap !important; }
+.onenet-social-pill {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 9999px !important;
+  border: 1px solid rgba(255,255,255,0.12) !important;
+  color: #a8a8c8 !important;
+  text-decoration: none !important;
+  transition: border-color 0.15s, color 0.15s !important;
+}
+.onenet-social-pill:hover { border-color: var(--on-primary) !important; color: var(--on-white) !important; }
+
+/* Footer columns */
+.onenet-footer-col h3 {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+  margin: 0 0 16px !important;
+}
+.onenet-footer-col ul { list-style: none !important; margin: 0 !important; padding: 0 !important; display: flex !important; flex-direction: column !important; gap: 10px !important; }
+.onenet-footer-col ul li a {
+  font-size: 13.5px !important;
+  color: #a8a8c8 !important;
+  text-decoration: none !important;
+  transition: color 0.15s !important;
+}
+.onenet-footer-col ul li a:hover { color: #ffffff !important; }
+.onenet-footer-link-disabled { font-size: 13.5px !important; color: #55556a !important; cursor: not-allowed !important; }
+
+/* Trust badges band */
+.onenet-footer-band {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  padding: 24px 0 !important;
+  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+}
+.onenet-footer-chip {
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  color: #a8a8c8 !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  border-radius: 9999px !important;
+  padding: 4px 10px !important;
+  white-space: nowrap !important;
+}
+
+/* Legal line */
+.onenet-footer-legal {
+  font-size: 11.5px !important;
+  color: #55556a !important;
+  padding: 20px 0 24px !important;
+  line-height: 1.6 !important;
+}
+
+/* ============================================================
+   PHASE 2 — TYPOGRAPHY & BODY
+   ============================================================ */
+body, html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', system-ui, sans-serif !important;
+  font-size: 15px !important;
+  color: var(--on-text) !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', system-ui, sans-serif !important;
+  color: var(--on-text) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* ============================================================
+   CLIENT AREA SIDEBAR — colour-only overrides (no structural changes)
+   ============================================================ */
+.hostx-child-side-bar-custom { background: var(--on-white) !important; border-right: 1px solid var(--on-border) !important; }
+.hostx-side-nav-list .nav-link.active,
+.hostx-side-nav-list .nav-item.active > a,
+.hostx-side-nav-list li.active > a { color: var(--on-primary) !important; background: var(--on-primary-light) !important; border-radius: 8px !important; }
+.hostx-side-nav-list .nav-link,
+.hostx-side-nav-list li > a { color: var(--on-text-2) !important; }
+.hostx-side-nav-list .nav-link:hover,
+.hostx-side-nav-list li > a:hover { color: var(--on-primary) !important; background: var(--on-primary-light) !important; border-radius: 8px !important; }
+.header-side-bar { background: var(--on-primary-xs) !important; border-bottom: 1px solid var(--on-border) !important; }
+.client-name-data { color: var(--on-text) !important; font-weight: 600 !important; }
