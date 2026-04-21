@@ -1,6 +1,7 @@
 /* ============================================================
-   OneNet Servers - override.css v10
-   Phase 2: dropdown fix, logo, language pill, pricing cards, footer
+   OneNet Servers - override.css v11
+   Phase 3: brand name removed, white space fix, breadcrumb gradient,
+   pill buttons, pricing cards, domain search plan
    Primary: #4343f0  Footer bg: #0f0f1a
    ============================================================ */
 :root {
@@ -35,6 +36,245 @@ header.wgs-new-header-top-late,
   display: none !important;
 }
 
+/* ── FIX: zero out HostX sticky-header top compensation ─────────── */
+body {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+section.hostx-pages-sections,
+section#main-body,
+.hostx-pages-section,
+.main-body-section {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+/* HostX adds padding-top on sticky header body class */
+body.header-is-sticky,
+body.header-is-sticky section.hostx-pages-sections,
+body.header-is-sticky section#main-body {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* ── BREADCRUMB — replace hero image with main-site gradient ─────── */
+.master-breadcrumb,
+.hostx-bread-crumb-data,
+.hostx-breadcrumb-area,
+.breadcrumb-area,
+.page-title-area,
+.inner-banner,
+nav.hostx-bread-crumb-data {
+  background: linear-gradient(180deg, #eeeeff 0%, #f0f0fa 45%, #ffffff 100%) !important;
+  background-image: none !important;
+  background-attachment: unset !important;
+  border-bottom: 1px solid var(--on-border-l) !important;
+  padding: 28px 0 20px !important;
+  box-shadow: none !important;
+}
+/* Ensure all text inside breadcrumb is dark (readable on light bg) */
+.master-breadcrumb *,
+.hostx-bread-crumb-data * {
+  color: var(--on-text) !important;
+  text-shadow: none !important;
+}
+.master-breadcrumb a,
+.hostx-bread-crumb-data a {
+  color: var(--on-primary) !important;
+}
+.master-breadcrumb a:hover,
+.hostx-bread-crumb-data a:hover {
+  color: var(--on-primary-dark) !important;
+}
+.master-breadcrumb .breadcrumb-item.active,
+.hostx-bread-crumb-data .breadcrumb-item.active {
+  color: var(--on-muted) !important;
+}
+/* Remove any pseudo-element overlay / background-image from child elements */
+.hostx-bread-crumb-data::before,
+.hostx-bread-crumb-data::after,
+.breadcrumb-area::before,
+.breadcrumb-area::after {
+  display: none !important;
+}
+
+/* ── GLOBAL BUTTONS — pill shape matching main site ─────────────── */
+/* All buttons get pill shape and proper padding */
+.btn,
+a.btn,
+button.btn,
+.btn-primary,
+.btn-secondary,
+.btn-default,
+.btn-success,
+.btn-info,
+.btn-warning,
+.btn-danger,
+.btn-link,
+.button,
+input[type="submit"],
+input[type="button"],
+.hostx-btn,
+.hx-btn,
+.order-btn,
+.order-button,
+.add-to-cart,
+.checkout-btn,
+.hostx-submit-btn,
+.whmcs-btn,
+.register-btn,
+.domain-btn {
+  border-radius: 9999px !important;
+  min-height: 42px !important;
+  padding: 0 20px !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  border: 1.5px solid transparent !important;
+}
+
+/* Primary button — blue gradient like main site */
+.btn-primary,
+a.btn-primary,
+button.btn-primary,
+input[type="submit"].btn-primary,
+.hx-primary-btn,
+.hostx-btn-primary,
+.order-btn,
+.order-button,
+.register-btn {
+  background: linear-gradient(135deg, #4343f0 0%, #6868f3 100%) !important;
+  border-color: #4343f0 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(67,67,240,0.18) !important;
+}
+.btn-primary:hover,
+a.btn-primary:hover,
+button.btn-primary:hover,
+.hx-primary-btn:hover,
+.hostx-btn-primary:hover,
+.order-btn:hover {
+  background: linear-gradient(135deg, #3535c8 0%, #4343f0 100%) !important;
+  border-color: #3535c8 !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(67,67,240,0.25) !important;
+}
+
+/* Secondary / ghost button */
+.btn-default,
+.btn-secondary,
+a.btn-default,
+button.btn-default,
+.btn-outline-primary,
+.hostx-btn-outline {
+  background: transparent !important;
+  border-color: var(--on-border) !important;
+  color: var(--on-text) !important;
+  box-shadow: none !important;
+}
+.btn-default:hover,
+.btn-secondary:hover,
+.btn-outline-primary:hover {
+  background: var(--on-primary-light) !important;
+  border-color: var(--on-primary) !important;
+  color: var(--on-primary) !important;
+}
+
+/* Success (used on checkout) */
+.btn-success {
+  background: linear-gradient(135deg, #4343f0 0%, #6868f3 100%) !important;
+  border-color: #4343f0 !important;
+  color: #ffffff !important;
+}
+.btn-success:hover {
+  background: linear-gradient(135deg, #3535c8 0%, #4343f0 100%) !important;
+  border-color: #3535c8 !important;
+}
+
+/* ── DOMAIN SEARCH BAR ──────────────────────────────────────────── */
+.domain-search-area,
+.domain-checker-wrap,
+.domain-search-form,
+.domainchecker-form,
+#domain-search,
+.domain-search,
+.hostx-domain-search {
+  background: #ffffff !important;
+  border: 1.5px solid var(--on-border) !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 4px 24px rgba(67,67,240,0.08) !important;
+  padding: 6px 6px 6px 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0 !important;
+  max-width: 640px !important;
+  margin: 0 auto !important;
+}
+/* Domain search input */
+.domain-search-area input[type="text"],
+.domain-checker-wrap input[type="text"],
+.domainchecker-form input[type="text"],
+#domain-search input[type="text"],
+.domain-search input[type="text"],
+.hostx-domain-search input[type="text"],
+input#query, input.query,
+input[name="sld"], input[name="domain"] {
+  flex: 1 !important;
+  border: none !important;
+  outline: none !important;
+  background: transparent !important;
+  font-size: 15px !important;
+  color: var(--on-text) !important;
+  padding: 10px 0 !important;
+  min-width: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+/* Domain search TLD select */
+.domain-search-area select,
+.domainchecker-form select,
+.domain-search select,
+select#tld {
+  border: none !important;
+  border-left: 1.5px solid var(--on-border) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  padding: 8px 12px !important;
+  color: var(--on-text) !important;
+  font-size: 14px !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+/* Domain search submit button */
+.domain-search-area input[type="submit"],
+.domain-search-area button[type="submit"],
+.domainchecker-form input[type="submit"],
+.domainchecker-form button[type="submit"],
+.domain-search button[type="submit"],
+.domain-search-btn,
+.hx-domain-btn {
+  border-radius: 9999px !important;
+  background: linear-gradient(135deg, #4343f0 0%, #6868f3 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 10px 24px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  min-height: 40px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  flex-shrink: 0 !important;
+  box-shadow: none !important;
+}
+
 /* HEADER */
 .onenet-header {
   position: sticky !important;
@@ -60,18 +300,12 @@ header.wgs-new-header-top-late,
   gap: 32px !important;
 }
 
-/* LOGO + BRAND NAME */
-.onenet-logo { flex-shrink: 0 !important; display: flex !important; align-items: center !important; gap: 8px !important; text-decoration: none !important; }
+/* LOGO — icon only, no brand name text */
+.onenet-logo { flex-shrink: 0 !important; display: inline-flex !important; align-items: center !important; text-decoration: none !important; }
 .onenet-logo img { height: 32px !important; width: 32px !important; display: block !important; flex-shrink: 0 !important; }
-.onenet-brand-name {
-  font-size: 15px !important;
-  font-weight: 700 !important;
-  color: var(--on-text) !important;
-  letter-spacing: -0.01em !important;
-  white-space: nowrap !important;
-}
-.onenet-mobile-logo { display: flex !important; align-items: center !important; gap: 8px !important; text-decoration: none !important; }
-.onenet-mobile-logo img { width: 26px !important; height: 26px !important; flex-shrink: 0 !important; }
+.onenet-brand-name { display: none !important; }
+.onenet-mobile-logo { display: inline-flex !important; align-items: center !important; text-decoration: none !important; }
+.onenet-mobile-logo img { width: 28px !important; height: 28px !important; flex-shrink: 0 !important; display: block !important; }
 
 /* NAV LIST */
 .onenet-nav-list {
@@ -520,24 +754,33 @@ footer.site-footer a:hover,
 .onenet-lang-dropdown.onenet-open { display: block !important; }
 
 /* ============================================================
-   PHASE 2 — PRICING CARDS
-   Compact, clean — matching main site screenshot
+   PHASE 3 — PRICING CARDS
+   Compact, clean — matching main site design
    ============================================================ */
 
-/* Card wrapper */
+/* Card wrapper — comprehensive HostX class targeting */
 .wgs-price-plan-wrap, .price-plan-wrapper, .hostx-price-card,
-.price-table-wrap, .plan-col, .pricing-plan {
+.price-table-wrap, .plan-col, .pricing-plan,
+.price-box, .plan-box, .wgs-price-plan,
+.price-plan-item, .plan-item, .package-box,
+.price-plan-box, .hostx-plan-card, .plan-wrap {
+  position: relative !important;
   border: 1px solid var(--on-border) !important;
   border-radius: 16px !important;
   background: var(--on-white) !important;
-  padding: 24px !important;
-  transition: box-shadow 0.2s ease, border-color 0.2s ease !important;
-  box-shadow: none !important;
+  padding: 28px !important;
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
 }
 .wgs-price-plan-wrap:hover, .price-plan-wrapper:hover, .hostx-price-card:hover,
-.price-table-wrap:hover, .plan-col:hover, .pricing-plan:hover {
-  box-shadow: 0 4px 24px rgba(67,67,240,0.08) !important;
-  border-color: var(--on-primary-light) !important;
+.price-table-wrap:hover, .plan-col:hover, .pricing-plan:hover,
+.price-box:hover, .plan-box:hover {
+  box-shadow: 0 8px 32px rgba(67,67,240,0.10) !important;
+  transform: translateY(-2px) !important;
+  border-color: rgba(67,67,240,0.2) !important;
 }
 
 /* Popular/featured card */
@@ -629,31 +872,47 @@ footer.site-footer a:hover,
   margin-bottom: 12px !important;
 }
 
-/* CTA button */
-.plan-cta, .price-cta, .wgs-plan-btn, .package-btn {
-  display: block !important;
+/* CTA button — full width pill */
+.plan-cta, .price-cta, .wgs-plan-btn, .package-btn,
+.plan-order-btn, .price-order-btn, .plan-action-btn,
+.wgs-price-plan-wrap .btn, .price-plan-wrapper .btn,
+.plan-col .btn, .pricing-plan .btn {
+  display: flex !important;
   width: 100% !important;
-  text-align: center !important;
-  padding: 11px 20px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 44px !important;
+  padding: 0 20px !important;
   border-radius: 9999px !important;
   font-size: 14px !important;
   font-weight: 600 !important;
   text-decoration: none !important;
-  transition: background 0.15s, border-color 0.15s !important;
+  transition: background 0.15s, border-color 0.15s, box-shadow 0.15s !important;
   border: 1.5px solid var(--on-border) !important;
-  background: transparent !important;
-  color: var(--on-text) !important;
+  background: var(--on-primary-xs) !important;
+  color: var(--on-primary) !important;
+  margin-top: auto !important;
 }
-.plan-cta:hover, .price-cta:hover { border-color: var(--on-primary) !important; color: var(--on-primary) !important; }
-.plan-cta.primary, .price-cta.primary, .plan-cta-primary,
-.featured .plan-cta, .most-popular .plan-cta, .popular .plan-cta {
-  background: var(--on-primary) !important;
+.plan-cta:hover, .price-cta:hover,
+.wgs-price-plan-wrap .btn:hover {
+  background: var(--on-primary-light) !important;
   border-color: var(--on-primary) !important;
-  color: var(--on-white) !important;
+  color: var(--on-primary) !important;
 }
-.plan-cta.primary:hover, .featured .plan-cta:hover {
-  background: var(--on-primary-dark) !important;
-  border-color: var(--on-primary-dark) !important;
+.plan-cta.primary, .price-cta.primary, .plan-cta-primary,
+.featured .plan-cta, .most-popular .plan-cta, .popular .plan-cta,
+.wgs-price-plan-wrap.plan-popular-wrapper .btn,
+.plan-col.most-popular .btn {
+  background: linear-gradient(135deg, #4343f0 0%, #6868f3 100%) !important;
+  border-color: #4343f0 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(67,67,240,0.2) !important;
+}
+.plan-cta.primary:hover, .featured .plan-cta:hover,
+.wgs-price-plan-wrap.plan-popular-wrapper .btn:hover {
+  background: linear-gradient(135deg, #3535c8 0%, #4343f0 100%) !important;
+  border-color: #3535c8 !important;
+  box-shadow: 0 6px 20px rgba(67,67,240,0.28) !important;
 }
 
 /* ============================================================

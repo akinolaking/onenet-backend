@@ -86,8 +86,7 @@
                    {if $hostx_theme_settings.enable_header_target eq 'on'}target="_blank"{/if}
                    aria-label="{$companyname} home">
                     <img src="{$WEB_ROOT}/templates/{$template}/images/onenet-logo-icon.svg"
-                         alt="" width="30" height="30" aria-hidden="true">
-                    <span class="onenet-brand-name">OneNet Servers</span>
+                         alt="OneNet Servers" width="32" height="32" aria-hidden="true">
                 </a>
 
                 {* Desktop navigation *}
@@ -234,8 +233,7 @@
         <div class="onenet-mobile-head">
             <a href="{$systemurl}" class="onenet-mobile-logo" aria-label="{$companyname} home">
                 <img src="{$WEB_ROOT}/templates/{$template}/images/onenet-logo-icon.svg"
-                     alt="" width="26" height="26" aria-hidden="true">
-                <span class="onenet-brand-name" style="font-size:14px">OneNet Servers</span>
+                     alt="OneNet Servers" width="28" height="28" aria-hidden="true">
             </a>
             <button class="onenet-mobile-close" id="onenet-close" type="button" aria-label="Close menu">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
