@@ -1,7 +1,7 @@
 /* ============================================================
-   OneNet Servers - override.css v11
-   Phase 3: brand name removed, white space fix, breadcrumb gradient,
-   pill buttons, pricing cards, domain search plan
+   OneNet Servers - override.css v12
+   Phase 4: cart body/content, billing-cycle toggle, order summary,
+   product configure, checkout — full journey continuity
    Primary: #4343f0  Footer bg: #0f0f1a
    ============================================================ */
 :root {
@@ -1206,3 +1206,1602 @@ h1, h2, h3, h4, h5, h6 {
 .hostx-side-nav-list li > a:hover { color: var(--on-primary) !important; background: var(--on-primary-light) !important; border-radius: 8px !important; }
 .header-side-bar { background: var(--on-primary-xs) !important; border-bottom: 1px solid var(--on-border) !important; }
 .client-name-data { color: var(--on-text) !important; font-weight: 600 !important; }
+
+/* ============================================================
+   PHASE 4 — CART BODY & PURCHASE JOURNEY
+   Covers: product list, configure, view-cart, checkout, complete
+   ============================================================ */
+
+/* ── Page background ─────────────────────────────────────────────── */
+.primary-bg-color,
+body.whmcs-in-cart-pages,
+.hostx-cart-body-section,
+.cart-body,
+.outer-wrapper,
+.inner-wrapper {
+  background: var(--on-white) !important;
+  color: var(--on-text) !important;
+}
+
+/* ── Cart body layout ────────────────────────────────────────────── */
+.hostx-cart-body-section { padding: 0 !important; }
+
+.secondary-cart-body {
+  background: var(--on-white) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* ── Section headings inside cart ───────────────────────────────── */
+.heading-sec-cart,
+.category-heading-section-cart,
+.heading-area-configuration,
+.group-content-section h2,
+.group-content-section h3 {
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  color: var(--on-text) !important;
+  letter-spacing: -0.01em !important;
+  border: none !important;
+  background: none !important;
+  padding-bottom: 8px !important;
+}
+
+.sub-heading,
+.header-lined-descp {
+  font-size: 14px !important;
+  color: var(--on-muted) !important;
+  font-weight: 400 !important;
+}
+
+/* ── Product group tabs / category list ─────────────────────────── */
+.product-category-list-hostx .col-md-3,
+.product-category-list-hostx .col-md-3.product-group-active-hostx {
+  background: var(--on-white) !important;
+  border: 1px solid var(--on-border) !important;
+  border-radius: 10px !important;
+  transition: border-color 0.15s, box-shadow 0.15s !important;
+}
+.product-category-list-hostx .col-md-3.product-group-active-hostx,
+.product-category-list-hostx .col-md-3:hover {
+  border-color: var(--on-primary) !important;
+  box-shadow: 0 2px 12px rgba(67,67,240,0.10) !important;
+}
+.product-category-list-hostx a,
+.product-category-list-hostx .headline,
+.product-category-list-hostx .tagline {
+  color: var(--on-text) !important;
+  text-decoration: none !important;
+}
+.product-category-list-hostx .tagline { color: var(--on-muted) !important; font-size: 12px !important; }
+
+/* ── Inner product/category section ─────────────────────────────── */
+.inner-sec-category-product {
+  background: var(--on-white) !important;
+  border: none !important;
+}
+
+/* ── Billing cycle toggle ────────────────────────────────────────── */
+.field-container.billing-cycle-styled,
+.select-billing-cycle,
+.selectBillingCycleHostxCart {
+  background: var(--on-bg-2) !important;
+  border: 1px solid var(--on-border) !important;
+  border-radius: 10px !important;
+  padding: 6px !important;
+  display: inline-flex !important;
+  gap: 4px !important;
+}
+.select-billing-cycle label,
+.selectBillingCycleHostxCart label,
+.field-container.billing-cycle-styled label {
+  border-radius: 8px !important;
+  padding: 6px 16px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: var(--on-muted) !important;
+  cursor: pointer !important;
+  transition: background 0.15s, color 0.15s !important;
+  border: none !important;
+  background: transparent !important;
+  margin: 0 !important;
+}
+.select-billing-cycle input[type="radio"]:checked + label,
+.selectBillingCycleHostxCart input[type="radio"]:checked + label {
+  background: var(--on-white) !important;
+  color: var(--on-primary) !important;
+  font-weight: 600 !important;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.10) !important;
+}
+.select-billing-cycle input[type="radio"],
+.selectBillingCycleHostxCart input[type="radio"] {
+  display: none !important;
+}
+
+/* ── Product info card ───────────────────────────────────────────── */
+.product-info {
+  background: var(--on-white) !important;
+  border: 1px solid var(--on-border) !important;
+  border-radius: 14px !important;
+  padding: 20px !important;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05) !important;
+}
+.product-title,
+.product-info h3,
+.product-info h4 {
+  color: var(--on-text) !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+}
+
+/* ── Price display ───────────────────────────────────────────────── */
+.price,
+.breakdown-price,
+.setup-fee,
+.font-size-30,
+.font-size-36 {
+  color: var(--on-text) !important;
+  font-weight: 800 !important;
+}
+.price .text-muted,
+.breakdown-price .text-muted { color: var(--on-muted) !important; }
+
+/* ── Order summary sidebar ───────────────────────────────────────── */
+.order-summary,
+.summary-container,
+.secondary-cart-sidebar {
+  background: var(--on-bg-2) !important;
+  border: 1px solid var(--on-border) !important;
+  border-radius: 14px !important;
+  padding: 20px !important;
+}
+.order-summary h3,
+.order-summary h4,
+.summary-container h3,
+.summary-container h4 {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: var(--on-text) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  margin-bottom: 12px !important;
+}
+
+/* ── Cart action buttons ─────────────────────────────────────────── */
+.btn-primary,
+.btn.btn-primary,
+a.btn-primary,
+button.btn-primary,
+.btn.hx-primary-btn,
+.btn.modal-submit,
+.button-style.hx-primary-btn {
+  background: var(--on-primary) !important;
+  border-color: var(--on-primary) !important;
+  color: var(--on-white) !important;
+  border-radius: 9999px !important;
+  padding: 10px 24px !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  transition: background 0.15s !important;
+  box-shadow: none !important;
+}
+.btn-primary:hover,
+.btn.btn-primary:hover,
+.btn.hx-primary-btn:hover {
+  background: var(--on-primary-dark) !important;
+  border-color: var(--on-primary-dark) !important;
+  color: var(--on-white) !important;
+}
+
+.btn.btn-default,
+.button-sec-cart,
+.button-style.hx-secondary {
+  background: transparent !important;
+  border: 1.5px solid var(--on-border) !important;
+  color: var(--on-text) !important;
+  border-radius: 9999px !important;
+  padding: 9px 20px !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  transition: border-color 0.15s, background 0.15s !important;
+}
+.btn.btn-default:hover,
+.button-sec-cart:hover,
+.button-style.hx-secondary:hover {
+  border-color: var(--on-primary) !important;
+  color: var(--on-primary) !important;
+  background: var(--on-primary-light) !important;
+}
+
+.btn-sm.btn-add {
+  background: var(--on-primary-light) !important;
+  border-color: var(--on-primary) !important;
+  color: var(--on-primary) !important;
+  border-radius: 8px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+
+/* ── Bootstrap breadcrumb ────────────────────────────────────────── */
+.breadcrumb {
+  background: transparent !important;
+  padding: 0 !important;
+  font-size: 13px !important;
+  color: var(--on-muted) !important;
+}
+.breadcrumb-item + .breadcrumb-item::before { color: var(--on-subtle) !important; }
+.breadcrumb-item a { color: var(--on-primary) !important; text-decoration: none !important; }
+.breadcrumb-item.active { color: var(--on-muted) !important; }
+
+/* ── Alerts / notices ────────────────────────────────────────────── */
+.alert.alert-warning {
+  background: #fffbeb !important;
+  border-color: #f59e0b !important;
+  color: #92400e !important;
+  border-radius: 10px !important;
+}
+.alert.alert-danger {
+  background: #fef2f2 !important;
+  border-color: #ef4444 !important;
+  color: #991b1b !important;
+  border-radius: 10px !important;
+}
+
+/* ── Progress / cart complete ────────────────────────────────────── */
+.cart-complete,
+.cart-complete-container,
+body.whmcs-templatefile-complete .content,
+body.whmcs-templatefile-viewcart .content {
+  background: var(--on-white) !important;
+}
+
+/* ── Copyright / footer line ─────────────────────────────────────── */
+.copyright {
+  font-size: 12px !important;
+  color: var(--on-muted) !important;
+  background: transparent !important;
+  border-top: 1px solid var(--on-border) !important;
+  padding: 16px 0 !important;
+}
+
+/* ── Input fields ────────────────────────────────────────────────── */
+.whmcs-in-cart-pages input[type="text"],
+.whmcs-in-cart-pages input[type="email"],
+.whmcs-in-cart-pages input[type="password"],
+.whmcs-in-cart-pages input[type="number"],
+.whmcs-in-cart-pages select,
+.whmcs-in-cart-pages textarea {
+  border: 1.5px solid var(--on-border) !important;
+  border-radius: 8px !important;
+  color: var(--on-text) !important;
+  background: var(--on-white) !important;
+  font-size: 14px !important;
+  transition: border-color 0.15s !important;
+}
+.whmcs-in-cart-pages input:focus,
+.whmcs-in-cart-pages select:focus,
+.whmcs-in-cart-pages textarea:focus {
+  border-color: var(--on-primary) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(67,67,240,0.12) !important;
+}
+
+/* ── Remove HostX orange accent everywhere in cart ───────────────── */
+.hostx-child-orange-mode .price-color,
+.hostx-child-orange-mode .text-primary,
+.hostx-child-orange-mode .color-primary,
+.hostx-child-orange-mode a.color-primary,
+.hostx-child-orange-mode .btn-primary,
+.whmcs-in-cart-pages .price-color,
+.whmcs-in-cart-pages .text-primary,
+.whmcs-in-cart-pages .color-primary {
+  color: var(--on-primary) !important;
+}
+.hostx-child-orange-mode .bg-primary,
+.whmcs-in-cart-pages .bg-primary {
+  background-color: var(--on-primary) !important;
+}
+
+/* ============================================================
+   PHASE 4b — CART JOURNEY: SPECIFIC FIXES
+   1. Hide Register/Transfer domain buttons in cart header
+   2. Hide product category navigation carousel
+   3. Fix domain search dark background
+   4. Fix order summary card (dark bg, invisible text, broken layout)
+   5. Fix billing cycle toggle radio interaction
+   ============================================================ */
+
+/* 1. Remove Register Domain / Transfer Domain buttons from cart header */
+.button-sec-cart { display: none !important; }
+
+/* Also hide the entire heading section's border-bottom when there's no nav following */
+.category-heading-section-cart {
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 16px !important;
+}
+.category-heading-section-cart .heading-sec-cart h3 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  color: var(--on-text) !important;
+  margin: 0 !important;
+}
+
+/* 2. Hide product category navigation carousel */
+.product-category-list-hostx,
+#product-group-category {
+  display: none !important;
+}
+
+/* 3. Fix domain search: remove dark background, style like main site */
+#order-standard_cart .domain-selection-options .domain-input-group {
+  background: var(--on-bg-2) !important;
+  border: 1px solid var(--on-border) !important;
+  border-radius: 12px !important;
+  padding: 20px !important;
+  margin: 0 !important;
+}
+
+/* Domain selection option label rows */
+#order-standard_cart .domain-selection-options .option label {
+  background: var(--on-white) !important;
+  border-bottom: 1px solid var(--on-border) !important;
+  color: var(--on-text) !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  padding: 16px 4px !important;
+  cursor: pointer !important;
+}
+#order-standard_cart .domain-selection-options .option label:hover {
+  color: var(--on-primary) !important;
+}
+#order-standard_cart .domain-selection-options .option input[type="radio"] {
+  accent-color: var(--on-primary) !important;
+  margin-right: 10px !important;
+  width: 16px !important;
+  height: 16px !important;
+  vertical-align: middle !important;
+}
+
+/* Domain search input and TLD select */
+#order-standard_cart .domain-selection-options .input-group-text,
+#order-standard_cart .domain-selection-options .form-control,
+#order-standard_cart .domain-selection-options .form-control,
+.register-domain-page-cart .form-control,
+.register-domain-page-cart textarea {
+  border: 1.5px solid var(--on-border) !important;
+  border-radius: 8px !important;
+  background: var(--on-white) !important;
+  color: var(--on-text) !important;
+  font-size: 15px !important;
+}
+#order-standard_cart .domain-selection-options .input-group-text {
+  background: var(--on-bg-2) !important;
+  color: var(--on-muted) !important;
+  border-right: none !important;
+}
+
+/* domain checker background (register domain page) */
+.domain-checker-bg.clearfix,
+.domain-checker-container,
+.domain-checker-container .input-group-box {
+  background: var(--on-bg-2) !important;
+  border: 1px solid var(--on-border) !important;
+  border-radius: 12px !important;
+  padding: 20px !important;
+}
+
+/* Domain search button */
+#btnCheckAvailability,
+#order-standard_cart #btnCheckAvailability,
+.domain-check-availability {
+  background: var(--on-primary) !important;
+  border-color: var(--on-primary) !important;
+  color: var(--on-white) !important;
+  border-radius: 9999px !important;
+  font-weight: 600 !important;
+  height: auto !important;
+  padding: 10px 24px !important;
+  font-size: 14px !important;
+}
+#btnCheckAvailability:hover,
+.domain-check-availability:hover {
+  background: var(--on-primary-dark) !important;
+  border-color: var(--on-primary-dark) !important;
+}
+
+/* Register domain page textarea AI search */
+.register-domain-page-cart textarea#message {
+  background: var(--on-white) !important;
+  color: var(--on-text) !important;
+  border: 1.5px solid var(--on-border) !important;
+  border-radius: 8px !important;
+  padding: 12px !important;
+  font-size: 14px !important;
+  width: 100% !important;
+}
+
+/* 4. Fix order summary card — override hostx_cart.css !important rules with higher specificity */
+/* The hostx theme sets bg-secondary-color (#17494D dark teal) via !important — match specificity */
+body div#orderSummary,
+body .view-cart-page div#orderSummary,
+body #order-standard_cart .order-summary,
+body #order-standard_cart div#orderSummary {
+  background: var(--on-white) !important;
+  background-color: var(--on-white) !important;
+  border: 1px solid var(--on-border) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06) !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Order Summary heading strip — blue top bar */
+body #order-standard_cart .order-summary h2,
+body .order-summary-checkout h2 {
+  background: var(--on-primary) !important;
+  background-color: var(--on-primary) !important;
+  color: var(--on-white) !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  padding: 14px 20px !important;
+  margin: 0 !important;
+  line-height: 1 !important;
+  border-radius: 0 !important;
+}
+
+/* Summary container — white bg, readable text */
+body #order-standard_cart .summary-container,
+body #order-standard_cart .order-summary .summary-container {
+  background: var(--on-white) !important;
+  background-color: var(--on-white) !important;
+  padding: 16px 20px !important;
+  color: var(--on-text) !important;
+}
+
+/* All text inside producttotal — was white-on-dark, now dark-on-white */
+body #order-standard_cart #producttotal,
+body #order-standard_cart #producttotal span,
+body #order-standard_cart #producttotal *,
+body #order-standard_cart .summary-container span,
+body #order-standard_cart .summary-container span.pull-left.float-left,
+body #order-standard_cart .summary-container span.pull-right.float-right {
+  color: var(--on-text) !important;
+}
+
+/* Row separators */
+body #order-standard_cart .order-summary .subtotal,
+body #order-standard_cart .order-summary .summary-totals,
+body #order-standard_cart .order-summary .bordered-totals {
+  border-color: var(--on-border) !important;
+}
+
+/* Total amount — blue accent */
+body #order-standard_cart .order-summary .total-due-today .amt {
+  color: var(--on-primary) !important;
+  font-size: 20px !important;
+  font-weight: 800 !important;
+}
+body #order-standard_cart .order-summary .total-due-today span {
+  color: var(--on-text) !important;
+}
+
+/* Loader spinner */
+body #order-standard_cart .loader,
+body #orderSummaryLoader {
+  color: var(--on-primary) !important;
+  text-align: center !important;
+  padding: 16px !important;
+}
+
+/* Continue button wrapper */
+body div#orderSummary .text-center {
+  padding: 16px 20px 20px !important;
+  background: var(--on-white) !important;
+}
+
+/* 5. Billing cycle toggle — fix <li> items */
+#order-standard_cart ul.selectBillingCycleHostxCart {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+#order-standard_cart ul.selectBillingCycleHostxCart li {
+  border: 1.5px solid var(--on-border) !important;
+  border-radius: 10px !important;
+  padding: 12px 16px !important;
+  max-width: none !important;
+  min-width: 100px !important;
+  text-align: center !important;
+  cursor: pointer !important;
+  background: var(--on-white) !important;
+  transition: border-color 0.15s, box-shadow 0.15s !important;
+  flex: 1 1 auto !important;
+}
+#order-standard_cart ul.selectBillingCycleHostxCart li:hover {
+  border-color: var(--on-primary) !important;
+}
+#order-standard_cart ul.selectBillingCycleHostxCart li.active {
+  border-color: var(--on-primary) !important;
+  background: var(--on-primary-light) !important;
+  box-shadow: 0 0 0 2px rgba(67,67,240,0.15) !important;
+}
+#order-standard_cart ul.selectBillingCycleHostxCart li.active strong {
+  color: var(--on-primary) !important;
+}
+#order-standard_cart ul.selectBillingCycleHostxCart li strong {
+  display: block !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: var(--on-text) !important;
+  margin-bottom: 4px !important;
+}
+#order-standard_cart ul.selectBillingCycleHostxCart li span {
+  font-size: 12px !important;
+  color: var(--on-muted) !important;
+}
+
+/* 6. Hide domain TLD category/spotlight sections on register page */
+.spotlight-tlds,
+#spotlightTlds,
+.featured-tlds-container,
+.tld-pricing-header,
+.domain-pricing,
+.domain-pricing-table,
+.spot-tld-slider-area {
+  display: none !important;
+}
+
+/* Domain-related page text fixes */
+#order-standard_cart p.domain-renewal-desc,
+#order-standard_cart .register-domain-page-cart p,
+#order-standard_cart .configure-product-domain-page p {
+  color: var(--on-muted) !important;
+}
+
+/* Remove dark bg from domain configure and register cart body */
+#order-standard_cart .configure-product-domain-page .cart-body,
+#order-standard_cart .register-domain-page-cart .cart-body,
+#order-standard_cart .configure-domain-page .cart-body {
+  background: var(--on-white) !important;
+  padding: 24px !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--on-border) !important;
+}
+
+
+
+/* ============================================================
+   CONFIGURE PRODUCT PAGE v4 — GoDaddy-style, OneNet brand
+   Senior-grade CSS: design tokens, 4pt grid, consistent
+   specificity, Inter font, max-weight 500, #4343f0 brand
+   True 60/40 two-column layout, accordion terms, stepper
+   ============================================================ */
+
+/* ── Local token extensions (scoped to this page) ─────────── */
+#order-standard_cart .on-cfg-wrap {
+  --cfg-col-gap:   48px;
+  --cfg-sidebar-w: 360px;
+  --cfg-max-w:     1200px;
+  --cfg-pad-x:     32px;
+  --cfg-pad-top:   40px;
+  --cfg-radius-lg: 12px;
+  --cfg-radius-md: 8px;
+  --cfg-row-pad:   16px 20px;
+  --cfg-font:      'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --cfg-save-bg:   #fef9c3;
+  --cfg-save-fg:   #854d0e;
+  --cfg-badge-bg:  #d1fae5;
+  --cfg-badge-fg:  #065f46;
+  --cfg-inc-bg:    #f0f4ff;
+  --cfg-shadow-sm: 0 2px 16px rgba(0, 0, 0, 0.06);
+  --cfg-shadow-cta:0 4px 16px rgba(67, 67, 240, 0.22);
+}
+
+/* ── Two-column wrapper ──────────────────────────────────────
+   The form element and Bootstrap .row/.cart-body sit between
+   .on-cfg-wrap and its direct children — display:contents
+   removes them from the box tree on desktop so flex applies
+   directly to .on-cfg-main and .on-cfg-sidebar.
+   ──────────────────────────────────────────────────────────── */
+.on-cfg-wrap {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: var(--cfg-col-gap) !important;
+  max-width: var(--cfg-max-w) !important;
+  margin: var(--cfg-pad-top) auto !important;
+  padding: 0 var(--cfg-pad-x) !important;
+  font-family: var(--cfg-font) !important;
+  box-sizing: border-box !important;
+}
+
+/* Ghost-out Bootstrap wrappers that break flex */
+.on-cfg-wrap .row,
+.on-cfg-wrap .cart-body {
+  display: contents !important;
+}
+
+@media (min-width: 901px) {
+  .on-cfg-wrap form {
+    display: contents !important;
+  }
+}
+
+/* ── Column sizing ───────────────────────────────────────────
+   Main grows to fill remaining space; sidebar is a fixed
+   360px panel that sticks below the nav bar.
+   ──────────────────────────────────────────────────────────── */
+.on-cfg-main {
+  flex: 1 1 0% !important;
+  min-width: 0 !important;
+  max-width: 640px !important;
+}
+
+.on-cfg-sidebar {
+  width: var(--cfg-sidebar-w) !important;
+  flex-shrink: 0 !important;
+  position: sticky !important;
+  top: calc(var(--on-nav-h) + 24px) !important; /* respect nav bar height */
+}
+
+/* ── Product header ──────────────────────────────────────────
+   Thin separator below the product name mirrors GoDaddy's
+   approach of "contextual breadcrumb before the main heading".
+   ──────────────────────────────────────────────────────────── */
+.on-cfg-product-header {
+  margin-bottom: 24px !important;
+  padding-bottom: 20px !important;
+  border-bottom: 1px solid var(--on-border) !important;
+}
+
+.on-added-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  background: var(--cfg-badge-bg) !important;
+  color: var(--cfg-badge-fg) !important;
+  font-size: 11.5px !important;
+  font-weight: 500 !important;
+  padding: 4px 10px !important;
+  border-radius: 9999px !important;
+  margin-bottom: 8px !important;
+  letter-spacing: 0.01em !important;
+}
+
+.on-product-name {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: var(--on-text) !important;
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+
+/* ── Main heading + short description ───────────────────────
+   28px / weight-500 matches GoDaddy's section h1.
+   Short desc uses muted colour at 14px for supporting context.
+   ──────────────────────────────────────────────────────────── */
+.on-cfg-h1 {
+  font-size: 28px !important;
+  font-weight: 500 !important;
+  color: var(--on-text) !important;
+  margin: 0 0 8px !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.2 !important;
+}
+
+.on-cfg-short-desc {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: var(--on-muted) !important;
+  margin: 0 0 32px !important;
+  line-height: 1.6 !important;
+  max-width: 520px !important;
+}
+
+/* ── Section spacing system (4pt grid base × 8 = 32px) ─────
+   .on-cfg-section: bottom padding only (32px)
+   .on-cfg-divider-top: border-top separator + 32px top + bottom
+   ──────────────────────────────────────────────────────────── */
+.on-cfg-section {
+  padding-bottom: 32px !important;
+}
+
+.on-cfg-divider-top {
+  border-top: 1px solid var(--on-border) !important;
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
+}
+
+.on-section-label {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: var(--on-text) !important;
+  margin: 0 0 4px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  line-height: 1.4 !important;
+}
+
+.on-section-sub {
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  color: var(--on-muted) !important;
+  margin: 0 0 16px !important;
+  line-height: 1.55 !important;
+}
+
+/* ── Term accordion rows ─────────────────────────────────────
+   Container: a single rounded rectangle with internal dividers.
+   Each row: flex row — left (badge + term name), right (price).
+   Selected: 3px left accent border + hidden checkmark appears.
+   ──────────────────────────────────────────────────────────── */
+.on-term-list {
+  display: flex !important;
+  flex-direction: column !important;
+  border: 1.5px solid var(--on-border) !important;
+  border-radius: var(--cfg-radius-lg) !important;
+  overflow: hidden !important;
+}
+
+.on-term-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: var(--cfg-row-pad) !important;
+  cursor: pointer !important;
+  border-bottom: 1px solid var(--on-border) !important;
+  background: var(--on-white) !important;
+  transition: background 0.12s ease !important;
+  position: relative !important;
+  margin: 0 !important;
+  user-select: none !important;
+}
+
+.on-term-row:last-child {
+  border-bottom: none !important;
+}
+
+.on-term-row:hover {
+  background: var(--on-primary-xs) !important;
+}
+
+/* Selected state: dark left border, checkmark shown */
+.on-term-row--selected {
+  background: var(--on-white) !important;
+  border-left: 3px solid var(--on-text) !important;
+  padding-left: 17px !important; /* compensate 3px border so content doesn't shift */
+}
+
+.on-term-row--selected:hover {
+  background: var(--on-white) !important;
+}
+
+/* Visually-hidden native radio — keyboard accessible, not rendered */
+.on-term-radio {
+  position: absolute !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Show focus ring on keyboard navigation via hidden radio focus-visible */
+.on-term-radio:focus-visible + .on-term-left {
+  outline: 2px solid var(--on-primary) !important;
+  outline-offset: 2px !important;
+  border-radius: 4px !important;
+}
+
+/* Left side: save badge stacked above term name */
+.on-term-left {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  flex: 1 !important;
+  min-width: 0 !important;
+}
+
+.on-term-save {
+  display: inline-block !important;
+  background: var(--cfg-save-bg) !important;
+  color: var(--cfg-save-fg) !important;
+  font-size: 10px !important;
+  font-weight: 500 !important;
+  padding: 2px 8px !important;
+  border-radius: 9999px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  width: fit-content !important;
+}
+
+.on-term-name {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: var(--on-text) !important;
+}
+
+/* Right side: price/mo + total billed */
+.on-term-right {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-end !important;
+  gap: 2px !important;
+  flex-shrink: 0 !important;
+}
+
+.on-term-price {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: var(--on-text) !important;
+  line-height: 1.2 !important;
+}
+
+.on-term-mo {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  color: var(--on-muted) !important;
+  margin-left: 1px !important;
+}
+
+.on-term-total {
+  font-size: 11.5px !important;
+  font-weight: 400 !important;
+  color: var(--on-muted) !important;
+}
+
+/* Checkmark circle — hidden by default, visible on selected row */
+.on-term-check {
+  display: none !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+
+.on-term-row--selected .on-term-check {
+  display: flex !important;
+}
+
+/* ── Quantity stepper ────────────────────────────────────────
+   Layout: info text on left (flex: 1), pill stepper on right.
+   Stepper: pill border-radius, min–value–max in one container.
+   ──────────────────────────────────────────────────────────── */
+.on-qty-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 24px !important;
+}
+
+.on-qty-info {
+  flex: 1 !important;
+  min-width: 0 !important;
+}
+
+.on-qty-unit-price {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  color: var(--on-muted) !important;
+  margin: 6px 0 0 !important;
+  line-height: 1.4 !important;
+}
+
+.on-qty-stepper {
+  display: inline-flex !important;
+  align-items: center !important;
+  border: 1.5px solid var(--on-border) !important;
+  border-radius: 9999px !important;
+  overflow: hidden !important;
+  flex-shrink: 0 !important;
+  background: var(--on-white) !important;
+}
+
+.on-qty-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px !important;
+  height: 40px !important;
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer !important;
+  color: var(--on-text) !important;
+  transition: background 0.12s ease, color 0.12s ease !important;
+  flex-shrink: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+}
+
+.on-qty-btn:hover {
+  background: var(--on-primary-light) !important;
+  color: var(--on-primary) !important;
+}
+
+.on-qty-btn:active {
+  background: var(--on-primary-light) !important;
+}
+
+.on-qty-btn:focus-visible {
+  outline: 2px solid var(--on-primary) !important;
+  outline-offset: -2px !important;
+}
+
+/* Number input: no spinners, centered, monospaced tabular figures */
+.on-qty-input {
+  width: 48px !important;
+  text-align: center !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  border-left: 1px solid var(--on-border) !important;
+  border-right: 1px solid var(--on-border) !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: var(--on-text) !important;
+  background: var(--on-white) !important;
+  padding: 0 !important;
+  height: 40px !important;
+  outline: none !important;
+  font-variant-numeric: tabular-nums !important;
+  -moz-appearance: textfield !important;
+  border-radius: 0 !important;
+}
+
+.on-qty-input::-webkit-inner-spin-button,
+.on-qty-input::-webkit-outer-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+
+/* Inline help icon button */
+.on-qty-help-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  color: var(--on-muted) !important;
+  padding: 0 !important;
+  vertical-align: middle !important;
+  transition: color 0.12s !important;
+}
+
+.on-qty-help-btn:hover {
+  color: var(--on-text) !important;
+}
+
+/* ── Select + text inputs ────────────────────────────────────
+   Consistent with the OneNet form language: 1.5px border,
+   8px radius, 10px/14px padding, focus ring uses brand blue.
+   ──────────────────────────────────────────────────────────── */
+.on-select,
+.on-input {
+  display: block !important;
+  width: 100% !important;
+  padding: 10px 14px !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: var(--on-text) !important;
+  background: var(--on-white) !important;
+  border: 1.5px solid var(--on-border) !important;
+  border-radius: var(--cfg-radius-md) !important;
+  line-height: 1.4 !important;
+  transition: border-color 0.12s ease, box-shadow 0.12s ease !important;
+  font-family: var(--cfg-font) !important;
+}
+
+.on-select:focus,
+.on-input:focus {
+  border-color: var(--on-primary) !important;
+  box-shadow: 0 0 0 3px rgba(67, 67, 240, 0.12) !important;
+  outline: none !important;
+}
+
+/* Inline radio / checkbox options */
+.on-radio-label,
+.on-checkbox-label {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: var(--on-text) !important;
+  cursor: pointer !important;
+  margin: 6px 0 !important;
+  user-select: none !important;
+}
+
+/* Helper / description text below inputs */
+.on-field-help {
+  display: block !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  color: var(--on-muted) !important;
+  margin-top: 4px !important;
+  line-height: 1.4 !important;
+}
+
+/* ── "Included in your plan" section ────────────────────────
+   Cards with a soft indigo tint background, white icon badge
+   on the left, name + description on the right.
+   ──────────────────────────────────────────────────────────── */
+.on-included-h2 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  color: var(--on-text) !important;
+  margin: 0 0 16px !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1.3 !important;
+}
+
+.on-included-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+
+.on-included-item {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 14px !important;
+  background: var(--cfg-inc-bg) !important;
+  border-radius: 10px !important;
+  padding: 14px 16px !important;
+}
+
+.on-included-icon {
+  flex-shrink: 0 !important;
+  width: 32px !important;
+  height: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: var(--on-white) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06) !important;
+}
+
+.on-included-text {
+  flex: 1 !important;
+  min-width: 0 !important;
+}
+
+.on-included-name {
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+  color: var(--on-text) !important;
+  margin: 0 0 3px !important;
+  line-height: 1.4 !important;
+}
+
+.on-included-desc {
+  font-size: 12.5px !important;
+  font-weight: 400 !important;
+  color: var(--on-muted) !important;
+  margin: 0 !important;
+  line-height: 1.5 !important;
+}
+
+/* ── Metrics list (usage billing) ───────────────────────────
+   Kept simple: list-reset, thin row separators, 14px body.
+   ──────────────────────────────────────────────────────────── */
+.on-metrics-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.on-metrics-list li {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: var(--on-text) !important;
+  padding: 8px 0 !important;
+  border-bottom: 1px solid var(--on-border) !important;
+  line-height: 1.5 !important;
+}
+
+.on-metrics-list li:last-child {
+  border-bottom: none !important;
+}
+
+/* ── Sidebar summary card ────────────────────────────────────
+   White card with subtle shadow. Title bar uppercase 13px.
+   Body inherits HostX's #producttotal markup styles, but
+   overridden here to stay on-brand and legible on white.
+   ──────────────────────────────────────────────────────────── */
+.on-summary-wrap {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+.on-summary-card {
+  background: var(--on-white) !important;
+  border: 1px solid var(--on-border) !important;
+  border-radius: var(--cfg-radius-lg) !important;
+  overflow: hidden !important;
+  box-shadow: var(--cfg-shadow-sm) !important;
+}
+
+.on-summary-title {
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  color: var(--on-muted) !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  padding: 16px 20px !important;
+  margin: 0 !important;
+  border-bottom: 1px solid var(--on-border) !important;
+  background: var(--on-white) !important;
+}
+
+.on-summary-body {
+  padding: 16px 20px !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: var(--on-text) !important;
+  line-height: 1.6 !important;
+  font-family: var(--cfg-font) !important;
+}
+
+/* Force correct colours over any HostX dark-theme overrides */
+#order-standard_cart .on-summary-card,
+#order-standard_cart #orderSummary .on-summary-card {
+  background: var(--on-white) !important;
+  background-color: var(--on-white) !important;
+}
+
+#order-standard_cart #producttotal,
+#order-standard_cart .on-summary-body {
+  color: var(--on-text) !important;
+  background: transparent !important;
+  font-family: var(--cfg-font) !important;
+}
+
+#order-standard_cart #producttotal *,
+#order-standard_cart .on-summary-body * {
+  color: inherit !important;
+  background: transparent !important;
+  font-family: var(--cfg-font) !important;
+}
+
+/* Loading spinner inside summary */
+.on-summary-loader {
+  padding: 16px 20px !important;
+  text-align: center !important;
+  color: var(--on-primary) !important;
+}
+
+/* ── Primary CTA button ──────────────────────────────────────
+   Full-width pill, brand blue, 50px min-height, subtle shadow.
+   Uses .hx-primary-btn so HostX hover states are overridden.
+   ──────────────────────────────────────────────────────────── */
+.on-cta-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  min-height: 50px !important;
+  padding: 14px 24px !important;
+  background: var(--on-primary) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 9999px !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.01em !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  font-family: var(--cfg-font) !important;
+  transition: background 0.15s ease, box-shadow 0.15s ease !important;
+  box-shadow: var(--cfg-shadow-cta) !important;
+}
+
+.on-cta-btn:hover,
+.on-cta-btn:focus-visible {
+  background: var(--on-primary-dark) !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  box-shadow: 0 6px 20px rgba(67, 67, 240, 0.3) !important;
+}
+
+.on-cta-btn:active {
+  background: var(--on-primary-dark) !important;
+  box-shadow: 0 2px 8px rgba(67, 67, 240, 0.18) !important;
+}
+
+/* ── Suppress legacy HostX configure elements ────────────────
+   These blocks appear in the base HostX template and must be
+   hidden when our custom markup is present on this page.
+   ──────────────────────────────────────────────────────────── */
+#order-standard_cart .on-cfg-wrap .heading-area-configuration,
+#order-standard_cart .on-cfg-wrap .header-lined-descp,
+#order-standard_cart .on-cfg-wrap .product-info,
+#order-standard_cart .on-cfg-wrap .field-container.billing-cycle-styled,
+#order-standard_cart .on-cfg-wrap .alert.alert-warning.info-text-sm,
+#order-standard_cart .on-cfg-wrap .secondary-cart-body,
+#order-standard_cart .on-cfg-wrap .secondary-cart-sidebar,
+#order-standard_cart .on-cfg-wrap .configure-product-page {
+  display: none !important;
+}
+
+/* ── Responsive: single column on mobile/tablet ──────────────
+   Below 900px: column layout, sidebar floats above (order: -1)
+   so order summary is visible before scrolling the form.
+   ──────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .on-cfg-wrap {
+    flex-direction: column !important;
+    gap: 24px !important;
+    padding: 0 16px !important;
+    margin: 24px auto !important;
+  }
+
+  .on-cfg-sidebar {
+    width: 100% !important;
+    position: static !important;
+    order: -1 !important;
+  }
+
+  .on-cfg-main {
+    max-width: 100% !important;
+  }
+
+  .on-cfg-h1 {
+    font-size: 22px !important;
+  }
+
+  .on-qty-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+  }
+}
+
+/* ============================================================
+   Configure Product Final Pass — GoDaddy dropdown + layout fixes
+   ============================================================ */
+#order-standard_cart.hostx-cart-body-section {
+  background: #ffffff !important;
+  min-height: 100vh !important;
+}
+
+#order-standard_cart .on-cfg-wrap {
+  --cfg-max-w: 1460px;
+  --cfg-sidebar-w: 504px;
+  --cfg-col-gap: 72px;
+  --cfg-pad-top: 12px;
+  align-items: flex-start !important;
+}
+
+#order-standard_cart .on-cfg-main {
+  flex: 1 1 648px !important;
+  max-width: 648px !important;
+}
+
+#order-standard_cart .on-cfg-sidebar {
+  width: var(--cfg-sidebar-w) !important;
+}
+
+#order-standard_cart .on-cfg-product-header {
+  margin-bottom: 22px !important;
+  padding-bottom: 26px !important;
+}
+
+#order-standard_cart .on-added-badge {
+  background: #86f5df !important;
+  color: #061c18 !important;
+  border-radius: 0 !important;
+  text-transform: uppercase !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  padding: 5px 9px !important;
+  letter-spacing: 0.02em !important;
+}
+
+#order-standard_cart .on-product-name {
+  color: #0b0f19 !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  margin-top: 10px !important;
+}
+
+#order-standard_cart .on-cfg-h1 {
+  font-size: 31px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.045em !important;
+  margin-bottom: 26px !important;
+}
+
+#order-standard_cart .on-section-label {
+  color: #0b0f19 !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  margin-bottom: 4px !important;
+}
+
+#order-standard_cart .on-section-sub {
+  color: #0b0f19 !important;
+  font-size: 13px !important;
+  line-height: 1.55 !important;
+  margin-bottom: 16px !important;
+}
+
+#order-standard_cart .on-term-select {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+#order-standard_cart .on-term-dropdown {
+  position: relative !important;
+  width: 100% !important;
+  z-index: 20 !important;
+}
+
+#order-standard_cart .on-term-trigger,
+#order-standard_cart .on-term-option {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  width: 100% !important;
+  display: grid !important;
+  grid-template-columns: 1fr auto 24px !important;
+  align-items: center !important;
+  gap: 18px !important;
+  background: #ffffff !important;
+  border: 0 !important;
+  color: #0b0f19 !important;
+  font-family: var(--cfg-font) !important;
+  text-align: left !important;
+  cursor: pointer !important;
+}
+
+#order-standard_cart .on-term-trigger {
+  min-height: 72px !important;
+  padding: 16px 18px !important;
+  border: 2px solid #111111 !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+}
+
+#order-standard_cart .on-term-trigger:focus-visible,
+#order-standard_cart .on-term-option:focus-visible {
+  outline: 3px solid rgba(67, 67, 240, 0.28) !important;
+  outline-offset: 2px !important;
+}
+
+#order-standard_cart .on-term-menu {
+  display: none !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  max-height: 430px !important;
+  overflow-y: auto !important;
+  background: #ffffff !important;
+  border: 2px solid #111111 !important;
+  border-radius: 10px !important;
+  box-shadow: 12px 14px 28px rgba(15, 23, 42, 0.14) !important;
+  z-index: 30 !important;
+}
+
+#order-standard_cart .on-term-dropdown.is-open .on-term-menu {
+  display: block !important;
+}
+
+#order-standard_cart .on-term-dropdown.is-open .on-term-trigger {
+  visibility: hidden !important;
+}
+
+#order-standard_cart .on-term-option {
+  min-height: 67px !important;
+  padding: 12px 18px !important;
+}
+
+#order-standard_cart .on-term-option:hover {
+  background: #f8fafc !important;
+}
+
+#order-standard_cart .on-term-option.is-selected .on-term-check {
+  display: flex !important;
+}
+
+#order-standard_cart .on-term-card-left {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 6px !important;
+}
+
+#order-standard_cart .on-term-name {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #0b0f19 !important;
+}
+
+#order-standard_cart .on-term-save {
+  background: #fff1a8 !important;
+  color: #111111 !important;
+  border-radius: 0 !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  padding: 2px 4px !important;
+}
+
+#order-standard_cart .on-term-card-right,
+#order-standard_cart .on-term-right {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-end !important;
+  gap: 3px !important;
+}
+
+#order-standard_cart .on-term-price {
+  color: #0b0f19 !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  line-height: 1.1 !important;
+}
+
+#order-standard_cart .on-term-mo,
+#order-standard_cart .on-term-total {
+  color: #0b0f19 !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+}
+
+#order-standard_cart .on-term-check {
+  display: none !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+#order-standard_cart .on-term-radio,
+#order-standard_cart input.on-term-radio,
+#order-standard_cart .on-term-row input[type="radio"] {
+  position: absolute !important;
+  inset: auto !important;
+  opacity: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+}
+
+#order-standard_cart .on-qty-row {
+  display: grid !important;
+  grid-template-columns: 1fr 158px !important;
+  align-items: start !important;
+  gap: 28px !important;
+}
+
+#order-standard_cart .on-qty-info {
+  max-width: 470px !important;
+}
+
+#order-standard_cart .on-qty-info .on-section-label {
+  display: inline-flex !important;
+  margin-bottom: 4px !important;
+}
+
+#order-standard_cart .on-qty-control {
+  width: 158px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 6px !important;
+}
+
+#order-standard_cart .on-qty-stepper {
+  width: 158px !important;
+  height: 46px !important;
+  border: 1.5px solid #111111 !important;
+  border-radius: 10px !important;
+}
+
+#order-standard_cart .on-qty-btn {
+  width: 51px !important;
+  height: 46px !important;
+}
+
+#order-standard_cart .on-qty-input {
+  width: 56px !important;
+  height: 46px !important;
+  font-size: 18px !important;
+}
+
+#order-standard_cart .on-qty-unit-price {
+  margin: 0 !important;
+  color: #6b7280 !important;
+  font-size: 13px !important;
+  line-height: 1.2 !important;
+}
+
+#order-standard_cart .on-included-h2 {
+  font-size: 26px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.035em !important;
+}
+
+#order-standard_cart .on-included-item {
+  background: #dcecff !important;
+  border-radius: 9px !important;
+  padding: 16px !important;
+}
+
+#order-standard_cart .on-included-name {
+  color: #0b0f19 !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+}
+
+#order-standard_cart .on-included-desc {
+  color: #0b0f19 !important;
+  font-size: 13px !important;
+}
+
+#order-standard_cart .on-summary-card {
+  border: 1px solid #cfd7e3 !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+}
+
+#order-standard_cart .on-summary-title {
+  color: #0b0f19 !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  padding: 18px 14px 22px !important;
+}
+
+#order-standard_cart .on-cta-btn {
+  background: #2176d2 !important;
+  border-radius: 5px !important;
+  min-height: 39px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  box-shadow: none !important;
+}
+
+#order-standard_cart .on-summary-note {
+  margin: 12px 0 0 !important;
+  color: #0b0f19 !important;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  text-align: center !important;
+}
+
+@media (max-width: 900px) {
+  #order-standard_cart .on-cfg-wrap {
+    padding: 0 18px !important;
+    gap: 26px !important;
+  }
+
+  #order-standard_cart .on-cfg-sidebar {
+    order: 2 !important;
+  }
+
+  #order-standard_cart .on-cfg-main {
+    max-width: 100% !important;
+  }
+
+  #order-standard_cart .on-qty-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  #order-standard_cart .on-term-trigger,
+  #order-standard_cart .on-term-option {
+    grid-template-columns: 1fr auto 20px !important;
+    gap: 12px !important;
+  }
+}

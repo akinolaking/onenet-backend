@@ -141,17 +141,17 @@ var _localLang = {
                 {assign var=onProductNameLower value=$productinfo.name|lower}
                 {assign var=onServiceName value="service"}
                 {if $productinfo.type eq "server"}
-                    {assign var=onServiceName value="server"}
+                    {assign var=onServiceName value="Server"}
                 {elseif $onProductNameLower|strstr:"wordpress" || $onProductNameLower|strstr:"wp "}
-                    {assign var=onServiceName value="WordPress site"}
+                    {assign var=onServiceName value="WordPress Hosting"}
                 {elseif $onProductNameLower|strstr:"reseller" || $onProductNameLower|strstr:"rsl"}
-                    {assign var=onServiceName value="reseller service"}
+                    {assign var=onServiceName value="Reseller Hosting"}
                 {elseif $onProductNameLower|strstr:"vps" || $onProductNameLower|strstr:"dedicated" || $onProductNameLower|strstr:"cloud"}
-                    {assign var=onServiceName value="server"}
+                    {assign var=onServiceName value="Server"}
                 {elseif $onProductNameLower|strstr:"email" || $onProductNameLower|strstr:"mail"}
-                    {assign var=onServiceName value="email service"}
+                    {assign var=onServiceName value="Email Service"}
                 {elseif $onProductNameLower|strstr:"web"}
-                    {assign var=onServiceName value="web hosting service"}
+                    {assign var=onServiceName value="Web Hosting"}
                 {/if}
 
                 <!-- ── CONFIGURABLE OPTIONS (qty stepper + others) ── -->
@@ -243,7 +243,7 @@ var _localLang = {
                 <div class="on-cfg-section on-cfg-divider-top on-qty-fallback">
                     <div class="on-qty-row">
                         <div class="on-qty-info">
-                            <p class="on-section-label">Add More {$productinfo.name|trim} to your plan
+                            <p class="on-section-label">Add More {$onServiceName} to your plan
                                 <button type="button" class="on-qty-help-btn" aria-label="More information" title="Add more to your plan">
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6.5" stroke="currentColor" stroke-width="1.2"/><path d="M7 6v4M7 4.5v.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
                                 </button>
