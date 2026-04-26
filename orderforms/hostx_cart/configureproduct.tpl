@@ -141,17 +141,17 @@ var _localLang = {
                 {assign var=onProductNameLower value=$productinfo.name|lower}
                 {assign var=onServiceName value="service"}
                 {if $productinfo.type eq "server"}
-                    {assign var=onServiceName value="server"}
+                    {assign var=onServiceName value="Server"}
                 {elseif $onProductNameLower|strstr:"wordpress" || $onProductNameLower|strstr:"wp "}
-                    {assign var=onServiceName value="WordPress site"}
+                    {assign var=onServiceName value="WordPress Hosting"}
                 {elseif $onProductNameLower|strstr:"reseller" || $onProductNameLower|strstr:"rsl"}
-                    {assign var=onServiceName value="reseller service"}
+                    {assign var=onServiceName value="Reseller Hosting"}
                 {elseif $onProductNameLower|strstr:"vps" || $onProductNameLower|strstr:"dedicated" || $onProductNameLower|strstr:"cloud"}
-                    {assign var=onServiceName value="server"}
+                    {assign var=onServiceName value="Server"}
                 {elseif $onProductNameLower|strstr:"email" || $onProductNameLower|strstr:"mail"}
-                    {assign var=onServiceName value="email service"}
+                    {assign var=onServiceName value="Email Service"}
                 {elseif $onProductNameLower|strstr:"web"}
-                    {assign var=onServiceName value="web hosting service"}
+                    {assign var=onServiceName value="Web Hosting"}
                 {/if}
 
                 <!-- ── CONFIGURABLE OPTIONS (qty stepper + others) ── -->
