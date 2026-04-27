@@ -1,11 +1,25 @@
+{assign var=onEmbeddedCheckout value=$embeddedCheckout|default:false}
+{assign var=onKeepSignupOpen value=false}
+{if $errormessage
+    || $clientsdetails.firstname
+    || $clientsdetails.lastname
+    || $clientsdetails.email
+    || $clientsdetails.address1
+    || $clientsdetails.city
+    || $clientsdetails.postcode
+}
+    {assign var=onKeepSignupOpen value=true}
+{/if}
 <script>
     // Define state tab index value
     var statesTab = 10;
     // Do not enforce state input client side
     var stateNotRequired = true;
 </script>
+{if !$onEmbeddedCheckout}
 {include file="orderforms/{$carttpl}/common.tpl"}
 <script type="text/javascript" src="{$BASE_PATH_JS}/StatesDropdown.js"></script>
+{/if}
 <script type="text/javascript" src="{$BASE_PATH_JS}/PasswordStrength.js"></script>
 <script type="text/javascript" src="{$BASE_PATH_JS}/VatValidator.js"></script>
 <script>
@@ -15,36 +29,30 @@
     window.langPasswordStrong = "{$LANG.pwstrengthstrong}";
     window.langVatErrorInvalidFormat = "{$LANG.tax.errorVatInvalidFormat}";
 </script>
+{if !$onEmbeddedCheckout}
 <div id="order-standard_cart" class="hostx-cart-body-section">
     {include file="orderforms/{$carttpl}/product-group-list.tpl"}
-    <div class="checkout-cart-page">
-        <div class="cart-body checkout-page-body">
-            <div class="row">
-                <div class="secondary-cart-body">
-                    <div class="header-lined">
-                        <h1 class="font-size-36">{$LANG.orderForm.checkout}</h1>
+    <div class="checkout-cart-page on-cfg-wrap on-checkout-wrap">
+        <div class="secondary-cart-body on-cfg-main on-checkout-main">
+                    <div class="on-cfg-product-header on-checkout-header">
+                        <span class="on-added-badge">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1.5 6L4.5 9L10.5 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Order review complete
+                        </span>
+                        <p class="on-product-name">Secure checkout</p>
                     </div>
+                    <h1 class="on-cfg-h1 on-checkout-title">Checkout</h1>
+                    <p class="on-cfg-short-desc on-checkout-copy">Confirm billing details, choose payment, and place the order.</p>
                     {foreach $hookOutput as $output}
                         <div class="last-chance-market-connect">
                             {$output}
                         </div>
                     {/foreach}
+{else}
+<div class="on-view-checkout-stack on-cfg-stack">
+{/if}
 
-                    <div class="already-registered clearfix">
-                        <div class="pull-right float-right">
-                            <button type="button" class="btn btn-info{if $loggedin || !$loggedin && $custtype eq "existing"} w-hidden{/if}" id="btnAlreadyRegistered">
-                                {$LANG.orderForm.alreadyRegistered}
-                            </button>
-                            <button type="button" class="btn btn-warning{if $loggedin || $custtype neq "existing"} w-hidden{/if}" id="btnNewUserSignup">
-                                {$LANG.orderForm.createAccount}
-                            </button>
-                        </div>
-
-                        <p class="text-sm-left overflow-hidden">{lang key='orderForm.enterPersonalDetails'}</p>
-                    </div>
-
-                    
-                        <div class="alert alert-danger cart-error-alert checkout-error-feedback {if !$errormessage}d-none{/if}" role="alert">
+                    <div class="alert alert-danger cart-error-alert checkout-error-feedback {if !$errormessage}d-none{/if}" role="alert">
                         <p>{$LANG.orderForm.correctErrors}:</p>
                         <ul>
                             {if $errormessage}
@@ -73,7 +81,34 @@
                         {if $isTaxInclusiveDeduct}
                             <input type="hidden" id="isTaxInclusiveDeduct" value="true">
                         {/if}
+                        <div class="on-clean-accordion on-live-checkout-accordion">
+                        <section class="on-acc-card on-checkout-accordion-card is-open" data-acc-card="account">
+                            <button type="button" class="on-acc-toggle" data-acc-toggle>
+                                <span class="on-acc-toggle-main">
+                                    <span class="on-acc-step">1</span>
+                                    <span>
+                                        <span class="on-acc-title">Account</span><br>
+                                        <span class="on-acc-summary">Sign in if you already have an account, or create one for this order.</span>
+                                    </span>
+                                </span>
+                                <span class="on-acc-chevron">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4.5 7l4.5 4 4.5-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </span>
+                            </button>
+                            <div class="on-acc-body">
+                        <div class="already-registered clearfix on-checkout-section on-checkout-account-switch">
+                            <div class="pull-right float-right">
+                                <button type="button" class="btn btn-info on-checkout-pill-btn{if $loggedin || !$loggedin && $custtype eq "existing"} w-hidden{/if}" id="btnAlreadyRegistered">
+                                    {$LANG.orderForm.alreadyRegistered}
+                                </button>
+                                <button type="button" class="btn btn-warning on-checkout-pill-btn{if $loggedin || $custtype neq "existing"} w-hidden{/if}" id="btnNewUserSignup">
+                                    {$LANG.orderForm.createAccount}
+                                </button>
+                            </div>
+                            <p class="text-sm-left overflow-hidden">{lang key='orderForm.enterPersonalDetails'}</p>
+                        </div>
                         {if $custtype neq "new" && $loggedin}
+                            <div class="on-checkout-section on-checkout-account-section">
                             <div class="sub-heading">
                                 <span class="primary-bg-color">
                                     {lang key='switchAccount.title'}
@@ -124,9 +159,10 @@
                                     </div>
                                 </div>
                             </div>
+                            </div>
                         {/if}
 
-                        <div id="containerExistingUserSignin"{if $loggedin || $custtype neq "existing"} class="w-hidden{/if}">
+                        <div id="containerExistingUserSignin" class="on-checkout-section on-checkout-login-section{if $loggedin || $custtype neq "existing"} w-hidden{/if}">
                             <div class="sub-heading">
                                 <span class="primary-bg-color">{$LANG.orderForm.existingCustomerLogin}</span>
                             </div>
@@ -149,7 +185,7 @@
                                 </div>
                                 <div class="col-sm-2">
                                     <div class="text-center">
-                                        <button type="button" id="btnExistingLogin" class="btn button-style hx-primary-btn">
+                                        <button type="button" id="btnExistingLogin" class="btn button-style hx-primary-btn on-checkout-pill-btn">
                                             <span id="existingLoginButton">{lang key='login'}</span>
                                             <span id="existingLoginPleaseWait" class="w-hidden">{lang key='pleasewait'}</span>
                                         </button>
@@ -159,7 +195,7 @@
                             {include file="orderforms/{$carttpl}/linkedaccounts.tpl" linkContext="checkout-existing"}
                         </div>
 
-                        <div id="containerNewUserSignup"
+                        <div id="containerNewUserSignup" class="on-checkout-section on-checkout-signup-section
                             {if
                                 $custtype === 'existing'
                                 || (is_numeric($selectedAccountId) && $selectedAccountId > 0)
@@ -168,8 +204,9 @@
                                     && $selectedAccountId !== 'new'
                                     && $custtype !== 'add'
                                 )
+                                || !$onKeepSignupOpen
                             }
-                                class="w-hidden"
+                                w-hidden
                             {/if}
                         >
 
@@ -271,7 +308,7 @@
                             </div>
                         </div>    
                             {if $customfields}
-                                <div class="custom-field-info">
+                                <div class="custom-field-info on-checkout-subsection">
                                     <div class="sub-heading">
                                         <span class="primary-bg-color">{$LANG.orderadditionalrequiredinfo}<br><i><small>{lang key='orderForm.requiredField'}</small></i></span>
                                     </div>
@@ -297,6 +334,7 @@
                         </div>
 
                         {if isset($checkoutExtraFields) && !empty($checkoutExtraFields)}
+                            <div class="on-checkout-section on-checkout-extra-section">
                             <div class="sub-heading">
                                 <span class="primary-bg-color">{lang key='orderForm.additionalInformation'}</span>
                             </div>
@@ -316,10 +354,11 @@
                                     </div>
                                 {/foreach}
                             </div>
+                            </div>
                         {/if}
 
                         {if $domainsinorder}
-                            <div class="domains-contact-info-order">
+                            <div class="domains-contact-info-order on-checkout-section on-checkout-domain-section">
                                 <div class="sub-heading">
                                     <span class="primary-bg-color">{$LANG.domainregistrantinfo}</span>
                                 </div>
@@ -425,7 +464,7 @@
                         {/if}
 
                         {if !$loggedin}
-                            <div id="containerNewUserSecurity"{if (!$loggedin && $custtype eq "existing") || ($remote_auth_prelinked && !$securityquestions)} class="w-hidden"{/if}>
+                            <div id="containerNewUserSecurity" class="on-checkout-section on-checkout-security-section{if (!$loggedin && $custtype eq "existing") || ($remote_auth_prelinked && !$securityquestions) || !$onKeepSignupOpen} w-hidden{/if}">
                                 <div class="sub-heading">
                                     <span class="primary-bg-color">{$LANG.orderForm.accountSecurity}</span>
                                 </div>
@@ -445,7 +484,7 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
-                                        <button type="button" class="btn btn-default btn-sm generate-password" data-targetfields="inputNewPassword1,inputNewPassword2">
+                                        <button type="button" class="btn btn-default btn-sm generate-password on-checkout-pill-btn" data-targetfields="inputNewPassword1,inputNewPassword2">
                                             {$LANG.generatePassword.btnLabel}
                                         </button>
                                     </div>
@@ -484,8 +523,25 @@
                             </div>
 
                         {/if}
-                        
-                        <div id="applyCreditContainer" class="apply-credit-container{if !$canUseCreditOnCheckout} w-hidden{/if}" data-apply-credit="{$applyCredit}">
+                            </div>
+                        </section>
+
+                        <section class="on-acc-card on-checkout-accordion-card is-open" data-acc-card="payment">
+                            <button type="button" class="on-acc-toggle" data-acc-toggle>
+                                <span class="on-acc-toggle-main">
+                                    <span class="on-acc-step">2</span>
+                                    <span>
+                                        <span class="on-acc-title">Payment</span><br>
+                                        <span class="on-acc-summary">Choose the payment method you want to use for this order.</span>
+                                    </span>
+                                </span>
+                                <span class="on-acc-chevron">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4.5 7l4.5 4 4.5-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </span>
+                            </button>
+                            <div class="on-acc-body">
+
+                        <div id="applyCreditContainer" class="apply-credit-container on-checkout-section on-checkout-credit-section{if !$canUseCreditOnCheckout} w-hidden{/if}" data-apply-credit="{$applyCredit}">
                             <p>{lang key='cart.availableCreditBalance' amount=$creditBalance}</p>
 
                             <label class="radio">
@@ -504,13 +560,13 @@
                         </div>
 
                         {if !$inExpressCheckout}
-                        <div class="checkout-payment-info">
+                        <div class="checkout-payment-info on-checkout-section on-checkout-payment-section">
                             <div id="paymentGatewaysContainer" class="form-group">
                                 <p class="small text-muted">{$LANG.orderForm.preferredPaymentMethod}</p>
 
-                                <div class="text-center">
+                            <div class="text-center on-checkout-gateway-grid">
                                     {foreach $gateways as $gateway}
-                                        <label class="radio-inline">
+                                        <label class="radio-inline on-pay-option{if $selectedgateway eq $gateway.sysname} is-selected{/if}">
                                             <input type="radio"
                                                 name="paymentmethod"
                                                 value="{$gateway.sysname}"
@@ -520,7 +576,15 @@
                                                 class="payment-methods{if $gateway.type eq "CC"} is-credit-card{/if}"
                                                     {if $selectedgateway eq $gateway.sysname} checked{/if}
                                             />
-                                            {$gateway.name}
+                                            <span class="on-pay-head">
+                                                <span class="on-pay-left">
+                                                    <span class="on-pay-dot"></span>
+                                                    <span class="on-pay-name">{$gateway.name}</span>
+                                                </span>
+                                                <span class="on-acc-chevron">
+                                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4.5 7l4.5 4 4.5-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                </span>
+                                            </span>
                                         </label>
                                     {/foreach}
                                 </div>
@@ -638,9 +702,26 @@
                                 </p>
                             {/if}
                         {/if}
+                            </div>
+                        </section>
 
+                        {if $shownotesfield || $showMarketingEmailOptIn}
+                        <section class="on-acc-card on-checkout-accordion-card" data-acc-card="details">
+                            <button type="button" class="on-acc-toggle" data-acc-toggle>
+                                <span class="on-acc-toggle-main">
+                                    <span class="on-acc-step">3</span>
+                                    <span>
+                                        <span class="on-acc-title">Optional details</span><br>
+                                        <span class="on-acc-summary">Add any extra order information only if you need it.</span>
+                                    </span>
+                                </span>
+                                <span class="on-acc-chevron">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4.5 7l4.5 4 4.5-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </span>
+                            </button>
+                            <div class="on-acc-body">
                         {if $shownotesfield}
-                            <div class="checkout-notes">
+                            <div class="checkout-notes on-checkout-section on-checkout-notes-section">
                                 <div class="sub-heading">
                                     <span class="primary-bg-color">{$LANG.orderForm.additionalNotes}</span>
                                 </div>
@@ -655,15 +736,19 @@
                         {/if}
 
                         {if $showMarketingEmailOptIn}
-                            <div class="marketing-email-optin">
+                            <div class="marketing-email-optin on-checkout-section on-checkout-marketing-section">
                                 <i class="far fa-envelope"></i>
                                 <h4 class="font-size-18">{lang key='emailMarketing.joinOurMailingList'}</h4>
                                 <p>{$marketingEmailOptInMessage}</p>
                                 <input type="checkbox" name="marketingoptin" value="1"{if $marketingEmailOptIn} checked{/if} class="no-icheck toggle-switch-success" data-size="small" data-on-text="{lang key='yes'}" data-off-text="{lang key='no'}">
                             </div>
                         {/if}
+                            </div>
+                        </section>
+                        {/if}
+                        </div>
 
-                        <div class="text-center">
+                        <div class="text-center on-checkout-section on-checkout-consent-section on-checkout-consent-shell">
                             {if $accepttos}
                                 <p>
                                     <label class="checkbox-inline">
@@ -707,17 +792,43 @@
                             <div class="clearfix"></div>
                         </div>
                     {/if}
+                {if $onEmbeddedCheckout}
                 </div>
-                <div class="secondary-cart-sidebar" id="scrollingPanelContainer">
-                    <div class="order-summary" id="orderSummary">
+                {else}
+                </div>
+                <div class="secondary-cart-sidebar on-cfg-sidebar on-checkout-sidebar" id="scrollingPanelContainer">
+                    <div class="order-summary on-summary-card on-checkout-summary-card" id="orderSummary">
                         <div class="loader w-hidden" id="orderSummaryLoader">
                             <i class="fas fa-fw fa-sync fa-spin"></i>
                         </div>
-                        <h2 class="font-size-30">{$LANG.ordersummary}</h2>
-                        <div class="summary-container">
+                        <h2 class="font-size-30 on-summary-title">{$LANG.ordersummary}</h2>
+                        <div class="summary-container on-summary-body">
                             <div class="subtotal clearfix">
                                 <span class="pull-left float-left">{$LANG.ordersubtotal}</span>
                                 <span id="subtotal" class="pull-right float-right">{$subtotal}</span>
+                            </div>
+                            <div class="on-checkout-promo-shell">
+                                {if $promotioncode}
+                                    <div class="promo-code-view on-checkout-promo-active">
+                                        <div class="view-cart-promotion-code">
+                                            {$promotioncode} - {$promotiondescription}
+                                        </div>
+                                        <div class="remove-promo-btn">
+                                            <a href="{$WEB_ROOT}/cart.php?a=removepromo" class="btn button-style hx-secondary on-checkout-pill-btn on-checkout-mini-btn">
+                                                Remove
+                                            </a>
+                                        </div>
+                                    </div>
+                                {else}
+                                    <div class="on-checkout-promo-form">
+                                        <span class="on-checkout-promo-label">Apply promo code</span>
+                                        <div class="on-checkout-promo-row">
+                                            <a href="{$WEB_ROOT}/cart.php?a=view" class="btn button-style hx-secondary on-checkout-pill-btn on-checkout-mini-btn">
+                                                Review cart
+                                            </a>
+                                        </div>
+                                    </div>
+                                {/if}
                             </div>
                             {if $promotioncode || $taxrate || $taxrate2}
                                 <div class="bordered-totals">
@@ -766,7 +877,10 @@
                             </div>
 
                             <div class="total-due-today total-due-today-padded">
-                                <span id="totalDueToday" class="amt">{$total}</span>
+                                <span class="amt">
+                                    <span id="totalDueToday">{$total}</span>
+                                    <span id="totalCartPrice" class="sr-only">{$total}</span>
+                                </span>
                                 <span>{$LANG.ordertotalduetoday}</span>
                             </div>
 
@@ -779,19 +893,107 @@
                                 {/foreach}
                             </div>
                             <div class="summary-checkout-btn">
-                                <button class="btn button-style hx-primary-btn{if $cartitems == 0} disabled{/if}" id="checkout-summary" onclick="jQuery('#btnCompleteOrder').click();">{if $inExpressCheckout}{$LANG.confirmAndPay}{else}{$LANG.completeorder}{/if} <i class="fas fa-arrow-circle-right"></i>
+                                <button class="btn button-style hx-primary-btn on-checkout-pill-btn on-checkout-submit-btn{if $cartitems == 0} disabled{/if}" id="checkout-summary" onclick="jQuery('#btnCompleteOrder').click();">{if $inExpressCheckout}{$LANG.confirmAndPay}{else}{$LANG.completeorder}{/if} <i class="fas fa-arrow-circle-right"></i>
                                 </button>
                             </div>
                         </div>
                     </div>                    
                 </div>
-            </div>
-        </div>
     </div>
 </div>
+                {/if}
 <script type="text/javascript" src="{$BASE_PATH_JS}/jquery.payment.js"></script>
 <script>
     var hideCvcOnCheckoutForExistingCard = '{if $canUseCreditOnCheckout && $applyCredit && ($creditBalance->toNumeric() >= $total->toNumeric())}1{else}0{/if}';
 </script>
+{if !$onEmbeddedCheckout}
 <script type="text/javascript" src="{$BASE_PATH_JS}/CartTotalUpdater.js"></script>
+{/if}
+<script>
+    (function () {
+        function hostxResetCheckoutScroll() {
+            window.scrollTo(0, 0);
+        }
+        if (window.history && 'scrollRestoration' in window.history) {
+            window.history.scrollRestoration = 'manual';
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            hostxResetCheckoutScroll();
+        });
+        window.addEventListener('load', function () {
+            [0, 120, 320, 720].forEach(function (delay) {
+                setTimeout(hostxResetCheckoutScroll, delay);
+            });
+        });
+        window.addEventListener('pageshow', function () {
+            [0, 120, 320, 720].forEach(function (delay) {
+                setTimeout(hostxResetCheckoutScroll, delay);
+            });
+        });
+
+        function updateGatewaySelection() {
+            var labels = document.querySelectorAll('#paymentGatewaysContainer .on-pay-option');
+            labels.forEach(function (label) {
+                var radio = label.querySelector('input[type="radio"]');
+                if (!radio) {
+                    return;
+                }
+                label.classList.toggle('is-selected', !!radio.checked);
+            });
+        }
+
+        function mirrorCartTotalProxy() {
+            var totalProxy = document.getElementById('totalCartPrice');
+            var totalVisible = document.getElementById('totalDueToday');
+            if (!totalProxy || !totalVisible) {
+                return;
+            }
+            var sync = function () {
+                if (totalProxy.textContent && totalVisible.textContent !== totalProxy.textContent) {
+                    totalVisible.textContent = totalProxy.textContent;
+                }
+            };
+            sync();
+            new MutationObserver(sync).observe(totalProxy, {
+                characterData: true,
+                childList: true,
+                subtree: true
+            });
+        }
+
+        document.querySelectorAll('#order-standard_cart [data-acc-toggle]').forEach(function (toggle) {
+            toggle.addEventListener('click', function () {
+                var card = toggle.closest('[data-acc-card]');
+                if (card) {
+                    card.classList.toggle('is-open');
+                }
+            });
+        });
+
+        document.querySelectorAll('#paymentGatewaysContainer .on-pay-option').forEach(function (label) {
+            label.addEventListener('click', function () {
+                var radio = label.querySelector('input[type="radio"]');
+                if (!radio) {
+                    return;
+                }
+                radio.checked = true;
+                if (window.jQuery) {
+                    window.jQuery(radio).trigger('click').trigger('change');
+                } else {
+                    radio.dispatchEvent(new Event('change', { bubbles: true }));
+                }
+                updateGatewaySelection();
+            });
+        });
+
+        document.querySelectorAll('#paymentGatewaysContainer input[type="radio"]').forEach(function (radio) {
+            radio.addEventListener('change', updateGatewaySelection);
+        });
+
+        updateGatewaySelection();
+        mirrorCartTotalProxy();
+    })();
+</script>
+{if !$onEmbeddedCheckout}
 {include file="orderforms/{$carttpl}/recommendations-modal.tpl"}
+{/if}

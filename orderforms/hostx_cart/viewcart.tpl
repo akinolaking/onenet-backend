@@ -1,23 +1,43 @@
-{if $checkout}
-    {include file="orderforms/{$carttpl}/checkout.tpl"}
-{else}
-    <script>
+<script>
         // Define state tab index value
         var statesTab = 10;
         var stateNotRequired = true;
+        function hostxResetCheckoutScroll() {
+            window.scrollTo(0, 0);
+        }
+        if (window.history && 'scrollRestoration' in window.history) {
+            window.history.scrollRestoration = 'manual';
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            hostxResetCheckoutScroll();
+        });
+        window.addEventListener('load', function () {
+            [0, 120, 320, 720].forEach(function (delay) {
+                setTimeout(hostxResetCheckoutScroll, delay);
+            });
+        });
+        window.addEventListener('pageshow', function () {
+            [0, 120, 320, 720].forEach(function (delay) {
+                setTimeout(hostxResetCheckoutScroll, delay);
+            });
+        });
     </script>
     {include file="orderforms/{$carttpl}/common.tpl"}
     <script type="text/javascript" src="{$BASE_PATH_JS}/StatesDropdown.js"></script>
     <div id="order-standard_cart" class="hostx-cart-body-section">
         {include file="orderforms/{$carttpl}/product-group-list.tpl"}
-        <div class="view-cart-page">
-            <div class="cart-body">
-                <div class="row">
-                    <div class="secondary-cart-body">
+        <div class="on-cfg-wrap on-review-shell on-review-checkout-page">
+            <div class="secondary-cart-body on-cfg-main on-review-main">
+                        <div class="on-cfg-product-header on-review-header">
+                            <span class="on-added-badge">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1.5 6L4.5 9L10.5 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Added to cart
+                            </span>
+                            <p class="on-product-name">Your cart</p>
+                        </div>
                         {if $cartitems > 0}
-                            <div class="header-lined">
-                                <h1 class="font-size-36">{$LANG.cartreviewcheckout}</h1>
-                            </div>
+                            <h1 class="on-cfg-h1 on-review-title">{$LANG.cartreviewcheckout}</h1>
+                            <p class="on-cfg-short-desc on-review-copy">Review your items, confirm your account details, and finish checkout in one flow.</p>
                         {/if}
                         {if $promoerrormessage}
                             <div class="alert alert-warning text-center" role="alert">
@@ -50,9 +70,9 @@
                                 </ul>
                             </div>
                         {/if}
-                        <form method="post" action="{$smarty.server.PHP_SELF}?a=view">
+                        <form method="post" action="{$smarty.server.PHP_SELF}?a=view" class="on-review-cart-form">
                             {if $cartitems > 0}
-                                <div class="view-cart-items-header">
+                                <div class="view-cart-items-header on-review-items-header">
                                     <div class="row">
                                         <div class="{if $showqtyoptions}col-sm-5{else}col-sm-7{/if} col-xs-7 col-7">
                                             {$LANG.orderForm.productOptions}
@@ -68,7 +88,7 @@
                                     </div>
                                 </div>
                             {/if}
-                            <div class="view-cart-items {if $cartitems == 0}cart-is-empty-view{/if}">
+                            <div class="view-cart-items on-review-items {if $cartitems == 0}cart-is-empty-view{/if}">
                                 {foreach $products as $num => $product}
                                     <div class="item">
                                         <div class="row">
@@ -367,7 +387,7 @@
                                 {/if}
                             </div>                            
                             {if $cartitems > 0}
-                                <div class="empty-continue-button">
+                                <div class="empty-continue-button on-review-actions">
                                     <div class="empty-cart">
                                         <button type="button" class="btn btn-link btn-xs" id="btnEmptyCart">
                                             <i class="fas fa-trash-alt"></i>
@@ -378,8 +398,13 @@
                                         {$LANG.orderForm.continueShopping}
                                     </a>
                                 </div>
-                            {/if}                           
+                            {/if}
                         </form>
+                        {if $cartitems > 0}
+                            <div class="on-view-checkout-embed on-review-checkout-embed">
+                                {include file="orderforms/{$carttpl}/checkout.tpl" embeddedCheckout=true}
+                            </div>
+                        {/if}
                         {foreach $hookOutput as $output}
                             <div class="recommendations-product-market-connect">
                                 {$output}
@@ -391,13 +416,13 @@
                             </div>
                         {/foreach}
                     </div>
-                    <div class="secondary-cart-sidebar" id="scrollingPanelContainer">
-                        <div class="order-summary" id="orderSummary">
+            <div class="secondary-cart-sidebar on-cfg-sidebar on-review-sidebar" id="scrollingPanelContainer">
+                        <div class="order-summary on-summary-card on-review-summary-card" id="orderSummary">
                             <div class="loader w-hidden" id="orderSummaryLoader">
                                 <i class="fas fa-fw fa-sync fa-spin"></i>
                             </div>
-                            <h2 class="font-size-30">{$LANG.ordersummary}</h2>
-                            <div class="summary-container">
+                            <h2 class="font-size-30 on-summary-title">{$LANG.ordersummary}</h2>
+                            <div class="summary-container on-summary-body">
                                 <div class="subtotal clearfix">
                                     <span class="pull-left float-left">{$LANG.ordersubtotal}</span>
                                     <span id="subtotal" class="pull-right float-right">{$subtotal}</span>
@@ -474,7 +499,7 @@
                                         </form>
                                     </div>
                                 {/if}
-                                {if $taxenabled && !$loggedin}
+                                {if $taxenabled && !$loggedin && $cartitems == 0}
                                     <div class="tax-calculator" id="calcTaxes">
                                         <h3 class="tax-cal-header">{$LANG.orderForm.estimateTaxes}</h3>
                                         <form method="post" action="{$WEB_ROOT}/cart.php?a=setstateandcountry">
@@ -516,17 +541,17 @@
                                         </div>
                                     {/foreach}
                                 </div>
-                                <div class="text-right">
-                                    <a href="{$WEB_ROOT}/cart.php?a=checkout&e=false" class="btn button-style hx-primary-btn btn-checkout{if $cartitems == 0} disabled{/if}" id="checkout">
-                                        {$LANG.orderForm.checkout}
-                                        <i class="fas fa-arrow-right"></i>
-                                    </a>
-                                </div>
                             </div>
                         </div>
+                        <button type="button" class="btn button-style hx-primary-btn on-cta-btn btn-checkout{if $cartitems == 0} disabled{/if}" id="checkout" onclick="var completeButton = document.getElementById('btnCompleteOrder'); if (completeButton) { completeButton.click(); } else { window.location.href = '{$WEB_ROOT}/cart.php?a=checkout&e=false'; }">
+                            {$LANG.orderForm.checkout}
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <div class="on-summary-guarantee" aria-label="30-day money-back guarantee">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.5 13 3.5v4.4c0 3.05-2.15 5.88-5 6.6-2.85-.72-5-3.55-5-6.6V3.5l5-2Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M5.5 8 7.2 9.7 10.7 6.2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>30-day money-back guarantee</span>
+                        </div>
                     </div>
-                </div>
-            </div>
         </div>
 
         <form method="post" action="{$WEB_ROOT}/cart.php">
@@ -584,5 +609,4 @@
         </form>
     </div>
     {include file="orderforms/{$carttpl}/recommendations-modal.tpl"}
-{/if}
 <script>cartWindowResizeHostx();</script>
